@@ -9,6 +9,12 @@ This is a fork of [loaf](https://github.com/danomatika/loaf), make use of [ofxTi
 - use prebuilt binary from [release](https://github.com/funatsufumiya/loaf_timeline/releases)
 - or build from source
   - be sure to apply `projectGenerator` before build
+ 
+and run:
+
+```bash
+$ loaf_timeline examples/timeline/camera_track/camera_track.lua
+```
 
 ## Build
 
