@@ -17,6 +17,10 @@ This is a fork of [loaf](https://github.com/danomatika/loaf), make use of [ofxTi
 
 see [examples/timeline](examples/timeline)
 
+## License
+
+Original Loaf is licensed under GPL v3.0 (see Original README below). Original content of example/timeline is licensed under Apache License 2.0. (Copyright 2011-2014 [James George](http://www.jamesgeorge.org) co-developed by [YCAM InterLab](http://interlab.ycam.jp/))
+
 -----
 -----
 Original README
