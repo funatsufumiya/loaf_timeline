@@ -2,6 +2,8 @@
 
 This is a fork of [loaf](https://github.com/danomatika/loaf), make use of [ofxTimeline](https://github.com/funatsufumiya/ofxTimeline) with handy lua scripting environment.
 
+![screenshot-loaf-timeline](images/screenshot-loaf-timeline.png)
+
 ## Usage
 
 - use prebuilt binary from [release](https://github.com/funatsufumiya/ofxTimeline/releases) (**NOT READY YET**)
