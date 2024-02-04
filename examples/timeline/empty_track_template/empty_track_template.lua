@@ -1,6 +1,9 @@
 timeline = ofxTimeline.ofxTimeline()
 
 function setup()
+    of.setWindowTitle("empty track template")
+    of.setWindowShape(1024, 768)
+    
     of.background(255*.15);
 	of.setFrameRate(30);
 	of.setVerticalSync(true);
