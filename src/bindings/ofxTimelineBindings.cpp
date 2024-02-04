@@ -2816,7 +2816,6 @@ typedef struct{} LANGUAGE_OBJ;
 }
 
 
-#include "ofxTimeline.h"
 #include "ofxTLTrack.h"
 #include "ofxTLColorTrack.h"
 #include "ofxTLEmptyTrack.h"
@@ -2827,6 +2826,7 @@ typedef struct{} LANGUAGE_OBJ;
 #include "ofxTLBangs.h"
 #include "ofxTLCameraTrack.h"
 #include "ofxTLAudioTrack.h"
+#include "ofxTimeline.h"
 
 
 #include <string>
@@ -2839,24 +2839,6 @@ SWIGINTERN int SWIG_lua_isnilstring(lua_State *L, int idx) {
   return ret;
 }
 
-SWIGINTERN void ofxTimeline_setLoopType__SWIG_1(ofxTimeline *self,short value){
-        self->setLoopType((ofLoopType)value);
-    }
-SWIGINTERN float ofxTimeline_getR(ofxTimeline *self,string trackName){
-        return self->getColor(trackName).r;
-    }
-SWIGINTERN float ofxTimeline_getG(ofxTimeline *self,string trackName){
-        return self->getColor(trackName).g;
-    }
-SWIGINTERN float ofxTimeline_getB(ofxTimeline *self,string trackName){
-        return self->getColor(trackName).b;
-    }
-SWIGINTERN float ofxTimeline_getA(ofxTimeline *self,string trackName){
-        return self->getColor(trackName).a;
-    }
-SWIGINTERN void ofxTimeline_addCurves__SWIG_6(ofxTimeline *self,string trackName,float min,float max){
-        self->addCurves(trackName, ofRange(min, max));
-    }
 SWIGINTERN ofxTLKeyframes *ofxTLTrack_getKeyframes(ofxTLTrack *self){
         return (ofxTLKeyframes *)self;
     }
@@ -2892,6 +2874,24 @@ SWIGINTERN bool ofxTLCameraTrack_getLockCameraToTrack(ofxTLCameraTrack *self){
     }
 SWIGINTERN ofxTLTrack *ofxTLAudioTrack_getTrack(ofxTLAudioTrack *self){
         return (ofxTLTrack *)self;
+    }
+SWIGINTERN void ofxTimeline_setLoopType__SWIG_1(ofxTimeline *self,short value){
+        self->setLoopType((ofLoopType)value);
+    }
+SWIGINTERN float ofxTimeline_getR(ofxTimeline *self,string trackName){
+        return self->getColor(trackName).r;
+    }
+SWIGINTERN float ofxTimeline_getG(ofxTimeline *self,string trackName){
+        return self->getColor(trackName).g;
+    }
+SWIGINTERN float ofxTimeline_getB(ofxTimeline *self,string trackName){
+        return self->getColor(trackName).b;
+    }
+SWIGINTERN float ofxTimeline_getA(ofxTimeline *self,string trackName){
+        return self->getColor(trackName).a;
+    }
+SWIGINTERN void ofxTimeline_addCurves__SWIG_6(ofxTimeline *self,string trackName,float min,float max){
+        self->addCurves(trackName, ofRange(min, max));
     }
 #ifdef __cplusplus
 extern "C" {
@@ -2999,2523 +2999,6 @@ static swig_lua_namespace swig_string_Sf_SwigStatic = {
 static swig_lua_class *swig_string_bases[] = {0};
 static const char *swig_string_base_names[] = {0};
 static swig_lua_class _wrap_class_string = { "string", "string", &SWIGTYPE_p_std__string,_proxy__wrap_new_string, swig_delete_string, swig_string_methods, swig_string_attributes, &swig_string_Sf_SwigStatic, swig_string_meta, swig_string_bases, swig_string_base_names };
-
-static int _wrap_UndoItem_track_set(lua_State* L) { { int SWIG_arg = 0; UndoItem *arg1 = (UndoItem *) 0 ;
-    ofxTLTrack *arg2 = (ofxTLTrack *) 0 ; SWIG_check_num_args("UndoItem::track",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("UndoItem::track",1,"UndoItem *");
-    if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("UndoItem::track",2,"ofxTLTrack *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_UndoItem,0))){
-      SWIG_fail_ptr("UndoItem_track_set",1,SWIGTYPE_p_UndoItem); } 
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofxTLTrack,SWIG_POINTER_DISOWN))){
-      SWIG_fail_ptr("UndoItem_track_set",2,SWIGTYPE_p_ofxTLTrack); }  if (arg1) (arg1)->track = arg2; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_UndoItem_track_get(lua_State* L) { { int SWIG_arg = 0; UndoItem *arg1 = (UndoItem *) 0 ;
-    ofxTLTrack *result = 0 ; SWIG_check_num_args("UndoItem::track",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("UndoItem::track",1,"UndoItem *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_UndoItem,0))){
-      SWIG_fail_ptr("UndoItem_track_get",1,SWIGTYPE_p_UndoItem); }  result = (ofxTLTrack *) ((arg1)->track);
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLTrack,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_UndoItem_stateBuffer_set(lua_State* L) { { int SWIG_arg = 0; UndoItem *arg1 = (UndoItem *) 0 ;
-    string *arg2 = 0 ; string temp2 ; SWIG_check_num_args("UndoItem::stateBuffer",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("UndoItem::stateBuffer",1,"UndoItem *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("UndoItem::stateBuffer",2,"string const &");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_UndoItem,0))){
-      SWIG_fail_ptr("UndoItem_stateBuffer_set",1,SWIGTYPE_p_UndoItem); } 
-    temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2; if (arg1) (arg1)->stateBuffer = *arg2; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_UndoItem_stateBuffer_get(lua_State* L) { { int SWIG_arg = 0; UndoItem *arg1 = (UndoItem *) 0 ;
-    string *result = 0 ; SWIG_check_num_args("UndoItem::stateBuffer",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("UndoItem::stateBuffer",1,"UndoItem *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_UndoItem,0))){
-      SWIG_fail_ptr("UndoItem_stateBuffer_get",1,SWIGTYPE_p_UndoItem); }  result = (string *) & ((arg1)->stateBuffer);
-    lua_pushlstring(L,result->data(),result->size()); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_new_UndoItem(lua_State* L) { { int SWIG_arg = 0; UndoItem *result = 0 ;
-    SWIG_check_num_args("UndoItem::UndoItem",0,0) result = (UndoItem *)new UndoItem();
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_UndoItem,1); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static void swig_delete_UndoItem(void *obj) {
-UndoItem *arg1 = (UndoItem *) obj;
-delete arg1;
-}
-static int _proxy__wrap_new_UndoItem(lua_State *L) {
-    assert(lua_istable(L,1));
-    lua_pushcfunction(L,_wrap_new_UndoItem);
-    assert(!lua_isnil(L,-1));
-    lua_replace(L,1); /* replace our table with real constructor */
-    lua_call(L,lua_gettop(L)-1,1);
-    return 1;
-}
-static swig_lua_attribute swig_UndoItem_attributes[] = {
-    { "track", _wrap_UndoItem_track_get, _wrap_UndoItem_track_set },
-    { "stateBuffer", _wrap_UndoItem_stateBuffer_get, _wrap_UndoItem_stateBuffer_set },
-    {0,0,0}
-};
-static swig_lua_method swig_UndoItem_methods[]= {
-    {0,0}
-};
-static swig_lua_method swig_UndoItem_meta[] = {
-    {0,0}
-};
-
-static swig_lua_attribute swig_UndoItem_Sf_SwigStatic_attributes[] = {
-    {0,0,0}
-};
-static swig_lua_const_info swig_UndoItem_Sf_SwigStatic_constants[]= {
-    {0,0,0,0,0,0}
-};
-static swig_lua_method swig_UndoItem_Sf_SwigStatic_methods[]= {
-    {0,0}
-};
-static swig_lua_class* swig_UndoItem_Sf_SwigStatic_classes[]= {
-    0
-};
-
-static swig_lua_namespace swig_UndoItem_Sf_SwigStatic = {
-    "UndoItem",
-    swig_UndoItem_Sf_SwigStatic_methods,
-    swig_UndoItem_Sf_SwigStatic_attributes,
-    swig_UndoItem_Sf_SwigStatic_constants,
-    swig_UndoItem_Sf_SwigStatic_classes,
-    0
-};
-static swig_lua_class *swig_UndoItem_bases[] = {0};
-static const char *swig_UndoItem_base_names[] = {0};
-static swig_lua_class _wrap_class_UndoItem = { "UndoItem", "UndoItem", &SWIGTYPE_p_UndoItem,_proxy__wrap_new_UndoItem, swig_delete_UndoItem, swig_UndoItem_methods, swig_UndoItem_attributes, &swig_UndoItem_Sf_SwigStatic, swig_UndoItem_meta, swig_UndoItem_bases, swig_UndoItem_base_names };
-
-static int _wrap_new_ofxTimeline(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *result = 0 ;
-    SWIG_check_num_args("ofxTimeline::ofxTimeline",0,0) result = (ofxTimeline *)new ofxTimeline();
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTimeline,1); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_setup__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string *arg2 = 0 ; string temp2 ; SWIG_check_num_args("ofxTimeline::setup",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setup",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setup",2,"string const &");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setup",1,SWIGTYPE_p_ofxTimeline); } 
-    temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2; (arg1)->setup((string const &)*arg2); return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setup__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::setup",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setup",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setup",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->setup(); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setup(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 1) {
-    return _wrap_ofxTimeline_setup__SWIG_1(L);}  if (argc == 2) { return _wrap_ofxTimeline_setup__SWIG_0(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_setup'\n" "  Possible C/C++ prototypes are:\n"
-  "    ofxTimeline::setup(string const &)\n" "    ofxTimeline::setup()\n"); lua_error(L);return 0; }
-static int _wrap_ofxTimeline_moveToThread(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::moveToThread",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::moveToThread",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_moveToThread",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->moveToThread(); return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_removeFromThread(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::removeFromThread",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::removeFromThread",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_removeFromThread",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->removeFromThread(); return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_toggleEnabled(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool result; SWIG_check_num_args("ofxTimeline::toggleEnabled",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::toggleEnabled",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_toggleEnabled",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->toggleEnabled();
-    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_enable(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::enable",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::enable",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_enable",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->enable(); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_disable(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::disable",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::disable",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_disable",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->disable(); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getIsEnabled(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool result; SWIG_check_num_args("ofxTimeline::getIsEnabled",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getIsEnabled",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getIsEnabled",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->getIsEnabled();
-    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_enableEvents(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::enableEvents",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::enableEvents",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_enableEvents",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->enableEvents(); return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_disableEvents(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::disableEvents",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::disableEvents",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_disableEvents",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->disableEvents(); return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_clear(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::clear",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::clear",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_clear",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->clear(); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_reset(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::reset",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::reset",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_reset",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->reset(); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setName(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ;
-    SWIG_check_num_args("ofxTimeline::setName",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setName",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setName",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setName",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    (arg1)->setName(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getName(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; string result;
-    SWIG_check_num_args("ofxTimeline::getName",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getName",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getName",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getName();
-    lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_play(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::play",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::play",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_play",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->play(); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_stop(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::stop",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::stop",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_stop",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->stop(); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_togglePlay(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; bool result;
-    SWIG_check_num_args("ofxTimeline::togglePlay",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::togglePlay",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_togglePlay",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->togglePlay();
-    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getIsPlaying(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool result; SWIG_check_num_args("ofxTimeline::getIsPlaying",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getIsPlaying",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getIsPlaying",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->getIsPlaying();
-    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getSpacebarTogglesPlay(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool result; SWIG_check_num_args("ofxTimeline::getSpacebarTogglesPlay",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getSpacebarTogglesPlay",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getSpacebarTogglesPlay",1,SWIGTYPE_p_ofxTimeline); } 
-    result = (bool)(arg1)->getSpacebarTogglesPlay(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setSpacebarTogglePlay(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool arg2 ; SWIG_check_num_args("ofxTimeline::setSpacebarTogglePlay",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setSpacebarTogglePlay",1,"ofxTimeline *");
-    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setSpacebarTogglePlay",2,"bool");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setSpacebarTogglePlay",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
-    (arg1)->setSpacebarTogglePlay(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_playSelectedTrack(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::playSelectedTrack",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::playSelectedTrack",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_playSelectedTrack",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->playSelectedTrack(); return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_stopSelectedTrack(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::stopSelectedTrack",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::stopSelectedTrack",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_stopSelectedTrack",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->stopSelectedTrack(); return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_togglePlaySelectedTrack(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool result; SWIG_check_num_args("ofxTimeline::togglePlaySelectedTrack",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::togglePlaySelectedTrack",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_togglePlaySelectedTrack",1,SWIGTYPE_p_ofxTimeline); } 
-    result = (bool)(arg1)->togglePlaySelectedTrack(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setLoopType__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofLoopType arg2 ; ofLoopType *argp2 ; SWIG_check_num_args("ofxTimeline::setLoopType",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setLoopType",1,"ofxTimeline *");
-    if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofxTimeline::setLoopType",2,"ofLoopType");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setLoopType",1,SWIGTYPE_p_ofxTimeline); } 
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofLoopType,0))){
-      SWIG_fail_ptr("ofxTimeline_setLoopType",2,SWIGTYPE_p_ofLoopType); }  arg2 = *argp2; (arg1)->setLoopType(arg2);
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getLoopType(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofLoopType result; SWIG_check_num_args("ofxTimeline::getLoopType",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getLoopType",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getLoopType",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getLoopType(); {
-      ofLoopType * resultptr = new ofLoopType(result);
-      SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofLoopType,1); SWIG_arg++; }  return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_isDone(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; bool result;
-    SWIG_check_num_args("ofxTimeline::isDone",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::isDone",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_isDone",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->isDone();
-    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_toggleShow(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; bool result;
-    SWIG_check_num_args("ofxTimeline::toggleShow",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::toggleShow",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_toggleShow",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->toggleShow();
-    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_show(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::show",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::show",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_show",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->show(); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_hide(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::hide",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::hide",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_hide",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->hide(); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getIsShowing(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool result; SWIG_check_num_args("ofxTimeline::getIsShowing",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getIsShowing",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getIsShowing",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->getIsShowing();
-    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_draw(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::draw",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::draw",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_draw",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->draw(); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_mousePressed(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofMouseEventArgs *arg2 = 0 ; SWIG_check_num_args("ofxTimeline::mousePressed",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::mousePressed",1,"ofxTimeline *");
-    if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofxTimeline::mousePressed",2,"ofMouseEventArgs &");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_mousePressed",1,SWIGTYPE_p_ofxTimeline); } 
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofMouseEventArgs,0))){
-      SWIG_fail_ptr("ofxTimeline_mousePressed",2,SWIGTYPE_p_ofMouseEventArgs); }  (arg1)->mousePressed(*arg2); return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_mouseMoved(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofMouseEventArgs *arg2 = 0 ; SWIG_check_num_args("ofxTimeline::mouseMoved",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::mouseMoved",1,"ofxTimeline *");
-    if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofxTimeline::mouseMoved",2,"ofMouseEventArgs &");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_mouseMoved",1,SWIGTYPE_p_ofxTimeline); } 
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofMouseEventArgs,0))){
-      SWIG_fail_ptr("ofxTimeline_mouseMoved",2,SWIGTYPE_p_ofMouseEventArgs); }  (arg1)->mouseMoved(*arg2); return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_mouseDragged(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofMouseEventArgs *arg2 = 0 ; SWIG_check_num_args("ofxTimeline::mouseDragged",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::mouseDragged",1,"ofxTimeline *");
-    if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofxTimeline::mouseDragged",2,"ofMouseEventArgs &");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_mouseDragged",1,SWIGTYPE_p_ofxTimeline); } 
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofMouseEventArgs,0))){
-      SWIG_fail_ptr("ofxTimeline_mouseDragged",2,SWIGTYPE_p_ofMouseEventArgs); }  (arg1)->mouseDragged(*arg2); return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_mouseReleased(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofMouseEventArgs *arg2 = 0 ; SWIG_check_num_args("ofxTimeline::mouseReleased",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::mouseReleased",1,"ofxTimeline *");
-    if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofxTimeline::mouseReleased",2,"ofMouseEventArgs &");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_mouseReleased",1,SWIGTYPE_p_ofxTimeline); } 
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofMouseEventArgs,0))){
-      SWIG_fail_ptr("ofxTimeline_mouseReleased",2,SWIGTYPE_p_ofMouseEventArgs); }  (arg1)->mouseReleased(*arg2);
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_keyPressed(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofKeyEventArgs *arg2 = 0 ; SWIG_check_num_args("ofxTimeline::keyPressed",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::keyPressed",1,"ofxTimeline *");
-    if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofxTimeline::keyPressed",2,"ofKeyEventArgs &");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_keyPressed",1,SWIGTYPE_p_ofxTimeline); } 
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofKeyEventArgs,0))){
-      SWIG_fail_ptr("ofxTimeline_keyPressed",2,SWIGTYPE_p_ofKeyEventArgs); }  (arg1)->keyPressed(*arg2); return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_keyReleased(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofKeyEventArgs *arg2 = 0 ; SWIG_check_num_args("ofxTimeline::keyReleased",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::keyReleased",1,"ofxTimeline *");
-    if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofxTimeline::keyReleased",2,"ofKeyEventArgs &");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_keyReleased",1,SWIGTYPE_p_ofxTimeline); } 
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofKeyEventArgs,0))){
-      SWIG_fail_ptr("ofxTimeline_keyReleased",2,SWIGTYPE_p_ofKeyEventArgs); }  (arg1)->keyReleased(*arg2); return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_windowResized(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofResizeEventArgs *arg2 = 0 ; SWIG_check_num_args("ofxTimeline::windowResized",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::windowResized",1,"ofxTimeline *");
-    if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofxTimeline::windowResized",2,"ofResizeEventArgs &");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_windowResized",1,SWIGTYPE_p_ofxTimeline); } 
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofResizeEventArgs,0))){
-      SWIG_fail_ptr("ofxTimeline_windowResized",2,SWIGTYPE_p_ofResizeEventArgs); }  (arg1)->windowResized(*arg2);
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_exit(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofEventArgs *arg2 = 0 ; SWIG_check_num_args("ofxTimeline::exit",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::exit",1,"ofxTimeline *");
-    if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofxTimeline::exit",2,"ofEventArgs &");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_exit",1,SWIGTYPE_p_ofxTimeline); } 
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofEventArgs,0))){
-      SWIG_fail_ptr("ofxTimeline_exit",2,SWIGTYPE_p_ofEventArgs); }  (arg1)->exit(*arg2); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setShowTimeControls(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool arg2 ; SWIG_check_num_args("ofxTimeline::setShowTimeControls",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setShowTimeControls",1,"ofxTimeline *");
-    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setShowTimeControls",2,"bool");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setShowTimeControls",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
-    (arg1)->setShowTimeControls(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setShowTicker(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool arg2 ; SWIG_check_num_args("ofxTimeline::setShowTicker",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setShowTicker",1,"ofxTimeline *");
-    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setShowTicker",2,"bool");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setShowTicker",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
-    (arg1)->setShowTicker(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setShowInoutControl(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool arg2 ; SWIG_check_num_args("ofxTimeline::setShowInoutControl",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setShowInoutControl",1,"ofxTimeline *");
-    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setShowInoutControl",2,"bool");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setShowInoutControl",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
-    (arg1)->setShowInoutControl(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setShowZoomer(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool arg2 ; SWIG_check_num_args("ofxTimeline::setShowZoomer",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setShowZoomer",1,"ofxTimeline *");
-    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setShowZoomer",2,"bool");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setShowZoomer",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
-    (arg1)->setShowZoomer(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setWorkingFolder(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; SWIG_check_num_args("ofxTimeline::setWorkingFolder",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setWorkingFolder",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setWorkingFolder",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setWorkingFolder",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->setWorkingFolder(arg2); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getWorkingFolder(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string result; SWIG_check_num_args("ofxTimeline::getWorkingFolder",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getWorkingFolder",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getWorkingFolder",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getWorkingFolder();
-    lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_loadTracksFromFolder(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; SWIG_check_num_args("ofxTimeline::loadTracksFromFolder",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::loadTracksFromFolder",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::loadTracksFromFolder",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_loadTracksFromFolder",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->loadTracksFromFolder(arg2); return SWIG_arg; fail: SWIGUNUSED; }
-   lua_error(L); return 0; }
-static int _wrap_ofxTimeline_saveTracksToFolder(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; SWIG_check_num_args("ofxTimeline::saveTracksToFolder",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::saveTracksToFolder",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::saveTracksToFolder",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_saveTracksToFolder",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->saveTracksToFolder(arg2); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setDefaultFontPath(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; SWIG_check_num_args("ofxTimeline::setDefaultFontPath",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setDefaultFontPath",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setDefaultFontPath",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setDefaultFontPath",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->setDefaultFontPath(arg2); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setFrameRate(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    float arg2 ; SWIG_check_num_args("ofxTimeline::setFrameRate",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setFrameRate",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setFrameRate",2,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setFrameRate",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
-    (arg1)->setFrameRate(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setDurationInFrames(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    int arg2 ; SWIG_check_num_args("ofxTimeline::setDurationInFrames",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setDurationInFrames",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setDurationInFrames",2,"int");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setDurationInFrames",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (int)lua_tonumber(L, 2);
-    (arg1)->setDurationInFrames(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setDurationInSeconds(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    float arg2 ; SWIG_check_num_args("ofxTimeline::setDurationInSeconds",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setDurationInSeconds",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setDurationInSeconds",2,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setDurationInSeconds",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
-    (arg1)->setDurationInSeconds(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setDurationInMillis(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    unsigned long long arg2 ; SWIG_check_num_args("ofxTimeline::setDurationInMillis",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setDurationInMillis",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setDurationInMillis",2,"unsigned long long");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setDurationInMillis",1,SWIGTYPE_p_ofxTimeline); } 
-    arg2 = (unsigned long long)lua_tonumber(L, 2); (arg1)->setDurationInMillis(arg2); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setDurationInTimecode(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; SWIG_check_num_args("ofxTimeline::setDurationInTimecode",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setDurationInTimecode",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setDurationInTimecode",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setDurationInTimecode",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->setDurationInTimecode(arg2); return SWIG_arg; fail: SWIGUNUSED; }
-   lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getDurationInFrames(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    int result; SWIG_check_num_args("ofxTimeline::getDurationInFrames",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getDurationInFrames",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getDurationInFrames",1,SWIGTYPE_p_ofxTimeline); }  result = (int)(arg1)->getDurationInFrames();
-    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getDurationInSeconds(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    float result; SWIG_check_num_args("ofxTimeline::getDurationInSeconds",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getDurationInSeconds",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getDurationInSeconds",1,SWIGTYPE_p_ofxTimeline); } 
-    result = (float)(arg1)->getDurationInSeconds(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getDurationInMilliseconds(lua_State* L) { { int SWIG_arg = 0;
-    ofxTimeline *arg1 = (ofxTimeline *) 0 ; long result; SWIG_check_num_args("ofxTimeline::getDurationInMilliseconds",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getDurationInMilliseconds",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getDurationInMilliseconds",1,SWIGTYPE_p_ofxTimeline); } 
-    result = (long)(arg1)->getDurationInMilliseconds(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getDurationInTimecode(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string result; SWIG_check_num_args("ofxTimeline::getDurationInTimecode",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getDurationInTimecode",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getDurationInTimecode",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getDurationInTimecode();
-    lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_setFrameBased(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool arg2 ; SWIG_check_num_args("ofxTimeline::setFrameBased",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setFrameBased",1,"ofxTimeline *");
-    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setFrameBased",2,"bool");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setFrameBased",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
-    (arg1)->setFrameBased(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getIsFrameBased(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool result; SWIG_check_num_args("ofxTimeline::getIsFrameBased",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getIsFrameBased",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getIsFrameBased",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->getIsFrameBased();
-    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setAutosave(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; bool arg2 ;
-    SWIG_check_num_args("ofxTimeline::setAutosave",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setAutosave",1,"ofxTimeline *");
-    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setAutosave",2,"bool");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setAutosave",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
-    (arg1)->setAutosave(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_save(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::save",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::save",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_save",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->save(); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_hasUnsavedChanges(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool result; SWIG_check_num_args("ofxTimeline::hasUnsavedChanges",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::hasUnsavedChanges",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_hasUnsavedChanges",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->hasUnsavedChanges();
-    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setCurrentFrame(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    int arg2 ; SWIG_check_num_args("ofxTimeline::setCurrentFrame",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setCurrentFrame",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setCurrentFrame",2,"int");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setCurrentFrame",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (int)lua_tonumber(L, 2);
-    (arg1)->setCurrentFrame(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setCurrentTimeSeconds(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    float arg2 ; SWIG_check_num_args("ofxTimeline::setCurrentTimeSeconds",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setCurrentTimeSeconds",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setCurrentTimeSeconds",2,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setCurrentTimeSeconds",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
-    (arg1)->setCurrentTimeSeconds(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setCurrentTimeMillis(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    unsigned long long arg2 ; SWIG_check_num_args("ofxTimeline::setCurrentTimeMillis",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setCurrentTimeMillis",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setCurrentTimeMillis",2,"unsigned long long");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setCurrentTimeMillis",1,SWIGTYPE_p_ofxTimeline); } 
-    arg2 = (unsigned long long)lua_tonumber(L, 2); (arg1)->setCurrentTimeMillis(arg2); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setPercentComplete(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    float arg2 ; SWIG_check_num_args("ofxTimeline::setPercentComplete",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setPercentComplete",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setPercentComplete",2,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setPercentComplete",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
-    (arg1)->setPercentComplete(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setCurrentTimecode(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; SWIG_check_num_args("ofxTimeline::setCurrentTimecode",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setCurrentTimecode",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setCurrentTimecode",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setCurrentTimecode",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->setCurrentTimecode(arg2); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setCurrentTimeToInPoint(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::setCurrentTimeToInPoint",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setCurrentTimeToInPoint",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setCurrentTimeToInPoint",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->setCurrentTimeToInPoint();
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setCurrentTimeToOutPoint(lua_State* L) { { int SWIG_arg = 0;
-    ofxTimeline *arg1 = (ofxTimeline *) 0 ; SWIG_check_num_args("ofxTimeline::setCurrentTimeToOutPoint",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setCurrentTimeToOutPoint",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setCurrentTimeToOutPoint",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->setCurrentTimeToOutPoint();
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getCurrentFrame(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    int result; SWIG_check_num_args("ofxTimeline::getCurrentFrame",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getCurrentFrame",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getCurrentFrame",1,SWIGTYPE_p_ofxTimeline); }  result = (int)(arg1)->getCurrentFrame();
-    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getCurrentPageIndex(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    int result; SWIG_check_num_args("ofxTimeline::getCurrentPageIndex",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getCurrentPageIndex",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getCurrentPageIndex",1,SWIGTYPE_p_ofxTimeline); }  result = (int)(arg1)->getCurrentPageIndex();
-    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getCurrentPageName(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string result; SWIG_check_num_args("ofxTimeline::getCurrentPageName",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getCurrentPageName",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getCurrentPageName",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getCurrentPageName();
-    lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_getCurrentTime(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    float result; SWIG_check_num_args("ofxTimeline::getCurrentTime",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getCurrentTime",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getCurrentTime",1,SWIGTYPE_p_ofxTimeline); }  result = (float)(arg1)->getCurrentTime();
-    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getCurrentTimeMillis(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    long result; SWIG_check_num_args("ofxTimeline::getCurrentTimeMillis",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getCurrentTimeMillis",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getCurrentTimeMillis",1,SWIGTYPE_p_ofxTimeline); } 
-    result = (long)(arg1)->getCurrentTimeMillis(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getPercentComplete(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    float result; SWIG_check_num_args("ofxTimeline::getPercentComplete",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getPercentComplete",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getPercentComplete",1,SWIGTYPE_p_ofxTimeline); }  result = (float)(arg1)->getPercentComplete();
-    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getCurrentTimecode(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string result; SWIG_check_num_args("ofxTimeline::getCurrentTimecode",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getCurrentTimecode",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getCurrentTimecode",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getCurrentTimecode();
-    lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_getQuantizedTime(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    unsigned long long arg2 ; unsigned long long arg3 ; long result; SWIG_check_num_args("ofxTimeline::getQuantizedTime",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getQuantizedTime",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::getQuantizedTime",2,"unsigned long long");
-    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::getQuantizedTime",3,"unsigned long long");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getQuantizedTime",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (unsigned long long)lua_tonumber(L, 2);
-    arg3 = (unsigned long long)lua_tonumber(L, 3); result = (long)(arg1)->getQuantizedTime(arg2,arg3);
-    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_flagUserChangedValue(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::flagUserChangedValue",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::flagUserChangedValue",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_flagUserChangedValue",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->flagUserChangedValue();
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getUserChangedValue(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool result; SWIG_check_num_args("ofxTimeline::getUserChangedValue",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getUserChangedValue",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getUserChangedValue",1,SWIGTYPE_p_ofxTimeline); } 
-    result = (bool)(arg1)->getUserChangedValue(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_flagTrackModified(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofxTLTrack *arg2 = (ofxTLTrack *) 0 ; SWIG_check_num_args("ofxTimeline::flagTrackModified",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::flagTrackModified",1,"ofxTimeline *");
-    if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofxTimeline::flagTrackModified",2,"ofxTLTrack *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_flagTrackModified",1,SWIGTYPE_p_ofxTimeline); } 
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofxTLTrack,0))){
-      SWIG_fail_ptr("ofxTimeline_flagTrackModified",2,SWIGTYPE_p_ofxTLTrack); }  (arg1)->flagTrackModified(arg2);
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setInPointAtPercent(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    float arg2 ; SWIG_check_num_args("ofxTimeline::setInPointAtPercent",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setInPointAtPercent",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setInPointAtPercent",2,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setInPointAtPercent",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
-    (arg1)->setInPointAtPercent(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setInPointAtFrame(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    int arg2 ; SWIG_check_num_args("ofxTimeline::setInPointAtFrame",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setInPointAtFrame",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setInPointAtFrame",2,"int");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setInPointAtFrame",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (int)lua_tonumber(L, 2);
-    (arg1)->setInPointAtFrame(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setInPointAtSeconds(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    float arg2 ; SWIG_check_num_args("ofxTimeline::setInPointAtSeconds",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setInPointAtSeconds",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setInPointAtSeconds",2,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setInPointAtSeconds",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
-    (arg1)->setInPointAtSeconds(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setInPointAtMillis(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    unsigned long long arg2 ; SWIG_check_num_args("ofxTimeline::setInPointAtMillis",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setInPointAtMillis",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setInPointAtMillis",2,"unsigned long long");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setInPointAtMillis",1,SWIGTYPE_p_ofxTimeline); } 
-    arg2 = (unsigned long long)lua_tonumber(L, 2); (arg1)->setInPointAtMillis(arg2); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setInPointAtTimecode(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; SWIG_check_num_args("ofxTimeline::setInPointAtTimecode",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setInPointAtTimecode",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setInPointAtTimecode",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setInPointAtTimecode",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->setInPointAtTimecode(arg2); return SWIG_arg; fail: SWIGUNUSED; }
-   lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setInPointAtPlayhead(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::setInPointAtPlayhead",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setInPointAtPlayhead",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setInPointAtPlayhead",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->setInPointAtPlayhead();
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setOutPointAtPercent(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    float arg2 ; SWIG_check_num_args("ofxTimeline::setOutPointAtPercent",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setOutPointAtPercent",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setOutPointAtPercent",2,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setOutPointAtPercent",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
-    (arg1)->setOutPointAtPercent(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setOutPointAtFrame(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    float arg2 ; SWIG_check_num_args("ofxTimeline::setOutPointAtFrame",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setOutPointAtFrame",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setOutPointAtFrame",2,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setOutPointAtFrame",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
-    (arg1)->setOutPointAtFrame(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setOutPointAtSeconds(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    float arg2 ; SWIG_check_num_args("ofxTimeline::setOutPointAtSeconds",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setOutPointAtSeconds",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setOutPointAtSeconds",2,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setOutPointAtSeconds",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
-    (arg1)->setOutPointAtSeconds(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setOutPointAtMillis(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    unsigned long long arg2 ; SWIG_check_num_args("ofxTimeline::setOutPointAtMillis",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setOutPointAtMillis",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setOutPointAtMillis",2,"unsigned long long");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setOutPointAtMillis",1,SWIGTYPE_p_ofxTimeline); } 
-    arg2 = (unsigned long long)lua_tonumber(L, 2); (arg1)->setOutPointAtMillis(arg2); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setOutPointAtTimecode(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; SWIG_check_num_args("ofxTimeline::setOutPointAtTimecode",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setOutPointAtTimecode",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setOutPointAtTimecode",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setOutPointAtTimecode",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->setOutPointAtTimecode(arg2); return SWIG_arg; fail: SWIGUNUSED; }
-   lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setOutPointAtPlayhead(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::setOutPointAtPlayhead",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setOutPointAtPlayhead",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setOutPointAtPlayhead",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->setOutPointAtPlayhead();
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setEditableHeaders(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool arg2 ; SWIG_check_num_args("ofxTimeline::setEditableHeaders",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setEditableHeaders",1,"ofxTimeline *");
-    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setEditableHeaders",2,"bool");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setEditableHeaders",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
-    (arg1)->setEditableHeaders(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_areHeadersEditable(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool result; SWIG_check_num_args("ofxTimeline::areHeadersEditable",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::areHeadersEditable",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_areHeadersEditable",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->areHeadersEditable();
-    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setMinimalHeaders(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool arg2 ; SWIG_check_num_args("ofxTimeline::setMinimalHeaders",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setMinimalHeaders",1,"ofxTimeline *");
-    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setMinimalHeaders",2,"bool");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setMinimalHeaders",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
-    (arg1)->setMinimalHeaders(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_areHeadersMinimal(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool result; SWIG_check_num_args("ofxTimeline::areHeadersMinimal",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::areHeadersMinimal",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_areHeadersMinimal",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->areHeadersMinimal();
-    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_toggleShowFooters(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool result; SWIG_check_num_args("ofxTimeline::toggleShowFooters",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::toggleShowFooters",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_toggleShowFooters",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->toggleShowFooters();
-    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setFootersHidden(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool arg2 ; SWIG_check_num_args("ofxTimeline::setFootersHidden",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setFootersHidden",1,"ofxTimeline *");
-    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setFootersHidden",2,"bool");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setFootersHidden",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
-    (arg1)->setFootersHidden(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_areFootersHidden(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool result; SWIG_check_num_args("ofxTimeline::areFootersHidden",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::areFootersHidden",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_areFootersHidden",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->areFootersHidden();
-    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setInOutRange(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofRange arg2 ; ofRange *argp2 ; SWIG_check_num_args("ofxTimeline::setInOutRange",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setInOutRange",1,"ofxTimeline *");
-    if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofxTimeline::setInOutRange",2,"ofRange");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setInOutRange",1,SWIGTYPE_p_ofxTimeline); } 
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofRange,0))){
-      SWIG_fail_ptr("ofxTimeline_setInOutRange",2,SWIGTYPE_p_ofRange); }  arg2 = *argp2; (arg1)->setInOutRange(arg2);
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setInOutRangeMillis(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    unsigned long long arg2 ; unsigned long long arg3 ; SWIG_check_num_args("ofxTimeline::setInOutRangeMillis",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setInOutRangeMillis",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setInOutRangeMillis",2,"unsigned long long");
-    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::setInOutRangeMillis",3,"unsigned long long");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setInOutRangeMillis",1,SWIGTYPE_p_ofxTimeline); } 
-    arg2 = (unsigned long long)lua_tonumber(L, 2); arg3 = (unsigned long long)lua_tonumber(L, 3);
-    (arg1)->setInOutRangeMillis(arg2,arg3); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_clearInOut(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::clearInOut",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::clearInOut",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_clearInOut",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->clearInOut(); return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getInOutRange(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofRange result; SWIG_check_num_args("ofxTimeline::getInOutRange",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getInOutRange",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getInOutRange",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getInOutRange(); {
-      ofRange * resultptr = new ofRange(result); SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofRange,1); SWIG_arg++; } 
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getInOutRangeMillis(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofLongRange result; SWIG_check_num_args("ofxTimeline::getInOutRangeMillis",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getInOutRangeMillis",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getInOutRangeMillis",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getInOutRangeMillis(); {
-      ofLongRange * resultptr = new ofLongRange(result);
-      SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofLongRange,1); SWIG_arg++; }  return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getInFrame(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; int result;
-    SWIG_check_num_args("ofxTimeline::getInFrame",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getInFrame",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getInFrame",1,SWIGTYPE_p_ofxTimeline); }  result = (int)(arg1)->getInFrame();
-    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getInTimeInSeconds(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    float result; SWIG_check_num_args("ofxTimeline::getInTimeInSeconds",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getInTimeInSeconds",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getInTimeInSeconds",1,SWIGTYPE_p_ofxTimeline); }  result = (float)(arg1)->getInTimeInSeconds();
-    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getInTimeInMillis(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    long result; SWIG_check_num_args("ofxTimeline::getInTimeInMillis",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getInTimeInMillis",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getInTimeInMillis",1,SWIGTYPE_p_ofxTimeline); }  result = (long)(arg1)->getInTimeInMillis();
-    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getInPointTimecode(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string result; SWIG_check_num_args("ofxTimeline::getInPointTimecode",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getInPointTimecode",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getInPointTimecode",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getInPointTimecode();
-    lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_getOutFrame(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; int result;
-    SWIG_check_num_args("ofxTimeline::getOutFrame",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getOutFrame",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getOutFrame",1,SWIGTYPE_p_ofxTimeline); }  result = (int)(arg1)->getOutFrame();
-    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getOutTimeInSeconds(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    float result; SWIG_check_num_args("ofxTimeline::getOutTimeInSeconds",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getOutTimeInSeconds",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getOutTimeInSeconds",1,SWIGTYPE_p_ofxTimeline); } 
-    result = (float)(arg1)->getOutTimeInSeconds(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getOutTimeInMillis(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    long result; SWIG_check_num_args("ofxTimeline::getOutTimeInMillis",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getOutTimeInMillis",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getOutTimeInMillis",1,SWIGTYPE_p_ofxTimeline); }  result = (long)(arg1)->getOutTimeInMillis();
-    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getOutPointTimecode(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string result; SWIG_check_num_args("ofxTimeline::getOutPointTimecode",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getOutPointTimecode",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getOutPointTimecode",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getOutPointTimecode();
-    lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_setOffset(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofVec2f arg2 ; ofVec2f *argp2 ; SWIG_check_num_args("ofxTimeline::setOffset",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setOffset",1,"ofxTimeline *");
-    if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofxTimeline::setOffset",2,"ofVec2f");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setOffset",1,SWIGTYPE_p_ofxTimeline); } 
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofVec2f,0))){
-      SWIG_fail_ptr("ofxTimeline_setOffset",2,SWIGTYPE_p_ofVec2f); }  arg2 = *argp2; (arg1)->setOffset(arg2); return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setLockWidthToWindow(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool arg2 ; SWIG_check_num_args("ofxTimeline::setLockWidthToWindow",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setLockWidthToWindow",1,"ofxTimeline *");
-    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setLockWidthToWindow",2,"bool");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setLockWidthToWindow",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
-    (arg1)->setLockWidthToWindow(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getLockWidthToWindow(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool result; SWIG_check_num_args("ofxTimeline::getLockWidthToWindow",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getLockWidthToWindow",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getLockWidthToWindow",1,SWIGTYPE_p_ofxTimeline); } 
-    result = (bool)(arg1)->getLockWidthToWindow(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setWidth(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; float arg2 ;
-    SWIG_check_num_args("ofxTimeline::setWidth",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setWidth",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setWidth",2,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setWidth",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
-    (arg1)->setWidth(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setHeight(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; float arg2 ;
-    SWIG_check_num_args("ofxTimeline::setHeight",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setHeight",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setHeight",2,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setHeight",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
-    (arg1)->setHeight(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_collapseAllTracks(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::collapseAllTracks",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::collapseAllTracks",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_collapseAllTracks",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->collapseAllTracks(); return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getDrawRect(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofRectangle result; SWIG_check_num_args("ofxTimeline::getDrawRect",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getDrawRect",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getDrawRect",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getDrawRect(); {
-      ofRectangle * resultptr = new ofRectangle(result);
-      SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofRectangle,1); SWIG_arg++; }  return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getWidth(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; float result;
-    SWIG_check_num_args("ofxTimeline::getWidth",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getWidth",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getWidth",1,SWIGTYPE_p_ofxTimeline); }  result = (float)(arg1)->getWidth();
-    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getHeight(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; float result;
-    SWIG_check_num_args("ofxTimeline::getHeight",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getHeight",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getHeight",1,SWIGTYPE_p_ofxTimeline); }  result = (float)(arg1)->getHeight();
-    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getTopRight(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofVec2f result; SWIG_check_num_args("ofxTimeline::getTopRight",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getTopRight",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getTopRight",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getTopRight(); {
-      ofVec2f * resultptr = new ofVec2f(result); SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVec2f,1); SWIG_arg++; } 
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getTopLeft(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofVec2f result; SWIG_check_num_args("ofxTimeline::getTopLeft",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getTopLeft",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getTopLeft",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getTopLeft(); {
-      ofVec2f * resultptr = new ofVec2f(result); SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVec2f,1); SWIG_arg++; } 
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getBottomLeft(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofVec2f result; SWIG_check_num_args("ofxTimeline::getBottomLeft",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getBottomLeft",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getBottomLeft",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getBottomLeft(); {
-      ofVec2f * resultptr = new ofVec2f(result); SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVec2f,1); SWIG_arg++; } 
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getBottomRight(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofVec2f result; SWIG_check_num_args("ofxTimeline::getBottomRight",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getBottomRight",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getBottomRight",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getBottomRight(); {
-      ofVec2f * resultptr = new ofVec2f(result); SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVec2f,1); SWIG_arg++; } 
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setBPM(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; float arg2 ;
-    SWIG_check_num_args("ofxTimeline::setBPM",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setBPM",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setBPM",2,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setBPM",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2); (arg1)->setBPM(arg2);
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getBPM(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; float result;
-    SWIG_check_num_args("ofxTimeline::getBPM",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getBPM",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getBPM",1,SWIGTYPE_p_ofxTimeline); }  result = (float)(arg1)->getBPM();
-    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_toggleSnapToBPM(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool result; SWIG_check_num_args("ofxTimeline::toggleSnapToBPM",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::toggleSnapToBPM",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_toggleSnapToBPM",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->toggleSnapToBPM();
-    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_enableSnapToBPM(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool arg2 ; SWIG_check_num_args("ofxTimeline::enableSnapToBPM",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::enableSnapToBPM",1,"ofxTimeline *");
-    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::enableSnapToBPM",2,"bool");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_enableSnapToBPM",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
-    (arg1)->enableSnapToBPM(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getSnapToBPM(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool result; SWIG_check_num_args("ofxTimeline::getSnapToBPM",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getSnapToBPM",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getSnapToBPM",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->getSnapToBPM();
-    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_toggleShowBPMGrid(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool result; SWIG_check_num_args("ofxTimeline::toggleShowBPMGrid",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::toggleShowBPMGrid",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_toggleShowBPMGrid",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->toggleShowBPMGrid();
-    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setShowBPMGrid(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool arg2 ; SWIG_check_num_args("ofxTimeline::setShowBPMGrid",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setShowBPMGrid",1,"ofxTimeline *");
-    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setShowBPMGrid",2,"bool");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setShowBPMGrid",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
-    (arg1)->setShowBPMGrid(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getShowBPMGrid(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool result; SWIG_check_num_args("ofxTimeline::getShowBPMGrid",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getShowBPMGrid",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getShowBPMGrid",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->getShowBPMGrid();
-    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_toggleSnapToOtherKeyframes(lua_State* L) { { int SWIG_arg = 0;
-    ofxTimeline *arg1 = (ofxTimeline *) 0 ; bool result; SWIG_check_num_args("ofxTimeline::toggleSnapToOtherKeyframes",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::toggleSnapToOtherKeyframes",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_toggleSnapToOtherKeyframes",1,SWIGTYPE_p_ofxTimeline); } 
-    result = (bool)(arg1)->toggleSnapToOtherKeyframes(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_enableSnapToOtherKeyframes(lua_State* L) { { int SWIG_arg = 0;
-    ofxTimeline *arg1 = (ofxTimeline *) 0 ; bool arg2 ; SWIG_check_num_args("ofxTimeline::enableSnapToOtherKeyframes",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::enableSnapToOtherKeyframes",1,"ofxTimeline *");
-    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::enableSnapToOtherKeyframes",2,"bool");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_enableSnapToOtherKeyframes",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
-    (arg1)->enableSnapToOtherKeyframes(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getSnapToOtherElements(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool result; SWIG_check_num_args("ofxTimeline::getSnapToOtherElements",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getSnapToOtherElements",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getSnapToOtherElements",1,SWIGTYPE_p_ofxTimeline); } 
-    result = (bool)(arg1)->getSnapToOtherElements(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setMovePlayheadOnPaste(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool arg2 ; SWIG_check_num_args("ofxTimeline::setMovePlayheadOnPaste",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setMovePlayheadOnPaste",1,"ofxTimeline *");
-    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setMovePlayheadOnPaste",2,"bool");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setMovePlayheadOnPaste",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
-    (arg1)->setMovePlayheadOnPaste(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getMovePlayheadOnPaste(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool result; SWIG_check_num_args("ofxTimeline::getMovePlayheadOnPaste",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getMovePlayheadOnPaste",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getMovePlayheadOnPaste",1,SWIGTYPE_p_ofxTimeline); } 
-    result = (bool)(arg1)->getMovePlayheadOnPaste(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getPasteboard(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    vector< string > *result = 0 ; SWIG_check_num_args("ofxTimeline::getPasteboard",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getPasteboard",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getPasteboard",1,SWIGTYPE_p_ofxTimeline); } 
-    result = (vector< string > *) &(arg1)->getPasteboard();
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_vectorT_std__string_t,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_enableUndo(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; bool arg2 ;
-    SWIG_check_num_args("ofxTimeline::enableUndo",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::enableUndo",1,"ofxTimeline *");
-    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::enableUndo",2,"bool");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_enableUndo",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
-    (arg1)->enableUndo(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_undo(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::undo",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::undo",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_undo",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->undo(); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_redo(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::redo",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::redo",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_redo",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->redo(); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setMovePlayheadOnDrag(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool arg2 ; SWIG_check_num_args("ofxTimeline::setMovePlayheadOnDrag",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setMovePlayheadOnDrag",1,"ofxTimeline *");
-    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setMovePlayheadOnDrag",2,"bool");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setMovePlayheadOnDrag",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
-    (arg1)->setMovePlayheadOnDrag(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getMovePlayheadOnDrag(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool result; SWIG_check_num_args("ofxTimeline::getMovePlayheadOnDrag",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getMovePlayheadOnDrag",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getMovePlayheadOnDrag",1,SWIGTYPE_p_ofxTimeline); } 
-    result = (bool)(arg1)->getMovePlayheadOnDrag(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_unselectAll(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::unselectAll",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::unselectAll",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_unselectAll",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->unselectAll(); return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_addPage__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; bool arg3 ; SWIG_check_num_args("ofxTimeline::addPage",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addPage",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addPage",2,"string");
-    if(!lua_isboolean(L,3)) SWIG_fail_arg("ofxTimeline::addPage",3,"bool");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addPage",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    arg3 = (lua_toboolean(L, 3)!=0); (arg1)->addPage(arg2,arg3); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_addPage__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; SWIG_check_num_args("ofxTimeline::addPage",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addPage",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addPage",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addPage",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    (arg1)->addPage(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_addPage(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) {
-    return _wrap_ofxTimeline_addPage__SWIG_1(L);}  if (argc == 3) { return _wrap_ofxTimeline_addPage__SWIG_0(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_addPage'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::addPage(string,bool)\n" "    ofxTimeline::addPage(string)\n");
-  lua_error(L);return 0; }
-static int _wrap_ofxTimeline_setPageName__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; SWIG_check_num_args("ofxTimeline::setPageName",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setPageName",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setPageName",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setPageName",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    (arg1)->setPageName(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setPageName__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; int arg3 ; SWIG_check_num_args("ofxTimeline::setPageName",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setPageName",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setPageName",2,"string");
-    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::setPageName",3,"int");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setPageName",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    arg3 = (int)lua_tonumber(L, 3); (arg1)->setPageName(arg2,arg3); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_setPageName(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L);
-  if (argc == 2) { return _wrap_ofxTimeline_setPageName__SWIG_0(L);}  if (argc == 3) {
-    return _wrap_ofxTimeline_setPageName__SWIG_1(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_setPageName'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::setPageName(string)\n" "    ofxTimeline::setPageName(string,int)\n");
-  lua_error(L);return 0; }
-static int _wrap_ofxTimeline_setCurrentPage__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; SWIG_check_num_args("ofxTimeline::setCurrentPage",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setCurrentPage",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setCurrentPage",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setCurrentPage",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->setCurrentPage(arg2); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setCurrentPage__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    int arg2 ; SWIG_check_num_args("ofxTimeline::setCurrentPage",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setCurrentPage",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setCurrentPage",2,"int");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setCurrentPage",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (int)lua_tonumber(L, 2);
-    (arg1)->setCurrentPage(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setCurrentPage(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L);
-  if (argc == 2) { int _v = 0; { { _v = lua_isnumber(L,argv[1]); } }  if (!_v) goto check_1;
-    return _wrap_ofxTimeline_setCurrentPage__SWIG_1(L);}  check_1: if (argc == 2) {
-    return _wrap_ofxTimeline_setCurrentPage__SWIG_0(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_setCurrentPage'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::setCurrentPage(string)\n" "    ofxTimeline::setCurrentPage(int)\n");
-  lua_error(L);return 0; }
-static int _wrap_ofxTimeline_removePage__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; SWIG_check_num_args("ofxTimeline::removePage",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::removePage",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::removePage",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_removePage",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    (arg1)->removePage(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_removePage__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofxTLPage *arg2 = (ofxTLPage *) 0 ; SWIG_check_num_args("ofxTimeline::removePage",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::removePage",1,"ofxTimeline *");
-    if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofxTimeline::removePage",2,"ofxTLPage *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_removePage",1,SWIGTYPE_p_ofxTimeline); } 
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofxTLPage,0))){
-      SWIG_fail_ptr("ofxTimeline_removePage",2,SWIGTYPE_p_ofxTLPage); }  (arg1)->removePage(arg2); return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_removePage(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 2) {
-    int _v = 0; { { void *ptr;
-        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofxTLPage, 0)) { _v = 0; }
-         else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_ofxTimeline_removePage__SWIG_1(L);}  check_1:
-  if (argc == 2) { return _wrap_ofxTimeline_removePage__SWIG_0(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_removePage'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::removePage(string)\n" "    ofxTimeline::removePage(ofxTLPage *)\n");
-  lua_error(L);return 0; }
-static int _wrap_ofxTimeline_isModal(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; bool result;
-    SWIG_check_num_args("ofxTimeline::isModal",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::isModal",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_isModal",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->isModal();
-    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getModalTrack(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofxTLTrack *result = 0 ; SWIG_check_num_args("ofxTimeline::getModalTrack",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getModalTrack",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getModalTrack",1,SWIGTYPE_p_ofxTimeline); }  result = (ofxTLTrack *)(arg1)->getModalTrack();
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLTrack,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_getFocusedTrack(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofxTLTrack *result = 0 ; SWIG_check_num_args("ofxTimeline::getFocusedTrack",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getFocusedTrack",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getFocusedTrack",1,SWIGTYPE_p_ofxTimeline); } 
-    result = (ofxTLTrack *)(arg1)->getFocusedTrack(); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLTrack,0); SWIG_arg++; 
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setFocusedTrack(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofxTLTrack *arg2 = (ofxTLTrack *) 0 ; SWIG_check_num_args("ofxTimeline::setFocusedTrack",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setFocusedTrack",1,"ofxTimeline *");
-    if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofxTimeline::setFocusedTrack",2,"ofxTLTrack *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setFocusedTrack",1,SWIGTYPE_p_ofxTimeline); } 
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofxTLTrack,0))){
-      SWIG_fail_ptr("ofxTimeline_setFocusedTrack",2,SWIGTYPE_p_ofxTLTrack); }  (arg1)->setFocusedTrack(arg2); return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getTotalSelectedItems(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    int result; SWIG_check_num_args("ofxTimeline::getTotalSelectedItems",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getTotalSelectedItems",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getTotalSelectedItems",1,SWIGTYPE_p_ofxTimeline); } 
-    result = (int)(arg1)->getTotalSelectedItems(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getEarliestTime(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    unsigned long long result; SWIG_check_num_args("ofxTimeline::getEarliestTime",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getEarliestTime",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getEarliestTime",1,SWIGTYPE_p_ofxTimeline); } 
-    result = (unsigned long long)(arg1)->getEarliestTime(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getLatestTime(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    unsigned long long result; SWIG_check_num_args("ofxTimeline::getLatestTime",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getLatestTime",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getLatestTime",1,SWIGTYPE_p_ofxTimeline); } 
-    result = (unsigned long long)(arg1)->getLatestTime(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getEarliestSelectedTime(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    unsigned long long result; SWIG_check_num_args("ofxTimeline::getEarliestSelectedTime",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getEarliestSelectedTime",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getEarliestSelectedTime",1,SWIGTYPE_p_ofxTimeline); } 
-    result = (unsigned long long)(arg1)->getEarliestSelectedTime(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getLatestSelectedTime(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    unsigned long long result; SWIG_check_num_args("ofxTimeline::getLatestSelectedTime",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getLatestSelectedTime",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getLatestSelectedTime",1,SWIGTYPE_p_ofxTimeline); } 
-    result = (unsigned long long)(arg1)->getLatestSelectedTime(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_hasTrack(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ;
-    bool result; SWIG_check_num_args("ofxTimeline::hasTrack",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::hasTrack",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::hasTrack",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_hasTrack",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    result = (bool)(arg1)->hasTrack(arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }
-   lua_error(L); return 0; }
-static int _wrap_ofxTimeline_hasPage(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ;
-    bool result; SWIG_check_num_args("ofxTimeline::hasPage",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::hasPage",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::hasPage",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_hasPage",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    result = (bool)(arg1)->hasPage(arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getTrack(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ;
-    ofxTLTrack *result = 0 ; SWIG_check_num_args("ofxTimeline::getTrack",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getTrack",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getTrack",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getTrack",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    result = (ofxTLTrack *)(arg1)->getTrack(arg2); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLTrack,0); SWIG_arg++; 
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getPage(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ;
-    ofxTLPage *result = 0 ; SWIG_check_num_args("ofxTimeline::getPage",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getPage",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getPage",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getPage",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    result = (ofxTLPage *)(arg1)->getPage(arg2); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLPage,0); SWIG_arg++; 
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_addCurves__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; ofRange arg3 ; float arg4 ; ofRange *argp3 ; ofxTLCurves *result = 0 ;
-    SWIG_check_num_args("ofxTimeline::addCurves",4,4)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addCurves",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addCurves",2,"string");
-    if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofxTimeline::addCurves",3,"ofRange");
-    if(!lua_isnumber(L,4)) SWIG_fail_arg("ofxTimeline::addCurves",4,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addCurves",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_ofRange,0))){
-      SWIG_fail_ptr("ofxTimeline_addCurves",3,SWIGTYPE_p_ofRange); }  arg3 = *argp3; arg4 = (float)lua_tonumber(L, 4);
-    result = (ofxTLCurves *)(arg1)->addCurves(arg2,arg3,arg4);
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLCurves,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_addCurves__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; ofRange arg3 ; ofRange *argp3 ; ofxTLCurves *result = 0 ; SWIG_check_num_args("ofxTimeline::addCurves",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addCurves",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addCurves",2,"string");
-    if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofxTimeline::addCurves",3,"ofRange");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addCurves",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_ofRange,0))){
-      SWIG_fail_ptr("ofxTimeline_addCurves",3,SWIGTYPE_p_ofRange); }  arg3 = *argp3;
-    result = (ofxTLCurves *)(arg1)->addCurves(arg2,arg3); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLCurves,0); SWIG_arg++; 
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_addCurves__SWIG_2(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; ofxTLCurves *result = 0 ; SWIG_check_num_args("ofxTimeline::addCurves",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addCurves",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addCurves",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addCurves",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    result = (ofxTLCurves *)(arg1)->addCurves(arg2); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLCurves,0); SWIG_arg++; 
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_addCurves__SWIG_3(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; string arg3 ; ofRange arg4 ; float arg5 ; ofRange *argp4 ; ofxTLCurves *result = 0 ;
-    SWIG_check_num_args("ofxTimeline::addCurves",5,5)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addCurves",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addCurves",2,"string");
-    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addCurves",3,"string");
-    if(!lua_isuserdata(L,4)) SWIG_fail_arg("ofxTimeline::addCurves",4,"ofRange");
-    if(!lua_isnumber(L,5)) SWIG_fail_arg("ofxTimeline::addCurves",5,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addCurves",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3));
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&argp4,SWIGTYPE_p_ofRange,0))){
-      SWIG_fail_ptr("ofxTimeline_addCurves",4,SWIGTYPE_p_ofRange); }  arg4 = *argp4; arg5 = (float)lua_tonumber(L, 5);
-    result = (ofxTLCurves *)(arg1)->addCurves(arg2,arg3,arg4,arg5);
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLCurves,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_addCurves__SWIG_4(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; string arg3 ; ofRange arg4 ; ofRange *argp4 ; ofxTLCurves *result = 0 ;
-    SWIG_check_num_args("ofxTimeline::addCurves",4,4)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addCurves",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addCurves",2,"string");
-    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addCurves",3,"string");
-    if(!lua_isuserdata(L,4)) SWIG_fail_arg("ofxTimeline::addCurves",4,"ofRange");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addCurves",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3));
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&argp4,SWIGTYPE_p_ofRange,0))){
-      SWIG_fail_ptr("ofxTimeline_addCurves",4,SWIGTYPE_p_ofRange); }  arg4 = *argp4;
-    result = (ofxTLCurves *)(arg1)->addCurves(arg2,arg3,arg4);
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLCurves,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_addCurves__SWIG_5(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; string arg3 ; ofxTLCurves *result = 0 ; SWIG_check_num_args("ofxTimeline::addCurves",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addCurves",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addCurves",2,"string");
-    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addCurves",3,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addCurves",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3)); result = (ofxTLCurves *)(arg1)->addCurves(arg2,arg3);
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLCurves,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_getValue__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; float result; SWIG_check_num_args("ofxTimeline::getValue",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getValue",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getValue",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getValue",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    result = (float)(arg1)->getValue(arg2); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getValueAtPercent(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; float arg3 ; float result; SWIG_check_num_args("ofxTimeline::getValueAtPercent",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getValueAtPercent",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getValueAtPercent",2,"string");
-    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::getValueAtPercent",3,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getValueAtPercent",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); arg3 = (float)lua_tonumber(L, 3);
-    result = (float)(arg1)->getValueAtPercent(arg2,arg3); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getValue__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; float arg3 ; float result; SWIG_check_num_args("ofxTimeline::getValue",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getValue",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getValue",2,"string");
-    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::getValue",3,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getValue",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    arg3 = (float)lua_tonumber(L, 3); result = (float)(arg1)->getValue(arg2,arg3);
-    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getValue__SWIG_2(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; int arg3 ; float result; SWIG_check_num_args("ofxTimeline::getValue",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getValue",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getValue",2,"string");
-    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::getValue",3,"int");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getValue",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    arg3 = (int)lua_tonumber(L, 3); result = (float)(arg1)->getValue(arg2,arg3);
-    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getValue(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) {
-    return _wrap_ofxTimeline_getValue__SWIG_0(L);}  if (argc == 3) { return _wrap_ofxTimeline_getValue__SWIG_1(L);} 
-  if (argc == 3) { return _wrap_ofxTimeline_getValue__SWIG_2(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_getValue'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::getValue(string)\n" "    ofxTimeline::getValue(string,float)\n"
-  "    ofxTimeline::getValue(string,int)\n"); lua_error(L);return 0; }
-static int _wrap_ofxTimeline_addLFO__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; ofRange arg3 ; float arg4 ; ofRange *argp3 ; ofxTLLFO *result = 0 ;
-    SWIG_check_num_args("ofxTimeline::addLFO",4,4)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addLFO",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addLFO",2,"string");
-    if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofxTimeline::addLFO",3,"ofRange");
-    if(!lua_isnumber(L,4)) SWIG_fail_arg("ofxTimeline::addLFO",4,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addLFO",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_ofRange,0))){
-      SWIG_fail_ptr("ofxTimeline_addLFO",3,SWIGTYPE_p_ofRange); }  arg3 = *argp3; arg4 = (float)lua_tonumber(L, 4);
-    result = (ofxTLLFO *)(arg1)->addLFO(arg2,arg3,arg4); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLLFO,0); SWIG_arg++; 
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_addLFO__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; ofRange arg3 ; ofRange *argp3 ; ofxTLLFO *result = 0 ; SWIG_check_num_args("ofxTimeline::addLFO",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addLFO",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addLFO",2,"string");
-    if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofxTimeline::addLFO",3,"ofRange");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addLFO",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_ofRange,0))){
-      SWIG_fail_ptr("ofxTimeline_addLFO",3,SWIGTYPE_p_ofRange); }  arg3 = *argp3;
-    result = (ofxTLLFO *)(arg1)->addLFO(arg2,arg3); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLLFO,0); SWIG_arg++; 
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_addLFO__SWIG_2(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; ofxTLLFO *result = 0 ; SWIG_check_num_args("ofxTimeline::addLFO",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addLFO",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addLFO",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addLFO",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    result = (ofxTLLFO *)(arg1)->addLFO(arg2); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLLFO,0); SWIG_arg++;  return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_addLFO__SWIG_3(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; string arg3 ; ofRange arg4 ; float arg5 ; ofRange *argp4 ; ofxTLLFO *result = 0 ;
-    SWIG_check_num_args("ofxTimeline::addLFO",5,5)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addLFO",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addLFO",2,"string");
-    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addLFO",3,"string");
-    if(!lua_isuserdata(L,4)) SWIG_fail_arg("ofxTimeline::addLFO",4,"ofRange");
-    if(!lua_isnumber(L,5)) SWIG_fail_arg("ofxTimeline::addLFO",5,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addLFO",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3));
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&argp4,SWIGTYPE_p_ofRange,0))){
-      SWIG_fail_ptr("ofxTimeline_addLFO",4,SWIGTYPE_p_ofRange); }  arg4 = *argp4; arg5 = (float)lua_tonumber(L, 5);
-    result = (ofxTLLFO *)(arg1)->addLFO(arg2,arg3,arg4,arg5); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLLFO,0); SWIG_arg++; 
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_addLFO__SWIG_4(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; string arg3 ; ofRange arg4 ; ofRange *argp4 ; ofxTLLFO *result = 0 ;
-    SWIG_check_num_args("ofxTimeline::addLFO",4,4)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addLFO",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addLFO",2,"string");
-    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addLFO",3,"string");
-    if(!lua_isuserdata(L,4)) SWIG_fail_arg("ofxTimeline::addLFO",4,"ofRange");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addLFO",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3));
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&argp4,SWIGTYPE_p_ofRange,0))){
-      SWIG_fail_ptr("ofxTimeline_addLFO",4,SWIGTYPE_p_ofRange); }  arg4 = *argp4;
-    result = (ofxTLLFO *)(arg1)->addLFO(arg2,arg3,arg4); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLLFO,0); SWIG_arg++; 
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_addLFO__SWIG_5(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; string arg3 ; ofxTLLFO *result = 0 ; SWIG_check_num_args("ofxTimeline::addLFO",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addLFO",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addLFO",2,"string");
-    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addLFO",3,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addLFO",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3)); result = (ofxTLLFO *)(arg1)->addLFO(arg2,arg3);
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLLFO,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_addLFO(lua_State* L) { int argc; int argv[6]={ 1,2,3,4,5,6} ; argc = lua_gettop(L);
-  if (argc == 2) { return _wrap_ofxTimeline_addLFO__SWIG_2(L);}  if (argc == 3) { int _v = 0; { { void *ptr;
-        if (lua_isuserdata(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_ofRange, SWIG_POINTER_NO_NULL)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_ofxTimeline_addLFO__SWIG_1(L);}  check_2:
-  if (argc == 3) { return _wrap_ofxTimeline_addLFO__SWIG_5(L);}  if (argc == 4) { int _v = 0; { { void *ptr;
-        if (lua_isuserdata(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_ofRange, SWIG_POINTER_NO_NULL)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_4; { { _v = lua_isnumber(L,argv[3]); } }  if (!_v) goto check_4;
-    return _wrap_ofxTimeline_addLFO__SWIG_0(L);}  check_4: if (argc == 4) { return _wrap_ofxTimeline_addLFO__SWIG_4(L);} 
-  if (argc == 5) { return _wrap_ofxTimeline_addLFO__SWIG_3(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_addLFO'\n" "  Possible C/C++ prototypes are:\n"
-  "    ofxTimeline::addLFO(string,ofRange,float)\n" "    ofxTimeline::addLFO(string,ofRange)\n"
-  "    ofxTimeline::addLFO(string)\n" "    ofxTimeline::addLFO(string,string,ofRange,float)\n"
-  "    ofxTimeline::addLFO(string,string,ofRange)\n" "    ofxTimeline::addLFO(string,string)\n"); lua_error(L);return 0; }
-static int _wrap_ofxTimeline_addSwitches__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; ofxTLSwitches *result = 0 ; SWIG_check_num_args("ofxTimeline::addSwitches",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addSwitches",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addSwitches",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addSwitches",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    result = (ofxTLSwitches *)(arg1)->addSwitches(arg2); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLSwitches,0); SWIG_arg++; 
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_addSwitches__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; string arg3 ; ofxTLSwitches *result = 0 ; SWIG_check_num_args("ofxTimeline::addSwitches",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addSwitches",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addSwitches",2,"string");
-    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addSwitches",3,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addSwitches",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3)); result = (ofxTLSwitches *)(arg1)->addSwitches(arg2,arg3);
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLSwitches,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_addSwitches(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L);
-  if (argc == 2) { return _wrap_ofxTimeline_addSwitches__SWIG_0(L);}  if (argc == 3) {
-    return _wrap_ofxTimeline_addSwitches__SWIG_1(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_addSwitches'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::addSwitches(string)\n"
-  "    ofxTimeline::addSwitches(string,string)\n"); lua_error(L);return 0; }
-static int _wrap_ofxTimeline_isSwitchOn__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; bool result; SWIG_check_num_args("ofxTimeline::isSwitchOn",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::isSwitchOn",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::isSwitchOn",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_isSwitchOn",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    result = (bool)(arg1)->isSwitchOn(arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_isSwitchOn__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; float arg3 ; bool result; SWIG_check_num_args("ofxTimeline::isSwitchOn",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::isSwitchOn",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::isSwitchOn",2,"string");
-    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::isSwitchOn",3,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_isSwitchOn",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    arg3 = (float)lua_tonumber(L, 3); result = (bool)(arg1)->isSwitchOn(arg2,arg3);
-    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_isSwitchOn__SWIG_2(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; int arg3 ; bool result; SWIG_check_num_args("ofxTimeline::isSwitchOn",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::isSwitchOn",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::isSwitchOn",2,"string");
-    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::isSwitchOn",3,"int");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_isSwitchOn",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    arg3 = (int)lua_tonumber(L, 3); result = (bool)(arg1)->isSwitchOn(arg2,arg3);
-    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_isSwitchOn(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L);
-  if (argc == 2) { return _wrap_ofxTimeline_isSwitchOn__SWIG_0(L);}  if (argc == 3) {
-    return _wrap_ofxTimeline_isSwitchOn__SWIG_1(L);}  if (argc == 3) { return _wrap_ofxTimeline_isSwitchOn__SWIG_2(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_isSwitchOn'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::isSwitchOn(string)\n" "    ofxTimeline::isSwitchOn(string,float)\n"
-  "    ofxTimeline::isSwitchOn(string,int)\n"); lua_error(L);return 0; }
-static int _wrap_ofxTimeline_addBangs__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; ofxTLBangs *result = 0 ; SWIG_check_num_args("ofxTimeline::addBangs",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addBangs",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addBangs",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addBangs",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    result = (ofxTLBangs *)(arg1)->addBangs(arg2); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLBangs,0); SWIG_arg++; 
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_addBangs__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; string arg3 ; ofxTLBangs *result = 0 ; SWIG_check_num_args("ofxTimeline::addBangs",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addBangs",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addBangs",2,"string");
-    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addBangs",3,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addBangs",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3)); result = (ofxTLBangs *)(arg1)->addBangs(arg2,arg3);
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLBangs,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_addBangs(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) {
-    return _wrap_ofxTimeline_addBangs__SWIG_0(L);}  if (argc == 3) { return _wrap_ofxTimeline_addBangs__SWIG_1(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_addBangs'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::addBangs(string)\n" "    ofxTimeline::addBangs(string,string)\n");
-  lua_error(L);return 0; }
-static int _wrap_ofxTimeline_addFlags__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; ofxTLFlags *result = 0 ; SWIG_check_num_args("ofxTimeline::addFlags",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addFlags",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addFlags",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addFlags",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    result = (ofxTLFlags *)(arg1)->addFlags(arg2); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLFlags,0); SWIG_arg++; 
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_addFlags__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; string arg3 ; ofxTLFlags *result = 0 ; SWIG_check_num_args("ofxTimeline::addFlags",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addFlags",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addFlags",2,"string");
-    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addFlags",3,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addFlags",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3)); result = (ofxTLFlags *)(arg1)->addFlags(arg2,arg3);
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLFlags,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_addFlags(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) {
-    return _wrap_ofxTimeline_addFlags__SWIG_0(L);}  if (argc == 3) { return _wrap_ofxTimeline_addFlags__SWIG_1(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_addFlags'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::addFlags(string)\n" "    ofxTimeline::addFlags(string,string)\n");
-  lua_error(L);return 0; }
-static int _wrap_ofxTimeline_addColors__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; ofxTLColorTrack *result = 0 ; SWIG_check_num_args("ofxTimeline::addColors",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addColors",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addColors",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addColors",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    result = (ofxTLColorTrack *)(arg1)->addColors(arg2); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLColorTrack,0); SWIG_arg++; 
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_addColors__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; string arg3 ; ofxTLColorTrack *result = 0 ; SWIG_check_num_args("ofxTimeline::addColors",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addColors",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addColors",2,"string");
-    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addColors",3,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addColors",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3)); result = (ofxTLColorTrack *)(arg1)->addColors(arg2,arg3);
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLColorTrack,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_addColors(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) {
-    return _wrap_ofxTimeline_addColors__SWIG_0(L);}  if (argc == 3) { return _wrap_ofxTimeline_addColors__SWIG_1(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_addColors'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::addColors(string)\n" "    ofxTimeline::addColors(string,string)\n");
-  lua_error(L);return 0; }
-static int _wrap_ofxTimeline_addColorsWithPalette__SWIG_0(lua_State* L) { { int SWIG_arg = 0;
-    ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ; ofImage *arg3 = 0 ; ofxTLColorTrack *result = 0 ;
-    SWIG_check_num_args("ofxTimeline::addColorsWithPalette",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",2,"string");
-    if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",3,"ofImage &");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addColorsWithPalette",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_ofImage,0))){
-      SWIG_fail_ptr("ofxTimeline_addColorsWithPalette",3,SWIGTYPE_p_ofImage); } 
-    result = (ofxTLColorTrack *)(arg1)->addColorsWithPalette(arg2,*arg3);
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLColorTrack,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_addColorsWithPalette__SWIG_1(lua_State* L) { { int SWIG_arg = 0;
-    ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ; string arg3 ; ofxTLColorTrack *result = 0 ;
-    SWIG_check_num_args("ofxTimeline::addColorsWithPalette",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",2,"string");
-    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",3,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addColorsWithPalette",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3));
-    result = (ofxTLColorTrack *)(arg1)->addColorsWithPalette(arg2,arg3);
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLColorTrack,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_addColorsWithPalette__SWIG_2(lua_State* L) { { int SWIG_arg = 0;
-    ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ; string arg3 ; ofImage *arg4 = 0 ; ofxTLColorTrack *result = 0 ;
-    SWIG_check_num_args("ofxTimeline::addColorsWithPalette",4,4)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",2,"string");
-    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",3,"string");
-    if(!lua_isuserdata(L,4)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",4,"ofImage &");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addColorsWithPalette",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3));
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&arg4,SWIGTYPE_p_ofImage,0))){
-      SWIG_fail_ptr("ofxTimeline_addColorsWithPalette",4,SWIGTYPE_p_ofImage); } 
-    result = (ofxTLColorTrack *)(arg1)->addColorsWithPalette(arg2,arg3,*arg4);
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLColorTrack,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_addColorsWithPalette__SWIG_3(lua_State* L) { { int SWIG_arg = 0;
-    ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ; string arg3 ; string arg4 ; ofxTLColorTrack *result = 0 ;
-    SWIG_check_num_args("ofxTimeline::addColorsWithPalette",4,4)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",2,"string");
-    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",3,"string");
-    if(!lua_isstring(L,4)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",4,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addColorsWithPalette",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3));
-    (&arg4)->assign(lua_tostring(L,4),lua_rawlen(L,4));
-    result = (ofxTLColorTrack *)(arg1)->addColorsWithPalette(arg2,arg3,arg4);
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLColorTrack,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_addColorsWithPalette(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L);
-  if (argc == 3) { int _v = 0; { { void *ptr;
-        if (lua_isuserdata(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_ofImage, SWIG_POINTER_NO_NULL)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_ofxTimeline_addColorsWithPalette__SWIG_0(L);} 
-  check_1: if (argc == 3) { return _wrap_ofxTimeline_addColorsWithPalette__SWIG_1(L);}  if (argc == 4) { int _v = 0; { {
-        void *ptr;
-        if (lua_isuserdata(L,argv[3])==0 || SWIG_ConvertPtr(L,argv[3], (void **) &ptr, SWIGTYPE_p_ofImage, SWIG_POINTER_NO_NULL)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_3; return _wrap_ofxTimeline_addColorsWithPalette__SWIG_2(L);} 
-  check_3: if (argc == 4) { return _wrap_ofxTimeline_addColorsWithPalette__SWIG_3(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_addColorsWithPalette'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::addColorsWithPalette(string,ofImage &)\n"
-  "    ofxTimeline::addColorsWithPalette(string,string)\n" "    ofxTimeline::addColorsWithPalette(string,string,ofImage &)\n"
-  "    ofxTimeline::addColorsWithPalette(string,string,string)\n"); lua_error(L);return 0; }
-static int _wrap_ofxTimeline_getColor(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ;
-    ofColor result; SWIG_check_num_args("ofxTimeline::getColor",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getColor",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getColor",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getColor",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    result = (arg1)->getColor(arg2); { ofColor * resultptr = new ofColor(result);
-      SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofColor,1); SWIG_arg++; }  return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getColorAtPercent(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; float arg3 ; ofColor result; SWIG_check_num_args("ofxTimeline::getColorAtPercent",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getColorAtPercent",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getColorAtPercent",2,"string");
-    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::getColorAtPercent",3,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getColorAtPercent",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); arg3 = (float)lua_tonumber(L, 3);
-    result = (arg1)->getColorAtPercent(arg2,arg3); { ofColor * resultptr = new ofColor(result);
-      SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofColor,1); SWIG_arg++; }  return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getColorAtSecond(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; float arg3 ; ofColor result; SWIG_check_num_args("ofxTimeline::getColorAtSecond",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getColorAtSecond",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getColorAtSecond",2,"string");
-    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::getColorAtSecond",3,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getColorAtSecond",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); arg3 = (float)lua_tonumber(L, 3);
-    result = (arg1)->getColorAtSecond(arg2,arg3); { ofColor * resultptr = new ofColor(result);
-      SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofColor,1); SWIG_arg++; }  return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getColorAtMillis(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; unsigned long long arg3 ; ofColor result; SWIG_check_num_args("ofxTimeline::getColorAtMillis",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getColorAtMillis",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getColorAtMillis",2,"string");
-    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::getColorAtMillis",3,"unsigned long long");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getColorAtMillis",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); arg3 = (unsigned long long)lua_tonumber(L, 3);
-    result = (arg1)->getColorAtMillis(arg2,arg3); { ofColor * resultptr = new ofColor(result);
-      SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofColor,1); SWIG_arg++; }  return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setDefaultColorPalettePath(lua_State* L) { { int SWIG_arg = 0;
-    ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ; SWIG_check_num_args("ofxTimeline::setDefaultColorPalettePath",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setDefaultColorPalettePath",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setDefaultColorPalettePath",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setDefaultColorPalettePath",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->setDefaultColorPalettePath(arg2); return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getDefaultColorPalettePath(lua_State* L) { { int SWIG_arg = 0;
-    ofxTimeline *arg1 = (ofxTimeline *) 0 ; string result; SWIG_check_num_args("ofxTimeline::getDefaultColorPalettePath",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getDefaultColorPalettePath",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getDefaultColorPalettePath",1,SWIGTYPE_p_ofxTimeline); } 
-    result = (arg1)->getDefaultColorPalettePath(); lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_addImageSequence__SWIG_0(lua_State* L) { { int SWIG_arg = 0;
-    ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ; ofxTLImageSequence *result = 0 ;
-    SWIG_check_num_args("ofxTimeline::addImageSequence",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addImageSequence",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addImageSequence",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addImageSequence",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); result = (ofxTLImageSequence *)(arg1)->addImageSequence(arg2);
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLImageSequence,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_addImageSequence__SWIG_1(lua_State* L) { { int SWIG_arg = 0;
-    ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ; string arg3 ; ofxTLImageSequence *result = 0 ;
-    SWIG_check_num_args("ofxTimeline::addImageSequence",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addImageSequence",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addImageSequence",2,"string");
-    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addImageSequence",3,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addImageSequence",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3));
-    result = (ofxTLImageSequence *)(arg1)->addImageSequence(arg2,arg3);
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLImageSequence,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_addImageSequence(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L);
-  if (argc == 2) { return _wrap_ofxTimeline_addImageSequence__SWIG_0(L);}  if (argc == 3) {
-    return _wrap_ofxTimeline_addImageSequence__SWIG_1(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_addImageSequence'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::addImageSequence(string)\n"
-  "    ofxTimeline::addImageSequence(string,string)\n"); lua_error(L);return 0; }
-static int _wrap_ofxTimeline_getImage__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; ofImage *result = 0 ; SWIG_check_num_args("ofxTimeline::getImage",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getImage",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getImage",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getImage",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    result = (ofImage *)(arg1)->getImage(arg2); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofImage,0); SWIG_arg++;  return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getImage__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; float arg3 ; ofImage *result = 0 ; SWIG_check_num_args("ofxTimeline::getImage",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getImage",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getImage",2,"string");
-    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::getImage",3,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getImage",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    arg3 = (float)lua_tonumber(L, 3); result = (ofImage *)(arg1)->getImage(arg2,arg3);
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofImage,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_getImage__SWIG_2(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; int arg3 ; ofImage *result = 0 ; SWIG_check_num_args("ofxTimeline::getImage",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getImage",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getImage",2,"string");
-    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::getImage",3,"int");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getImage",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    arg3 = (int)lua_tonumber(L, 3); result = (ofImage *)(arg1)->getImage(arg2,arg3);
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofImage,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_getImage(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) {
-    return _wrap_ofxTimeline_getImage__SWIG_0(L);}  if (argc == 3) { return _wrap_ofxTimeline_getImage__SWIG_1(L);} 
-  if (argc == 3) { return _wrap_ofxTimeline_getImage__SWIG_2(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_getImage'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::getImage(string)\n" "    ofxTimeline::getImage(string,float)\n"
-  "    ofxTimeline::getImage(string,int)\n"); lua_error(L);return 0; }
-static int _wrap_ofxTimeline_setTimecontrolTrack__SWIG_0(lua_State* L) { { int SWIG_arg = 0;
-    ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ; SWIG_check_num_args("ofxTimeline::setTimecontrolTrack",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setTimecontrolTrack",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setTimecontrolTrack",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setTimecontrolTrack",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->setTimecontrolTrack(arg2); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setTimecontrolTrack__SWIG_1(lua_State* L) { { int SWIG_arg = 0;
-    ofxTimeline *arg1 = (ofxTimeline *) 0 ; ofxTLTrack *arg2 = (ofxTLTrack *) 0 ;
-    SWIG_check_num_args("ofxTimeline::setTimecontrolTrack",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setTimecontrolTrack",1,"ofxTimeline *");
-    if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofxTimeline::setTimecontrolTrack",2,"ofxTLTrack *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setTimecontrolTrack",1,SWIGTYPE_p_ofxTimeline); } 
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofxTLTrack,0))){
-      SWIG_fail_ptr("ofxTimeline_setTimecontrolTrack",2,SWIGTYPE_p_ofxTLTrack); }  (arg1)->setTimecontrolTrack(arg2);
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setTimecontrolTrack(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L);
-  if (argc == 2) { int _v = 0; { { void *ptr;
-        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofxTLTrack, 0)) { _v = 0; }
-         else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_ofxTimeline_setTimecontrolTrack__SWIG_1(L);}  check_1:
-  if (argc == 2) { return _wrap_ofxTimeline_setTimecontrolTrack__SWIG_0(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_setTimecontrolTrack'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::setTimecontrolTrack(string)\n"
-  "    ofxTimeline::setTimecontrolTrack(ofxTLTrack *)\n"); lua_error(L);return 0; }
-static int _wrap_ofxTimeline_getTimecontrolTrack(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofxTLTrack *result = 0 ; SWIG_check_num_args("ofxTimeline::getTimecontrolTrack",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getTimecontrolTrack",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getTimecontrolTrack",1,SWIGTYPE_p_ofxTimeline); } 
-    result = (ofxTLTrack *)(arg1)->getTimecontrolTrack(); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLTrack,0); SWIG_arg++; 
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_addTrack(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ;
-    ofxTLTrack *arg3 = (ofxTLTrack *) 0 ; SWIG_check_num_args("ofxTimeline::addTrack",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addTrack",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addTrack",2,"string");
-    if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofxTimeline::addTrack",3,"ofxTLTrack *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addTrack",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_ofxTLTrack,0))){
-      SWIG_fail_ptr("ofxTimeline_addTrack",3,SWIGTYPE_p_ofxTLTrack); }  (arg1)->addTrack(arg2,arg3); return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getTrackHeader__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; ofxTLTrackHeader *result = 0 ; SWIG_check_num_args("ofxTimeline::getTrackHeader",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getTrackHeader",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getTrackHeader",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getTrackHeader",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); result = (ofxTLTrackHeader *)(arg1)->getTrackHeader(arg2);
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLTrackHeader,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_getTrackHeader__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofxTLTrack *arg2 = (ofxTLTrack *) 0 ; ofxTLTrackHeader *result = 0 ; SWIG_check_num_args("ofxTimeline::getTrackHeader",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getTrackHeader",1,"ofxTimeline *");
-    if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofxTimeline::getTrackHeader",2,"ofxTLTrack *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getTrackHeader",1,SWIGTYPE_p_ofxTimeline); } 
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofxTLTrack,0))){
-      SWIG_fail_ptr("ofxTimeline_getTrackHeader",2,SWIGTYPE_p_ofxTLTrack); } 
-    result = (ofxTLTrackHeader *)(arg1)->getTrackHeader(arg2);
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLTrackHeader,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_getTrackHeader(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L);
-  if (argc == 2) { int _v = 0; { { void *ptr;
-        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofxTLTrack, 0)) { _v = 0; }
-         else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_ofxTimeline_getTrackHeader__SWIG_1(L);}  check_1:
-  if (argc == 2) { return _wrap_ofxTimeline_getTrackHeader__SWIG_0(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_getTrackHeader'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::getTrackHeader(string)\n"
-  "    ofxTimeline::getTrackHeader(ofxTLTrack *)\n"); lua_error(L);return 0; }
-static int _wrap_ofxTimeline_removeTrack__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; SWIG_check_num_args("ofxTimeline::removeTrack",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::removeTrack",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::removeTrack",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_removeTrack",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    (arg1)->removeTrack(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_removeTrack__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofxTLTrack *arg2 = (ofxTLTrack *) 0 ; SWIG_check_num_args("ofxTimeline::removeTrack",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::removeTrack",1,"ofxTimeline *");
-    if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofxTimeline::removeTrack",2,"ofxTLTrack *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_removeTrack",1,SWIGTYPE_p_ofxTimeline); } 
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofxTLTrack,0))){
-      SWIG_fail_ptr("ofxTimeline_removeTrack",2,SWIGTYPE_p_ofxTLTrack); }  (arg1)->removeTrack(arg2); return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_removeTrack(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 2) {
-    int _v = 0; { { void *ptr;
-        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofxTLTrack, 0)) { _v = 0; }
-         else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_ofxTimeline_removeTrack__SWIG_1(L);}  check_1:
-  if (argc == 2) { return _wrap_ofxTimeline_removeTrack__SWIG_0(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_removeTrack'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::removeTrack(string)\n" "    ofxTimeline::removeTrack(ofxTLTrack *)\n");
-  lua_error(L);return 0; }
-static int _wrap_ofxTimeline_bringTrackToTop__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; SWIG_check_num_args("ofxTimeline::bringTrackToTop",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::bringTrackToTop",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::bringTrackToTop",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_bringTrackToTop",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->bringTrackToTop(arg2); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_bringTrackToTop__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofxTLTrack *arg2 = (ofxTLTrack *) 0 ; SWIG_check_num_args("ofxTimeline::bringTrackToTop",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::bringTrackToTop",1,"ofxTimeline *");
-    if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofxTimeline::bringTrackToTop",2,"ofxTLTrack *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_bringTrackToTop",1,SWIGTYPE_p_ofxTimeline); } 
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofxTLTrack,0))){
-      SWIG_fail_ptr("ofxTimeline_bringTrackToTop",2,SWIGTYPE_p_ofxTLTrack); }  (arg1)->bringTrackToTop(arg2); return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_bringTrackToTop(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L);
-  if (argc == 2) { int _v = 0; { { void *ptr;
-        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofxTLTrack, 0)) { _v = 0; }
-         else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_ofxTimeline_bringTrackToTop__SWIG_1(L);}  check_1:
-  if (argc == 2) { return _wrap_ofxTimeline_bringTrackToTop__SWIG_0(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_bringTrackToTop'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::bringTrackToTop(string)\n"
-  "    ofxTimeline::bringTrackToTop(ofxTLTrack *)\n"); lua_error(L);return 0; }
-static int _wrap_ofxTimeline_bringTrackToBottom__SWIG_0(lua_State* L) { { int SWIG_arg = 0;
-    ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ; SWIG_check_num_args("ofxTimeline::bringTrackToBottom",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::bringTrackToBottom",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::bringTrackToBottom",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_bringTrackToBottom",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->bringTrackToBottom(arg2); return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_bringTrackToBottom__SWIG_1(lua_State* L) { { int SWIG_arg = 0;
-    ofxTimeline *arg1 = (ofxTimeline *) 0 ; ofxTLTrack *arg2 = (ofxTLTrack *) 0 ;
-    SWIG_check_num_args("ofxTimeline::bringTrackToBottom",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::bringTrackToBottom",1,"ofxTimeline *");
-    if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofxTimeline::bringTrackToBottom",2,"ofxTLTrack *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_bringTrackToBottom",1,SWIGTYPE_p_ofxTimeline); } 
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofxTLTrack,0))){
-      SWIG_fail_ptr("ofxTimeline_bringTrackToBottom",2,SWIGTYPE_p_ofxTLTrack); }  (arg1)->bringTrackToBottom(arg2);
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_bringTrackToBottom(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L);
-  if (argc == 2) { int _v = 0; { { void *ptr;
-        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofxTLTrack, 0)) { _v = 0; }
-         else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_ofxTimeline_bringTrackToBottom__SWIG_1(L);}  check_1:
-  if (argc == 2) { return _wrap_ofxTimeline_bringTrackToBottom__SWIG_0(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_bringTrackToBottom'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::bringTrackToBottom(string)\n"
-  "    ofxTimeline::bringTrackToBottom(ofxTLTrack *)\n"); lua_error(L);return 0; }
-static int _wrap_ofxTimeline_setupFont__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::setupFont",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setupFont",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setupFont",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->setupFont(); return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setupFont__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; int arg3 ; SWIG_check_num_args("ofxTimeline::setupFont",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setupFont",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setupFont",2,"string");
-    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::setupFont",3,"int");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setupFont",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    arg3 = (int)lua_tonumber(L, 3); (arg1)->setupFont(arg2,arg3); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setupFont(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 1) {
-    return _wrap_ofxTimeline_setupFont__SWIG_0(L);}  if (argc == 3) { return _wrap_ofxTimeline_setupFont__SWIG_1(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_setupFont'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::setupFont()\n" "    ofxTimeline::setupFont(string,int)\n");
-  lua_error(L);return 0; }
-static int _wrap_ofxTimeline_getFont(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofTrueTypeFont *result = 0 ; SWIG_check_num_args("ofxTimeline::getFont",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getFont",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getFont",1,SWIGTYPE_p_ofxTimeline); }  result = (ofTrueTypeFont *) &(arg1)->getFont();
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofTrueTypeFont,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_getColors(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofxTLColors *result = 0 ; SWIG_check_num_args("ofxTimeline::getColors",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getColors",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getColors",1,SWIGTYPE_p_ofxTimeline); }  result = (ofxTLColors *) &(arg1)->getColors();
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLColors,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_getTimecode(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofxTimecode *result = 0 ; SWIG_check_num_args("ofxTimeline::getTimecode",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getTimecode",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getTimecode",1,SWIGTYPE_p_ofxTimeline); }  result = (ofxTimecode *) &(arg1)->getTimecode();
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTimecode,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_getTimer(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofxMSATimer *result = 0 ; SWIG_check_num_args("ofxTimeline::getTimer",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getTimer",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getTimer",1,SWIGTYPE_p_ofxTimeline); }  result = (ofxMSATimer *) &(arg1)->getTimer();
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxMSATimer,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_getZoomer(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofxTLZoomer *result = 0 ; SWIG_check_num_args("ofxTimeline::getZoomer",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getZoomer",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getZoomer",1,SWIGTYPE_p_ofxTimeline); }  result = (ofxTLZoomer *)(arg1)->getZoomer();
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLZoomer,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_getPages(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    vector< ofxTLPage * > *result = 0 ; SWIG_check_num_args("ofxTimeline::getPages",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getPages",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getPages",1,SWIGTYPE_p_ofxTimeline); }  result = (vector< ofxTLPage * > *) &(arg1)->getPages();
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_vectorT_ofxTLPage_p_t,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; } 
-  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getNudgePercent(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofVec2f result; SWIG_check_num_args("ofxTimeline::getNudgePercent",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getNudgePercent",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getNudgePercent",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getNudgePercent(); {
-      ofVec2f * resultptr = new ofVec2f(result); SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVec2f,1); SWIG_arg++; } 
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getBigNudgePercent(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofVec2f result; SWIG_check_num_args("ofxTimeline::getBigNudgePercent",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getBigNudgePercent",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getBigNudgePercent",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getBigNudgePercent(); {
-      ofVec2f * resultptr = new ofVec2f(result); SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVec2f,1); SWIG_arg++; } 
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setDragTimeOffset(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    unsigned long long arg2 ; SWIG_check_num_args("ofxTimeline::setDragTimeOffset",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setDragTimeOffset",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setDragTimeOffset",2,"unsigned long long");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setDragTimeOffset",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (unsigned long long)lua_tonumber(L, 2);
-    (arg1)->setDragTimeOffset(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_cancelSnapping(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::cancelSnapping",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::cancelSnapping",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_cancelSnapping",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->cancelSnapping(); return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getDragTimeOffset(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    long result; SWIG_check_num_args("ofxTimeline::getDragTimeOffset",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getDragTimeOffset",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getDragTimeOffset",1,SWIGTYPE_p_ofxTimeline); }  result = (long)(arg1)->getDragTimeOffset();
-    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setHoverTime(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    unsigned long long arg2 ; SWIG_check_num_args("ofxTimeline::setHoverTime",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setHoverTime",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setHoverTime",2,"unsigned long long");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setHoverTime",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (unsigned long long)lua_tonumber(L, 2);
-    (arg1)->setHoverTime(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_formatTime__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    float arg2 ; string result; SWIG_check_num_args("ofxTimeline::formatTime",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::formatTime",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::formatTime",2,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_formatTime",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
-    result = (arg1)->formatTime(arg2); lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_formatTime__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    unsigned long long arg2 ; string result; SWIG_check_num_args("ofxTimeline::formatTime",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::formatTime",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::formatTime",2,"unsigned long long");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_formatTime",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (unsigned long long)lua_tonumber(L, 2);
-    result = (arg1)->formatTime(arg2); lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_formatTime(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 2) {
-    return _wrap_ofxTimeline_formatTime__SWIG_0(L);}  if (argc == 2) { return _wrap_ofxTimeline_formatTime__SWIG_1(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_formatTime'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::formatTime(float)\n"
-  "    ofxTimeline::formatTime(unsigned long long)\n"); lua_error(L);return 0; }
-static int _wrap_ofxTimeline_nameToXMLName(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; string result; SWIG_check_num_args("ofxTimeline::nameToXMLName",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::nameToXMLName",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::nameToXMLName",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_nameToXMLName",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); result = (arg1)->nameToXMLName(arg2);
-    lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_confirmedUniqueName(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; string result; SWIG_check_num_args("ofxTimeline::confirmedUniqueName",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::confirmedUniqueName",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::confirmedUniqueName",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_confirmedUniqueName",1,SWIGTYPE_p_ofxTimeline); } 
-    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); result = (arg1)->confirmedUniqueName(arg2);
-    lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_createPlaybackEvent(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofxTLPlaybackEventArgs result; SWIG_check_num_args("ofxTimeline::createPlaybackEvent",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::createPlaybackEvent",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_createPlaybackEvent",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->createPlaybackEvent(); {
-      ofxTLPlaybackEventArgs * resultptr = new ofxTLPlaybackEventArgs(result);
-      SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofxTLPlaybackEventArgs,1); SWIG_arg++; }  return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_presentedModalContent(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofxTLTrack *arg2 = (ofxTLTrack *) 0 ; SWIG_check_num_args("ofxTimeline::presentedModalContent",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::presentedModalContent",1,"ofxTimeline *");
-    if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofxTimeline::presentedModalContent",2,"ofxTLTrack *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_presentedModalContent",1,SWIGTYPE_p_ofxTimeline); } 
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofxTLTrack,0))){
-      SWIG_fail_ptr("ofxTimeline_presentedModalContent",2,SWIGTYPE_p_ofxTLTrack); }  (arg1)->presentedModalContent(arg2);
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_dismissedModalContent(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    SWIG_check_num_args("ofxTimeline::dismissedModalContent",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::dismissedModalContent",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_dismissedModalContent",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->dismissedModalContent();
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_screenXToMillis(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    float arg2 ; long result; SWIG_check_num_args("ofxTimeline::screenXToMillis",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::screenXToMillis",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::screenXToMillis",2,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_screenXToMillis",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
-    result = (long)(arg1)->screenXToMillis(arg2); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_millisToScreenX(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    long arg2 ; float result; SWIG_check_num_args("ofxTimeline::millisToScreenX",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::millisToScreenX",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::millisToScreenX",2,"long");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_millisToScreenX",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (long)lua_tonumber(L, 2);
-    result = (float)(arg1)->millisToScreenX(arg2); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_screenXtoNormalizedX__SWIG_0(lua_State* L) { { int SWIG_arg = 0;
-    ofxTimeline *arg1 = (ofxTimeline *) 0 ; float arg2 ; float result;
-    SWIG_check_num_args("ofxTimeline::screenXtoNormalizedX",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::screenXtoNormalizedX",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::screenXtoNormalizedX",2,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_screenXtoNormalizedX",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
-    result = (float)(arg1)->screenXtoNormalizedX(arg2); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_normalizedXtoScreenX__SWIG_0(lua_State* L) { { int SWIG_arg = 0;
-    ofxTimeline *arg1 = (ofxTimeline *) 0 ; float arg2 ; float result;
-    SWIG_check_num_args("ofxTimeline::normalizedXtoScreenX",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::normalizedXtoScreenX",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::normalizedXtoScreenX",2,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_normalizedXtoScreenX",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
-    result = (float)(arg1)->normalizedXtoScreenX(arg2); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_screenXtoNormalizedX__SWIG_1(lua_State* L) { { int SWIG_arg = 0;
-    ofxTimeline *arg1 = (ofxTimeline *) 0 ; float arg2 ; ofRange arg3 ; ofRange *argp3 ; float result;
-    SWIG_check_num_args("ofxTimeline::screenXtoNormalizedX",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::screenXtoNormalizedX",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::screenXtoNormalizedX",2,"float");
-    if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofxTimeline::screenXtoNormalizedX",3,"ofRange");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_screenXtoNormalizedX",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_ofRange,0))){
-      SWIG_fail_ptr("ofxTimeline_screenXtoNormalizedX",3,SWIGTYPE_p_ofRange); }  arg3 = *argp3;
-    result = (float)(arg1)->screenXtoNormalizedX(arg2,arg3); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_screenXtoNormalizedX(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L);
-  if (argc == 2) { return _wrap_ofxTimeline_screenXtoNormalizedX__SWIG_0(L);}  if (argc == 3) {
-    return _wrap_ofxTimeline_screenXtoNormalizedX__SWIG_1(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_screenXtoNormalizedX'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::screenXtoNormalizedX(float)\n"
-  "    ofxTimeline::screenXtoNormalizedX(float,ofRange)\n"); lua_error(L);return 0; }
-static int _wrap_ofxTimeline_normalizedXtoScreenX__SWIG_1(lua_State* L) { { int SWIG_arg = 0;
-    ofxTimeline *arg1 = (ofxTimeline *) 0 ; float arg2 ; ofRange arg3 ; ofRange *argp3 ; float result;
-    SWIG_check_num_args("ofxTimeline::normalizedXtoScreenX",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::normalizedXtoScreenX",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::normalizedXtoScreenX",2,"float");
-    if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofxTimeline::normalizedXtoScreenX",3,"ofRange");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_normalizedXtoScreenX",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_ofRange,0))){
-      SWIG_fail_ptr("ofxTimeline_normalizedXtoScreenX",3,SWIGTYPE_p_ofRange); }  arg3 = *argp3;
-    result = (float)(arg1)->normalizedXtoScreenX(arg2,arg3); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_normalizedXtoScreenX(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L);
-  if (argc == 2) { return _wrap_ofxTimeline_normalizedXtoScreenX__SWIG_0(L);}  if (argc == 3) {
-    return _wrap_ofxTimeline_normalizedXtoScreenX__SWIG_1(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_normalizedXtoScreenX'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::normalizedXtoScreenX(float)\n"
-  "    ofxTimeline::normalizedXtoScreenX(float,ofRange)\n"); lua_error(L);return 0; }
-static int _wrap_ofxTimeline_events(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    ofxTLEvents *result = 0 ; SWIG_check_num_args("ofxTimeline::events",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::events",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_events",1,SWIGTYPE_p_ofxTimeline); }  result = (ofxTLEvents *) &(arg1)->events();
-    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLEvents,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_curvesUseBinary_set(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool arg2 ; SWIG_check_num_args("ofxTimeline::curvesUseBinary",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::curvesUseBinary",1,"ofxTimeline *");
-    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::curvesUseBinary",2,"bool");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_curvesUseBinary_set",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
-    if (arg1) (arg1)->curvesUseBinary = arg2; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_curvesUseBinary_get(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    bool result; SWIG_check_num_args("ofxTimeline::curvesUseBinary",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::curvesUseBinary",1,"ofxTimeline *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_curvesUseBinary_get",1,SWIGTYPE_p_ofxTimeline); }  result = (bool) ((arg1)->curvesUseBinary);
-    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setLoopType__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    short arg2 ; SWIG_check_num_args("ofxTimeline::setLoopType",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setLoopType",1,"ofxTimeline *");
-    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setLoopType",2,"short");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_setLoopType",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (short)lua_tonumber(L, 2);
-    ofxTimeline_setLoopType__SWIG_1(arg1,arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_setLoopType(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 2) {
-    int _v = 0; { { void *ptr;
-        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofLoopType, SWIG_POINTER_NO_NULL)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_ofxTimeline_setLoopType__SWIG_0(L);}  check_1:
-  if (argc == 2) { return _wrap_ofxTimeline_setLoopType__SWIG_1(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_setLoopType'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::setLoopType(ofLoopType)\n" "    ofxTimeline::setLoopType(short)\n");
-  lua_error(L);return 0; }
-static int _wrap_ofxTimeline_getR(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ;
-    float result; SWIG_check_num_args("ofxTimeline::getR",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getR",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getR",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getR",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    result = (float)ofxTimeline_getR(arg1,SWIG_STD_MOVE(arg2)); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getG(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ;
-    float result; SWIG_check_num_args("ofxTimeline::getG",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getG",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getG",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getG",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    result = (float)ofxTimeline_getG(arg1,SWIG_STD_MOVE(arg2)); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getB(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ;
-    float result; SWIG_check_num_args("ofxTimeline::getB",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getB",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getB",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getB",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    result = (float)ofxTimeline_getB(arg1,SWIG_STD_MOVE(arg2)); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_getA(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ;
-    float result; SWIG_check_num_args("ofxTimeline::getA",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getA",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getA",2,"string");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_getA",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    result = (float)ofxTimeline_getA(arg1,SWIG_STD_MOVE(arg2)); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ofxTimeline_addCurves__SWIG_6(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
-    string arg2 ; float arg3 ; float arg4 ; SWIG_check_num_args("ofxTimeline::addCurves",4,4)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addCurves",1,"ofxTimeline *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addCurves",2,"string");
-    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::addCurves",3,"float");
-    if(!lua_isnumber(L,4)) SWIG_fail_arg("ofxTimeline::addCurves",4,"float");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
-      SWIG_fail_ptr("ofxTimeline_addCurves",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    arg3 = (float)lua_tonumber(L, 3); arg4 = (float)lua_tonumber(L, 4);
-    ofxTimeline_addCurves__SWIG_6(arg1,SWIG_STD_MOVE(arg2),arg3,arg4); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
-  return 0; }
-static int _wrap_ofxTimeline_addCurves(lua_State* L) { int argc; int argv[6]={ 1,2,3,4,5,6} ; argc = lua_gettop(L);
-  if (argc == 2) { return _wrap_ofxTimeline_addCurves__SWIG_2(L);}  if (argc == 3) { int _v = 0; { { void *ptr;
-        if (lua_isuserdata(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_ofRange, SWIG_POINTER_NO_NULL)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_ofxTimeline_addCurves__SWIG_1(L);}  check_2:
-  if (argc == 3) { return _wrap_ofxTimeline_addCurves__SWIG_5(L);}  if (argc == 4) { int _v = 0; { { void *ptr;
-        if (lua_isuserdata(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_ofRange, SWIG_POINTER_NO_NULL)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_4; { { _v = lua_isnumber(L,argv[3]); } }  if (!_v) goto check_4;
-    return _wrap_ofxTimeline_addCurves__SWIG_0(L);}  check_4: if (argc == 4) { int _v = 0; { { _v = lua_isnumber(L,argv[2]); } }
-     if (!_v) goto check_5; { { _v = lua_isnumber(L,argv[3]); } }  if (!_v) goto check_5;
-    return _wrap_ofxTimeline_addCurves__SWIG_6(L);}  check_5: if (argc == 4) { return _wrap_ofxTimeline_addCurves__SWIG_4(L);} 
-  if (argc == 5) { return _wrap_ofxTimeline_addCurves__SWIG_3(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_addCurves'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::addCurves(string,ofRange,float)\n"
-  "    ofxTimeline::addCurves(string,ofRange)\n" "    ofxTimeline::addCurves(string)\n"
-  "    ofxTimeline::addCurves(string,string,ofRange,float)\n" "    ofxTimeline::addCurves(string,string,ofRange)\n"
-  "    ofxTimeline::addCurves(string,string)\n" "    ofxTimeline::addCurves(string,float,float)\n"); lua_error(L);return 0; }
-static void swig_delete_ofxTimeline(void *obj) {
-ofxTimeline *arg1 = (ofxTimeline *) obj;
-delete arg1;
-}
-static int _proxy__wrap_new_ofxTimeline(lua_State *L) {
-    assert(lua_istable(L,1));
-    lua_pushcfunction(L,_wrap_new_ofxTimeline);
-    assert(!lua_isnil(L,-1));
-    lua_replace(L,1); /* replace our table with real constructor */
-    lua_call(L,lua_gettop(L)-1,1);
-    return 1;
-}
-static swig_lua_attribute swig_ofxTimeline_attributes[] = {
-    { "curvesUseBinary", _wrap_ofxTimeline_curvesUseBinary_get, _wrap_ofxTimeline_curvesUseBinary_set },
-    {0,0,0}
-};
-static swig_lua_method swig_ofxTimeline_methods[]= {
-    { "setup", _wrap_ofxTimeline_setup},
-    { "moveToThread", _wrap_ofxTimeline_moveToThread},
-    { "removeFromThread", _wrap_ofxTimeline_removeFromThread},
-    { "toggleEnabled", _wrap_ofxTimeline_toggleEnabled},
-    { "enable", _wrap_ofxTimeline_enable},
-    { "disable", _wrap_ofxTimeline_disable},
-    { "getIsEnabled", _wrap_ofxTimeline_getIsEnabled},
-    { "enableEvents", _wrap_ofxTimeline_enableEvents},
-    { "disableEvents", _wrap_ofxTimeline_disableEvents},
-    { "clear", _wrap_ofxTimeline_clear},
-    { "reset", _wrap_ofxTimeline_reset},
-    { "setName", _wrap_ofxTimeline_setName},
-    { "getName", _wrap_ofxTimeline_getName},
-    { "play", _wrap_ofxTimeline_play},
-    { "stop", _wrap_ofxTimeline_stop},
-    { "togglePlay", _wrap_ofxTimeline_togglePlay},
-    { "getIsPlaying", _wrap_ofxTimeline_getIsPlaying},
-    { "getSpacebarTogglesPlay", _wrap_ofxTimeline_getSpacebarTogglesPlay},
-    { "setSpacebarTogglePlay", _wrap_ofxTimeline_setSpacebarTogglePlay},
-    { "playSelectedTrack", _wrap_ofxTimeline_playSelectedTrack},
-    { "stopSelectedTrack", _wrap_ofxTimeline_stopSelectedTrack},
-    { "togglePlaySelectedTrack", _wrap_ofxTimeline_togglePlaySelectedTrack},
-    { "getLoopType", _wrap_ofxTimeline_getLoopType},
-    { "isDone", _wrap_ofxTimeline_isDone},
-    { "toggleShow", _wrap_ofxTimeline_toggleShow},
-    { "show", _wrap_ofxTimeline_show},
-    { "hide", _wrap_ofxTimeline_hide},
-    { "getIsShowing", _wrap_ofxTimeline_getIsShowing},
-    { "draw", _wrap_ofxTimeline_draw},
-    { "mousePressed", _wrap_ofxTimeline_mousePressed},
-    { "mouseMoved", _wrap_ofxTimeline_mouseMoved},
-    { "mouseDragged", _wrap_ofxTimeline_mouseDragged},
-    { "mouseReleased", _wrap_ofxTimeline_mouseReleased},
-    { "keyPressed", _wrap_ofxTimeline_keyPressed},
-    { "keyReleased", _wrap_ofxTimeline_keyReleased},
-    { "windowResized", _wrap_ofxTimeline_windowResized},
-    { "exit", _wrap_ofxTimeline_exit},
-    { "setShowTimeControls", _wrap_ofxTimeline_setShowTimeControls},
-    { "setShowTicker", _wrap_ofxTimeline_setShowTicker},
-    { "setShowInoutControl", _wrap_ofxTimeline_setShowInoutControl},
-    { "setShowZoomer", _wrap_ofxTimeline_setShowZoomer},
-    { "setWorkingFolder", _wrap_ofxTimeline_setWorkingFolder},
-    { "getWorkingFolder", _wrap_ofxTimeline_getWorkingFolder},
-    { "loadTracksFromFolder", _wrap_ofxTimeline_loadTracksFromFolder},
-    { "saveTracksToFolder", _wrap_ofxTimeline_saveTracksToFolder},
-    { "setDefaultFontPath", _wrap_ofxTimeline_setDefaultFontPath},
-    { "setFrameRate", _wrap_ofxTimeline_setFrameRate},
-    { "setDurationInFrames", _wrap_ofxTimeline_setDurationInFrames},
-    { "setDurationInSeconds", _wrap_ofxTimeline_setDurationInSeconds},
-    { "setDurationInMillis", _wrap_ofxTimeline_setDurationInMillis},
-    { "setDurationInTimecode", _wrap_ofxTimeline_setDurationInTimecode},
-    { "getDurationInFrames", _wrap_ofxTimeline_getDurationInFrames},
-    { "getDurationInSeconds", _wrap_ofxTimeline_getDurationInSeconds},
-    { "getDurationInMilliseconds", _wrap_ofxTimeline_getDurationInMilliseconds},
-    { "getDurationInTimecode", _wrap_ofxTimeline_getDurationInTimecode},
-    { "setFrameBased", _wrap_ofxTimeline_setFrameBased},
-    { "getIsFrameBased", _wrap_ofxTimeline_getIsFrameBased},
-    { "setAutosave", _wrap_ofxTimeline_setAutosave},
-    { "save", _wrap_ofxTimeline_save},
-    { "hasUnsavedChanges", _wrap_ofxTimeline_hasUnsavedChanges},
-    { "setCurrentFrame", _wrap_ofxTimeline_setCurrentFrame},
-    { "setCurrentTimeSeconds", _wrap_ofxTimeline_setCurrentTimeSeconds},
-    { "setCurrentTimeMillis", _wrap_ofxTimeline_setCurrentTimeMillis},
-    { "setPercentComplete", _wrap_ofxTimeline_setPercentComplete},
-    { "setCurrentTimecode", _wrap_ofxTimeline_setCurrentTimecode},
-    { "setCurrentTimeToInPoint", _wrap_ofxTimeline_setCurrentTimeToInPoint},
-    { "setCurrentTimeToOutPoint", _wrap_ofxTimeline_setCurrentTimeToOutPoint},
-    { "getCurrentFrame", _wrap_ofxTimeline_getCurrentFrame},
-    { "getCurrentPageIndex", _wrap_ofxTimeline_getCurrentPageIndex},
-    { "getCurrentPageName", _wrap_ofxTimeline_getCurrentPageName},
-    { "getCurrentTime", _wrap_ofxTimeline_getCurrentTime},
-    { "getCurrentTimeMillis", _wrap_ofxTimeline_getCurrentTimeMillis},
-    { "getPercentComplete", _wrap_ofxTimeline_getPercentComplete},
-    { "getCurrentTimecode", _wrap_ofxTimeline_getCurrentTimecode},
-    { "getQuantizedTime", _wrap_ofxTimeline_getQuantizedTime},
-    { "flagUserChangedValue", _wrap_ofxTimeline_flagUserChangedValue},
-    { "getUserChangedValue", _wrap_ofxTimeline_getUserChangedValue},
-    { "flagTrackModified", _wrap_ofxTimeline_flagTrackModified},
-    { "setInPointAtPercent", _wrap_ofxTimeline_setInPointAtPercent},
-    { "setInPointAtFrame", _wrap_ofxTimeline_setInPointAtFrame},
-    { "setInPointAtSeconds", _wrap_ofxTimeline_setInPointAtSeconds},
-    { "setInPointAtMillis", _wrap_ofxTimeline_setInPointAtMillis},
-    { "setInPointAtTimecode", _wrap_ofxTimeline_setInPointAtTimecode},
-    { "setInPointAtPlayhead", _wrap_ofxTimeline_setInPointAtPlayhead},
-    { "setOutPointAtPercent", _wrap_ofxTimeline_setOutPointAtPercent},
-    { "setOutPointAtFrame", _wrap_ofxTimeline_setOutPointAtFrame},
-    { "setOutPointAtSeconds", _wrap_ofxTimeline_setOutPointAtSeconds},
-    { "setOutPointAtMillis", _wrap_ofxTimeline_setOutPointAtMillis},
-    { "setOutPointAtTimecode", _wrap_ofxTimeline_setOutPointAtTimecode},
-    { "setOutPointAtPlayhead", _wrap_ofxTimeline_setOutPointAtPlayhead},
-    { "setEditableHeaders", _wrap_ofxTimeline_setEditableHeaders},
-    { "areHeadersEditable", _wrap_ofxTimeline_areHeadersEditable},
-    { "setMinimalHeaders", _wrap_ofxTimeline_setMinimalHeaders},
-    { "areHeadersMinimal", _wrap_ofxTimeline_areHeadersMinimal},
-    { "toggleShowFooters", _wrap_ofxTimeline_toggleShowFooters},
-    { "setFootersHidden", _wrap_ofxTimeline_setFootersHidden},
-    { "areFootersHidden", _wrap_ofxTimeline_areFootersHidden},
-    { "setInOutRange", _wrap_ofxTimeline_setInOutRange},
-    { "setInOutRangeMillis", _wrap_ofxTimeline_setInOutRangeMillis},
-    { "clearInOut", _wrap_ofxTimeline_clearInOut},
-    { "getInOutRange", _wrap_ofxTimeline_getInOutRange},
-    { "getInOutRangeMillis", _wrap_ofxTimeline_getInOutRangeMillis},
-    { "getInFrame", _wrap_ofxTimeline_getInFrame},
-    { "getInTimeInSeconds", _wrap_ofxTimeline_getInTimeInSeconds},
-    { "getInTimeInMillis", _wrap_ofxTimeline_getInTimeInMillis},
-    { "getInPointTimecode", _wrap_ofxTimeline_getInPointTimecode},
-    { "getOutFrame", _wrap_ofxTimeline_getOutFrame},
-    { "getOutTimeInSeconds", _wrap_ofxTimeline_getOutTimeInSeconds},
-    { "getOutTimeInMillis", _wrap_ofxTimeline_getOutTimeInMillis},
-    { "getOutPointTimecode", _wrap_ofxTimeline_getOutPointTimecode},
-    { "setOffset", _wrap_ofxTimeline_setOffset},
-    { "setLockWidthToWindow", _wrap_ofxTimeline_setLockWidthToWindow},
-    { "getLockWidthToWindow", _wrap_ofxTimeline_getLockWidthToWindow},
-    { "setWidth", _wrap_ofxTimeline_setWidth},
-    { "setHeight", _wrap_ofxTimeline_setHeight},
-    { "collapseAllTracks", _wrap_ofxTimeline_collapseAllTracks},
-    { "getDrawRect", _wrap_ofxTimeline_getDrawRect},
-    { "getWidth", _wrap_ofxTimeline_getWidth},
-    { "getHeight", _wrap_ofxTimeline_getHeight},
-    { "getTopRight", _wrap_ofxTimeline_getTopRight},
-    { "getTopLeft", _wrap_ofxTimeline_getTopLeft},
-    { "getBottomLeft", _wrap_ofxTimeline_getBottomLeft},
-    { "getBottomRight", _wrap_ofxTimeline_getBottomRight},
-    { "setBPM", _wrap_ofxTimeline_setBPM},
-    { "getBPM", _wrap_ofxTimeline_getBPM},
-    { "toggleSnapToBPM", _wrap_ofxTimeline_toggleSnapToBPM},
-    { "enableSnapToBPM", _wrap_ofxTimeline_enableSnapToBPM},
-    { "getSnapToBPM", _wrap_ofxTimeline_getSnapToBPM},
-    { "toggleShowBPMGrid", _wrap_ofxTimeline_toggleShowBPMGrid},
-    { "setShowBPMGrid", _wrap_ofxTimeline_setShowBPMGrid},
-    { "getShowBPMGrid", _wrap_ofxTimeline_getShowBPMGrid},
-    { "toggleSnapToOtherKeyframes", _wrap_ofxTimeline_toggleSnapToOtherKeyframes},
-    { "enableSnapToOtherKeyframes", _wrap_ofxTimeline_enableSnapToOtherKeyframes},
-    { "getSnapToOtherElements", _wrap_ofxTimeline_getSnapToOtherElements},
-    { "setMovePlayheadOnPaste", _wrap_ofxTimeline_setMovePlayheadOnPaste},
-    { "getMovePlayheadOnPaste", _wrap_ofxTimeline_getMovePlayheadOnPaste},
-    { "getPasteboard", _wrap_ofxTimeline_getPasteboard},
-    { "enableUndo", _wrap_ofxTimeline_enableUndo},
-    { "undo", _wrap_ofxTimeline_undo},
-    { "redo", _wrap_ofxTimeline_redo},
-    { "setMovePlayheadOnDrag", _wrap_ofxTimeline_setMovePlayheadOnDrag},
-    { "getMovePlayheadOnDrag", _wrap_ofxTimeline_getMovePlayheadOnDrag},
-    { "unselectAll", _wrap_ofxTimeline_unselectAll},
-    { "addPage", _wrap_ofxTimeline_addPage},
-    { "setPageName", _wrap_ofxTimeline_setPageName},
-    { "setCurrentPage", _wrap_ofxTimeline_setCurrentPage},
-    { "removePage", _wrap_ofxTimeline_removePage},
-    { "isModal", _wrap_ofxTimeline_isModal},
-    { "getModalTrack", _wrap_ofxTimeline_getModalTrack},
-    { "getFocusedTrack", _wrap_ofxTimeline_getFocusedTrack},
-    { "setFocusedTrack", _wrap_ofxTimeline_setFocusedTrack},
-    { "getTotalSelectedItems", _wrap_ofxTimeline_getTotalSelectedItems},
-    { "getEarliestTime", _wrap_ofxTimeline_getEarliestTime},
-    { "getLatestTime", _wrap_ofxTimeline_getLatestTime},
-    { "getEarliestSelectedTime", _wrap_ofxTimeline_getEarliestSelectedTime},
-    { "getLatestSelectedTime", _wrap_ofxTimeline_getLatestSelectedTime},
-    { "hasTrack", _wrap_ofxTimeline_hasTrack},
-    { "hasPage", _wrap_ofxTimeline_hasPage},
-    { "getTrack", _wrap_ofxTimeline_getTrack},
-    { "getPage", _wrap_ofxTimeline_getPage},
-    { "getValueAtPercent", _wrap_ofxTimeline_getValueAtPercent},
-    { "getValue", _wrap_ofxTimeline_getValue},
-    { "addLFO", _wrap_ofxTimeline_addLFO},
-    { "addSwitches", _wrap_ofxTimeline_addSwitches},
-    { "isSwitchOn", _wrap_ofxTimeline_isSwitchOn},
-    { "addBangs", _wrap_ofxTimeline_addBangs},
-    { "addFlags", _wrap_ofxTimeline_addFlags},
-    { "addColors", _wrap_ofxTimeline_addColors},
-    { "addColorsWithPalette", _wrap_ofxTimeline_addColorsWithPalette},
-    { "getColor", _wrap_ofxTimeline_getColor},
-    { "getColorAtPercent", _wrap_ofxTimeline_getColorAtPercent},
-    { "getColorAtSecond", _wrap_ofxTimeline_getColorAtSecond},
-    { "getColorAtMillis", _wrap_ofxTimeline_getColorAtMillis},
-    { "setDefaultColorPalettePath", _wrap_ofxTimeline_setDefaultColorPalettePath},
-    { "getDefaultColorPalettePath", _wrap_ofxTimeline_getDefaultColorPalettePath},
-    { "addImageSequence", _wrap_ofxTimeline_addImageSequence},
-    { "getImage", _wrap_ofxTimeline_getImage},
-    { "setTimecontrolTrack", _wrap_ofxTimeline_setTimecontrolTrack},
-    { "getTimecontrolTrack", _wrap_ofxTimeline_getTimecontrolTrack},
-    { "addTrack", _wrap_ofxTimeline_addTrack},
-    { "getTrackHeader", _wrap_ofxTimeline_getTrackHeader},
-    { "removeTrack", _wrap_ofxTimeline_removeTrack},
-    { "bringTrackToTop", _wrap_ofxTimeline_bringTrackToTop},
-    { "bringTrackToBottom", _wrap_ofxTimeline_bringTrackToBottom},
-    { "setupFont", _wrap_ofxTimeline_setupFont},
-    { "getFont", _wrap_ofxTimeline_getFont},
-    { "getColors", _wrap_ofxTimeline_getColors},
-    { "getTimecode", _wrap_ofxTimeline_getTimecode},
-    { "getTimer", _wrap_ofxTimeline_getTimer},
-    { "getZoomer", _wrap_ofxTimeline_getZoomer},
-    { "getPages", _wrap_ofxTimeline_getPages},
-    { "getNudgePercent", _wrap_ofxTimeline_getNudgePercent},
-    { "getBigNudgePercent", _wrap_ofxTimeline_getBigNudgePercent},
-    { "setDragTimeOffset", _wrap_ofxTimeline_setDragTimeOffset},
-    { "cancelSnapping", _wrap_ofxTimeline_cancelSnapping},
-    { "getDragTimeOffset", _wrap_ofxTimeline_getDragTimeOffset},
-    { "setHoverTime", _wrap_ofxTimeline_setHoverTime},
-    { "formatTime", _wrap_ofxTimeline_formatTime},
-    { "nameToXMLName", _wrap_ofxTimeline_nameToXMLName},
-    { "confirmedUniqueName", _wrap_ofxTimeline_confirmedUniqueName},
-    { "createPlaybackEvent", _wrap_ofxTimeline_createPlaybackEvent},
-    { "presentedModalContent", _wrap_ofxTimeline_presentedModalContent},
-    { "dismissedModalContent", _wrap_ofxTimeline_dismissedModalContent},
-    { "screenXToMillis", _wrap_ofxTimeline_screenXToMillis},
-    { "millisToScreenX", _wrap_ofxTimeline_millisToScreenX},
-    { "screenXtoNormalizedX", _wrap_ofxTimeline_screenXtoNormalizedX},
-    { "normalizedXtoScreenX", _wrap_ofxTimeline_normalizedXtoScreenX},
-    { "events", _wrap_ofxTimeline_events},
-    { "setLoopType", _wrap_ofxTimeline_setLoopType},
-    { "getR", _wrap_ofxTimeline_getR},
-    { "getG", _wrap_ofxTimeline_getG},
-    { "getB", _wrap_ofxTimeline_getB},
-    { "getA", _wrap_ofxTimeline_getA},
-    { "addCurves", _wrap_ofxTimeline_addCurves},
-    {0,0}
-};
-static swig_lua_method swig_ofxTimeline_meta[] = {
-    {0,0}
-};
-
-static swig_lua_attribute swig_ofxTimeline_Sf_SwigStatic_attributes[] = {
-    {0,0,0}
-};
-static swig_lua_const_info swig_ofxTimeline_Sf_SwigStatic_constants[]= {
-    {0,0,0,0,0,0}
-};
-static swig_lua_method swig_ofxTimeline_Sf_SwigStatic_methods[]= {
-    {0,0}
-};
-static swig_lua_class* swig_ofxTimeline_Sf_SwigStatic_classes[]= {
-    0
-};
-
-static swig_lua_namespace swig_ofxTimeline_Sf_SwigStatic = {
-    "ofxTimeline",
-    swig_ofxTimeline_Sf_SwigStatic_methods,
-    swig_ofxTimeline_Sf_SwigStatic_attributes,
-    swig_ofxTimeline_Sf_SwigStatic_constants,
-    swig_ofxTimeline_Sf_SwigStatic_classes,
-    0
-};
-static swig_lua_class *swig_ofxTimeline_bases[] = {0};
-static const char *swig_ofxTimeline_base_names[] = {0};
-static swig_lua_class _wrap_class_ofxTimeline = { "ofxTimeline", "ofxTimeline", &SWIGTYPE_p_ofxTimeline,_proxy__wrap_new_ofxTimeline, swig_delete_ofxTimeline, swig_ofxTimeline_methods, swig_ofxTimeline_attributes, &swig_ofxTimeline_Sf_SwigStatic, swig_ofxTimeline_meta, swig_ofxTimeline_bases, swig_ofxTimeline_base_names };
 
 static int _wrap_new_ofxTLTrack(lua_State* L) { { int SWIG_arg = 0; ofxTLTrack *result = 0 ;
     SWIG_check_num_args("ofxTLTrack::ofxTLTrack",0,0) result = (ofxTLTrack *)new ofxTLTrack();
@@ -8654,6 +6137,2628 @@ static swig_lua_class *swig_ofxTLAudioTrack_bases[] = {0,0};
 static const char *swig_ofxTLAudioTrack_base_names[] = {"ofxTLTrack *",0};
 static swig_lua_class _wrap_class_ofxTLAudioTrack = { "ofxTLAudioTrack", "ofxTLAudioTrack", &SWIGTYPE_p_ofxTLAudioTrack,_proxy__wrap_new_ofxTLAudioTrack, swig_delete_ofxTLAudioTrack, swig_ofxTLAudioTrack_methods, swig_ofxTLAudioTrack_attributes, &swig_ofxTLAudioTrack_Sf_SwigStatic, swig_ofxTLAudioTrack_meta, swig_ofxTLAudioTrack_bases, swig_ofxTLAudioTrack_base_names };
 
+static int _wrap_UndoItem_track_set(lua_State* L) { { int SWIG_arg = 0; UndoItem *arg1 = (UndoItem *) 0 ;
+    ofxTLTrack *arg2 = (ofxTLTrack *) 0 ; SWIG_check_num_args("UndoItem::track",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("UndoItem::track",1,"UndoItem *");
+    if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("UndoItem::track",2,"ofxTLTrack *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_UndoItem,0))){
+      SWIG_fail_ptr("UndoItem_track_set",1,SWIGTYPE_p_UndoItem); } 
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofxTLTrack,SWIG_POINTER_DISOWN))){
+      SWIG_fail_ptr("UndoItem_track_set",2,SWIGTYPE_p_ofxTLTrack); }  if (arg1) (arg1)->track = arg2; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_UndoItem_track_get(lua_State* L) { { int SWIG_arg = 0; UndoItem *arg1 = (UndoItem *) 0 ;
+    ofxTLTrack *result = 0 ; SWIG_check_num_args("UndoItem::track",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("UndoItem::track",1,"UndoItem *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_UndoItem,0))){
+      SWIG_fail_ptr("UndoItem_track_get",1,SWIGTYPE_p_UndoItem); }  result = (ofxTLTrack *) ((arg1)->track);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLTrack,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_UndoItem_stateBuffer_set(lua_State* L) { { int SWIG_arg = 0; UndoItem *arg1 = (UndoItem *) 0 ;
+    string *arg2 = 0 ; string temp2 ; SWIG_check_num_args("UndoItem::stateBuffer",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("UndoItem::stateBuffer",1,"UndoItem *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("UndoItem::stateBuffer",2,"string const &");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_UndoItem,0))){
+      SWIG_fail_ptr("UndoItem_stateBuffer_set",1,SWIGTYPE_p_UndoItem); } 
+    temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2; if (arg1) (arg1)->stateBuffer = *arg2; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_UndoItem_stateBuffer_get(lua_State* L) { { int SWIG_arg = 0; UndoItem *arg1 = (UndoItem *) 0 ;
+    string *result = 0 ; SWIG_check_num_args("UndoItem::stateBuffer",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("UndoItem::stateBuffer",1,"UndoItem *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_UndoItem,0))){
+      SWIG_fail_ptr("UndoItem_stateBuffer_get",1,SWIGTYPE_p_UndoItem); }  result = (string *) & ((arg1)->stateBuffer);
+    lua_pushlstring(L,result->data(),result->size()); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_new_UndoItem(lua_State* L) { { int SWIG_arg = 0; UndoItem *result = 0 ;
+    SWIG_check_num_args("UndoItem::UndoItem",0,0) result = (UndoItem *)new UndoItem();
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_UndoItem,1); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static void swig_delete_UndoItem(void *obj) {
+UndoItem *arg1 = (UndoItem *) obj;
+delete arg1;
+}
+static int _proxy__wrap_new_UndoItem(lua_State *L) {
+    assert(lua_istable(L,1));
+    lua_pushcfunction(L,_wrap_new_UndoItem);
+    assert(!lua_isnil(L,-1));
+    lua_replace(L,1); /* replace our table with real constructor */
+    lua_call(L,lua_gettop(L)-1,1);
+    return 1;
+}
+static swig_lua_attribute swig_UndoItem_attributes[] = {
+    { "track", _wrap_UndoItem_track_get, _wrap_UndoItem_track_set },
+    { "stateBuffer", _wrap_UndoItem_stateBuffer_get, _wrap_UndoItem_stateBuffer_set },
+    {0,0,0}
+};
+static swig_lua_method swig_UndoItem_methods[]= {
+    {0,0}
+};
+static swig_lua_method swig_UndoItem_meta[] = {
+    {0,0}
+};
+
+static swig_lua_attribute swig_UndoItem_Sf_SwigStatic_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_const_info swig_UndoItem_Sf_SwigStatic_constants[]= {
+    {0,0,0,0,0,0}
+};
+static swig_lua_method swig_UndoItem_Sf_SwigStatic_methods[]= {
+    {0,0}
+};
+static swig_lua_class* swig_UndoItem_Sf_SwigStatic_classes[]= {
+    0
+};
+
+static swig_lua_namespace swig_UndoItem_Sf_SwigStatic = {
+    "UndoItem",
+    swig_UndoItem_Sf_SwigStatic_methods,
+    swig_UndoItem_Sf_SwigStatic_attributes,
+    swig_UndoItem_Sf_SwigStatic_constants,
+    swig_UndoItem_Sf_SwigStatic_classes,
+    0
+};
+static swig_lua_class *swig_UndoItem_bases[] = {0};
+static const char *swig_UndoItem_base_names[] = {0};
+static swig_lua_class _wrap_class_UndoItem = { "UndoItem", "UndoItem", &SWIGTYPE_p_UndoItem,_proxy__wrap_new_UndoItem, swig_delete_UndoItem, swig_UndoItem_methods, swig_UndoItem_attributes, &swig_UndoItem_Sf_SwigStatic, swig_UndoItem_meta, swig_UndoItem_bases, swig_UndoItem_base_names };
+
+static int _wrap_new_ofxTimeline(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *result = 0 ;
+    SWIG_check_num_args("ofxTimeline::ofxTimeline",0,0) result = (ofxTimeline *)new ofxTimeline();
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTimeline,1); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_setup__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string *arg2 = 0 ; string temp2 ; SWIG_check_num_args("ofxTimeline::setup",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setup",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setup",2,"string const &");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setup",1,SWIGTYPE_p_ofxTimeline); } 
+    temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2; (arg1)->setup((string const &)*arg2); return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setup__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::setup",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setup",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setup",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->setup(); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setup(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 1) {
+    return _wrap_ofxTimeline_setup__SWIG_1(L);}  if (argc == 2) { return _wrap_ofxTimeline_setup__SWIG_0(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_setup'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofxTimeline::setup(string const &)\n" "    ofxTimeline::setup()\n"); lua_error(L);return 0; }
+static int _wrap_ofxTimeline_moveToThread(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::moveToThread",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::moveToThread",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_moveToThread",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->moveToThread(); return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_removeFromThread(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::removeFromThread",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::removeFromThread",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_removeFromThread",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->removeFromThread(); return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_toggleEnabled(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool result; SWIG_check_num_args("ofxTimeline::toggleEnabled",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::toggleEnabled",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_toggleEnabled",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->toggleEnabled();
+    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_enable(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::enable",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::enable",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_enable",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->enable(); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_disable(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::disable",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::disable",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_disable",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->disable(); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getIsEnabled(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool result; SWIG_check_num_args("ofxTimeline::getIsEnabled",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getIsEnabled",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getIsEnabled",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->getIsEnabled();
+    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_enableEvents(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::enableEvents",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::enableEvents",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_enableEvents",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->enableEvents(); return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_disableEvents(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::disableEvents",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::disableEvents",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_disableEvents",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->disableEvents(); return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_clear(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::clear",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::clear",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_clear",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->clear(); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_reset(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::reset",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::reset",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_reset",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->reset(); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setName(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ;
+    SWIG_check_num_args("ofxTimeline::setName",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setName",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setName",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setName",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    (arg1)->setName(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getName(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; string result;
+    SWIG_check_num_args("ofxTimeline::getName",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getName",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getName",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getName();
+    lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_play(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::play",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::play",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_play",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->play(); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_stop(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::stop",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::stop",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_stop",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->stop(); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_togglePlay(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; bool result;
+    SWIG_check_num_args("ofxTimeline::togglePlay",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::togglePlay",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_togglePlay",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->togglePlay();
+    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getIsPlaying(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool result; SWIG_check_num_args("ofxTimeline::getIsPlaying",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getIsPlaying",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getIsPlaying",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->getIsPlaying();
+    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getSpacebarTogglesPlay(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool result; SWIG_check_num_args("ofxTimeline::getSpacebarTogglesPlay",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getSpacebarTogglesPlay",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getSpacebarTogglesPlay",1,SWIGTYPE_p_ofxTimeline); } 
+    result = (bool)(arg1)->getSpacebarTogglesPlay(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setSpacebarTogglePlay(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool arg2 ; SWIG_check_num_args("ofxTimeline::setSpacebarTogglePlay",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setSpacebarTogglePlay",1,"ofxTimeline *");
+    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setSpacebarTogglePlay",2,"bool");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setSpacebarTogglePlay",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
+    (arg1)->setSpacebarTogglePlay(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_playSelectedTrack(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::playSelectedTrack",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::playSelectedTrack",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_playSelectedTrack",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->playSelectedTrack(); return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_stopSelectedTrack(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::stopSelectedTrack",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::stopSelectedTrack",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_stopSelectedTrack",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->stopSelectedTrack(); return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_togglePlaySelectedTrack(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool result; SWIG_check_num_args("ofxTimeline::togglePlaySelectedTrack",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::togglePlaySelectedTrack",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_togglePlaySelectedTrack",1,SWIGTYPE_p_ofxTimeline); } 
+    result = (bool)(arg1)->togglePlaySelectedTrack(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setLoopType__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofLoopType arg2 ; ofLoopType *argp2 ; SWIG_check_num_args("ofxTimeline::setLoopType",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setLoopType",1,"ofxTimeline *");
+    if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofxTimeline::setLoopType",2,"ofLoopType");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setLoopType",1,SWIGTYPE_p_ofxTimeline); } 
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofLoopType,0))){
+      SWIG_fail_ptr("ofxTimeline_setLoopType",2,SWIGTYPE_p_ofLoopType); }  arg2 = *argp2; (arg1)->setLoopType(arg2);
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getLoopType(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofLoopType result; SWIG_check_num_args("ofxTimeline::getLoopType",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getLoopType",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getLoopType",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getLoopType(); {
+      ofLoopType * resultptr = new ofLoopType(result);
+      SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofLoopType,1); SWIG_arg++; }  return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_isDone(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; bool result;
+    SWIG_check_num_args("ofxTimeline::isDone",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::isDone",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_isDone",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->isDone();
+    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_toggleShow(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; bool result;
+    SWIG_check_num_args("ofxTimeline::toggleShow",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::toggleShow",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_toggleShow",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->toggleShow();
+    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_show(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::show",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::show",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_show",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->show(); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_hide(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::hide",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::hide",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_hide",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->hide(); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getIsShowing(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool result; SWIG_check_num_args("ofxTimeline::getIsShowing",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getIsShowing",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getIsShowing",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->getIsShowing();
+    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_draw(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::draw",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::draw",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_draw",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->draw(); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_mousePressed(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofMouseEventArgs *arg2 = 0 ; SWIG_check_num_args("ofxTimeline::mousePressed",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::mousePressed",1,"ofxTimeline *");
+    if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofxTimeline::mousePressed",2,"ofMouseEventArgs &");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_mousePressed",1,SWIGTYPE_p_ofxTimeline); } 
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofMouseEventArgs,0))){
+      SWIG_fail_ptr("ofxTimeline_mousePressed",2,SWIGTYPE_p_ofMouseEventArgs); }  (arg1)->mousePressed(*arg2); return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_mouseMoved(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofMouseEventArgs *arg2 = 0 ; SWIG_check_num_args("ofxTimeline::mouseMoved",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::mouseMoved",1,"ofxTimeline *");
+    if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofxTimeline::mouseMoved",2,"ofMouseEventArgs &");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_mouseMoved",1,SWIGTYPE_p_ofxTimeline); } 
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofMouseEventArgs,0))){
+      SWIG_fail_ptr("ofxTimeline_mouseMoved",2,SWIGTYPE_p_ofMouseEventArgs); }  (arg1)->mouseMoved(*arg2); return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_mouseDragged(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofMouseEventArgs *arg2 = 0 ; SWIG_check_num_args("ofxTimeline::mouseDragged",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::mouseDragged",1,"ofxTimeline *");
+    if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofxTimeline::mouseDragged",2,"ofMouseEventArgs &");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_mouseDragged",1,SWIGTYPE_p_ofxTimeline); } 
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofMouseEventArgs,0))){
+      SWIG_fail_ptr("ofxTimeline_mouseDragged",2,SWIGTYPE_p_ofMouseEventArgs); }  (arg1)->mouseDragged(*arg2); return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_mouseReleased(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofMouseEventArgs *arg2 = 0 ; SWIG_check_num_args("ofxTimeline::mouseReleased",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::mouseReleased",1,"ofxTimeline *");
+    if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofxTimeline::mouseReleased",2,"ofMouseEventArgs &");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_mouseReleased",1,SWIGTYPE_p_ofxTimeline); } 
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofMouseEventArgs,0))){
+      SWIG_fail_ptr("ofxTimeline_mouseReleased",2,SWIGTYPE_p_ofMouseEventArgs); }  (arg1)->mouseReleased(*arg2);
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_keyPressed(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofKeyEventArgs *arg2 = 0 ; SWIG_check_num_args("ofxTimeline::keyPressed",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::keyPressed",1,"ofxTimeline *");
+    if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofxTimeline::keyPressed",2,"ofKeyEventArgs &");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_keyPressed",1,SWIGTYPE_p_ofxTimeline); } 
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofKeyEventArgs,0))){
+      SWIG_fail_ptr("ofxTimeline_keyPressed",2,SWIGTYPE_p_ofKeyEventArgs); }  (arg1)->keyPressed(*arg2); return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_keyReleased(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofKeyEventArgs *arg2 = 0 ; SWIG_check_num_args("ofxTimeline::keyReleased",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::keyReleased",1,"ofxTimeline *");
+    if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofxTimeline::keyReleased",2,"ofKeyEventArgs &");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_keyReleased",1,SWIGTYPE_p_ofxTimeline); } 
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofKeyEventArgs,0))){
+      SWIG_fail_ptr("ofxTimeline_keyReleased",2,SWIGTYPE_p_ofKeyEventArgs); }  (arg1)->keyReleased(*arg2); return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_windowResized(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofResizeEventArgs *arg2 = 0 ; SWIG_check_num_args("ofxTimeline::windowResized",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::windowResized",1,"ofxTimeline *");
+    if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofxTimeline::windowResized",2,"ofResizeEventArgs &");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_windowResized",1,SWIGTYPE_p_ofxTimeline); } 
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofResizeEventArgs,0))){
+      SWIG_fail_ptr("ofxTimeline_windowResized",2,SWIGTYPE_p_ofResizeEventArgs); }  (arg1)->windowResized(*arg2);
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_exit(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofEventArgs *arg2 = 0 ; SWIG_check_num_args("ofxTimeline::exit",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::exit",1,"ofxTimeline *");
+    if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofxTimeline::exit",2,"ofEventArgs &");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_exit",1,SWIGTYPE_p_ofxTimeline); } 
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofEventArgs,0))){
+      SWIG_fail_ptr("ofxTimeline_exit",2,SWIGTYPE_p_ofEventArgs); }  (arg1)->exit(*arg2); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setShowTimeControls(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool arg2 ; SWIG_check_num_args("ofxTimeline::setShowTimeControls",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setShowTimeControls",1,"ofxTimeline *");
+    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setShowTimeControls",2,"bool");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setShowTimeControls",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
+    (arg1)->setShowTimeControls(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setShowTicker(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool arg2 ; SWIG_check_num_args("ofxTimeline::setShowTicker",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setShowTicker",1,"ofxTimeline *");
+    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setShowTicker",2,"bool");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setShowTicker",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
+    (arg1)->setShowTicker(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setShowInoutControl(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool arg2 ; SWIG_check_num_args("ofxTimeline::setShowInoutControl",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setShowInoutControl",1,"ofxTimeline *");
+    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setShowInoutControl",2,"bool");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setShowInoutControl",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
+    (arg1)->setShowInoutControl(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setShowZoomer(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool arg2 ; SWIG_check_num_args("ofxTimeline::setShowZoomer",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setShowZoomer",1,"ofxTimeline *");
+    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setShowZoomer",2,"bool");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setShowZoomer",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
+    (arg1)->setShowZoomer(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setWorkingFolder(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; SWIG_check_num_args("ofxTimeline::setWorkingFolder",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setWorkingFolder",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setWorkingFolder",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setWorkingFolder",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->setWorkingFolder(arg2); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getWorkingFolder(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string result; SWIG_check_num_args("ofxTimeline::getWorkingFolder",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getWorkingFolder",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getWorkingFolder",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getWorkingFolder();
+    lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_loadTracksFromFolder(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; SWIG_check_num_args("ofxTimeline::loadTracksFromFolder",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::loadTracksFromFolder",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::loadTracksFromFolder",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_loadTracksFromFolder",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->loadTracksFromFolder(arg2); return SWIG_arg; fail: SWIGUNUSED; }
+   lua_error(L); return 0; }
+static int _wrap_ofxTimeline_saveTracksToFolder(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; SWIG_check_num_args("ofxTimeline::saveTracksToFolder",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::saveTracksToFolder",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::saveTracksToFolder",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_saveTracksToFolder",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->saveTracksToFolder(arg2); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setDefaultFontPath(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; SWIG_check_num_args("ofxTimeline::setDefaultFontPath",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setDefaultFontPath",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setDefaultFontPath",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setDefaultFontPath",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->setDefaultFontPath(arg2); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setFrameRate(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    float arg2 ; SWIG_check_num_args("ofxTimeline::setFrameRate",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setFrameRate",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setFrameRate",2,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setFrameRate",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
+    (arg1)->setFrameRate(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setDurationInFrames(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    int arg2 ; SWIG_check_num_args("ofxTimeline::setDurationInFrames",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setDurationInFrames",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setDurationInFrames",2,"int");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setDurationInFrames",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (int)lua_tonumber(L, 2);
+    (arg1)->setDurationInFrames(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setDurationInSeconds(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    float arg2 ; SWIG_check_num_args("ofxTimeline::setDurationInSeconds",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setDurationInSeconds",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setDurationInSeconds",2,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setDurationInSeconds",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
+    (arg1)->setDurationInSeconds(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setDurationInMillis(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    unsigned long long arg2 ; SWIG_check_num_args("ofxTimeline::setDurationInMillis",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setDurationInMillis",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setDurationInMillis",2,"unsigned long long");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setDurationInMillis",1,SWIGTYPE_p_ofxTimeline); } 
+    arg2 = (unsigned long long)lua_tonumber(L, 2); (arg1)->setDurationInMillis(arg2); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setDurationInTimecode(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; SWIG_check_num_args("ofxTimeline::setDurationInTimecode",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setDurationInTimecode",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setDurationInTimecode",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setDurationInTimecode",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->setDurationInTimecode(arg2); return SWIG_arg; fail: SWIGUNUSED; }
+   lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getDurationInFrames(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    int result; SWIG_check_num_args("ofxTimeline::getDurationInFrames",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getDurationInFrames",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getDurationInFrames",1,SWIGTYPE_p_ofxTimeline); }  result = (int)(arg1)->getDurationInFrames();
+    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getDurationInSeconds(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    float result; SWIG_check_num_args("ofxTimeline::getDurationInSeconds",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getDurationInSeconds",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getDurationInSeconds",1,SWIGTYPE_p_ofxTimeline); } 
+    result = (float)(arg1)->getDurationInSeconds(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getDurationInMilliseconds(lua_State* L) { { int SWIG_arg = 0;
+    ofxTimeline *arg1 = (ofxTimeline *) 0 ; long result; SWIG_check_num_args("ofxTimeline::getDurationInMilliseconds",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getDurationInMilliseconds",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getDurationInMilliseconds",1,SWIGTYPE_p_ofxTimeline); } 
+    result = (long)(arg1)->getDurationInMilliseconds(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getDurationInTimecode(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string result; SWIG_check_num_args("ofxTimeline::getDurationInTimecode",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getDurationInTimecode",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getDurationInTimecode",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getDurationInTimecode();
+    lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_setFrameBased(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool arg2 ; SWIG_check_num_args("ofxTimeline::setFrameBased",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setFrameBased",1,"ofxTimeline *");
+    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setFrameBased",2,"bool");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setFrameBased",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
+    (arg1)->setFrameBased(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getIsFrameBased(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool result; SWIG_check_num_args("ofxTimeline::getIsFrameBased",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getIsFrameBased",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getIsFrameBased",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->getIsFrameBased();
+    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setAutosave(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; bool arg2 ;
+    SWIG_check_num_args("ofxTimeline::setAutosave",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setAutosave",1,"ofxTimeline *");
+    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setAutosave",2,"bool");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setAutosave",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
+    (arg1)->setAutosave(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_save(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::save",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::save",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_save",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->save(); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_hasUnsavedChanges(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool result; SWIG_check_num_args("ofxTimeline::hasUnsavedChanges",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::hasUnsavedChanges",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_hasUnsavedChanges",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->hasUnsavedChanges();
+    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setCurrentFrame(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    int arg2 ; SWIG_check_num_args("ofxTimeline::setCurrentFrame",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setCurrentFrame",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setCurrentFrame",2,"int");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setCurrentFrame",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (int)lua_tonumber(L, 2);
+    (arg1)->setCurrentFrame(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setCurrentTimeSeconds(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    float arg2 ; SWIG_check_num_args("ofxTimeline::setCurrentTimeSeconds",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setCurrentTimeSeconds",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setCurrentTimeSeconds",2,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setCurrentTimeSeconds",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
+    (arg1)->setCurrentTimeSeconds(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setCurrentTimeMillis(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    unsigned long long arg2 ; SWIG_check_num_args("ofxTimeline::setCurrentTimeMillis",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setCurrentTimeMillis",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setCurrentTimeMillis",2,"unsigned long long");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setCurrentTimeMillis",1,SWIGTYPE_p_ofxTimeline); } 
+    arg2 = (unsigned long long)lua_tonumber(L, 2); (arg1)->setCurrentTimeMillis(arg2); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setPercentComplete(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    float arg2 ; SWIG_check_num_args("ofxTimeline::setPercentComplete",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setPercentComplete",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setPercentComplete",2,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setPercentComplete",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
+    (arg1)->setPercentComplete(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setCurrentTimecode(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; SWIG_check_num_args("ofxTimeline::setCurrentTimecode",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setCurrentTimecode",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setCurrentTimecode",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setCurrentTimecode",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->setCurrentTimecode(arg2); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setCurrentTimeToInPoint(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::setCurrentTimeToInPoint",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setCurrentTimeToInPoint",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setCurrentTimeToInPoint",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->setCurrentTimeToInPoint();
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setCurrentTimeToOutPoint(lua_State* L) { { int SWIG_arg = 0;
+    ofxTimeline *arg1 = (ofxTimeline *) 0 ; SWIG_check_num_args("ofxTimeline::setCurrentTimeToOutPoint",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setCurrentTimeToOutPoint",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setCurrentTimeToOutPoint",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->setCurrentTimeToOutPoint();
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getCurrentFrame(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    int result; SWIG_check_num_args("ofxTimeline::getCurrentFrame",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getCurrentFrame",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getCurrentFrame",1,SWIGTYPE_p_ofxTimeline); }  result = (int)(arg1)->getCurrentFrame();
+    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getCurrentPageIndex(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    int result; SWIG_check_num_args("ofxTimeline::getCurrentPageIndex",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getCurrentPageIndex",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getCurrentPageIndex",1,SWIGTYPE_p_ofxTimeline); }  result = (int)(arg1)->getCurrentPageIndex();
+    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getCurrentPageName(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string result; SWIG_check_num_args("ofxTimeline::getCurrentPageName",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getCurrentPageName",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getCurrentPageName",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getCurrentPageName();
+    lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_getCurrentTime(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    float result; SWIG_check_num_args("ofxTimeline::getCurrentTime",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getCurrentTime",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getCurrentTime",1,SWIGTYPE_p_ofxTimeline); }  result = (float)(arg1)->getCurrentTime();
+    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getCurrentTimeMillis(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    long result; SWIG_check_num_args("ofxTimeline::getCurrentTimeMillis",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getCurrentTimeMillis",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getCurrentTimeMillis",1,SWIGTYPE_p_ofxTimeline); } 
+    result = (long)(arg1)->getCurrentTimeMillis(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getPercentComplete(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    float result; SWIG_check_num_args("ofxTimeline::getPercentComplete",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getPercentComplete",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getPercentComplete",1,SWIGTYPE_p_ofxTimeline); }  result = (float)(arg1)->getPercentComplete();
+    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getCurrentTimecode(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string result; SWIG_check_num_args("ofxTimeline::getCurrentTimecode",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getCurrentTimecode",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getCurrentTimecode",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getCurrentTimecode();
+    lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_getQuantizedTime(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    unsigned long long arg2 ; unsigned long long arg3 ; long result; SWIG_check_num_args("ofxTimeline::getQuantizedTime",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getQuantizedTime",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::getQuantizedTime",2,"unsigned long long");
+    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::getQuantizedTime",3,"unsigned long long");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getQuantizedTime",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (unsigned long long)lua_tonumber(L, 2);
+    arg3 = (unsigned long long)lua_tonumber(L, 3); result = (long)(arg1)->getQuantizedTime(arg2,arg3);
+    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_flagUserChangedValue(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::flagUserChangedValue",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::flagUserChangedValue",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_flagUserChangedValue",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->flagUserChangedValue();
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getUserChangedValue(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool result; SWIG_check_num_args("ofxTimeline::getUserChangedValue",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getUserChangedValue",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getUserChangedValue",1,SWIGTYPE_p_ofxTimeline); } 
+    result = (bool)(arg1)->getUserChangedValue(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_flagTrackModified(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofxTLTrack *arg2 = (ofxTLTrack *) 0 ; SWIG_check_num_args("ofxTimeline::flagTrackModified",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::flagTrackModified",1,"ofxTimeline *");
+    if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofxTimeline::flagTrackModified",2,"ofxTLTrack *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_flagTrackModified",1,SWIGTYPE_p_ofxTimeline); } 
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofxTLTrack,0))){
+      SWIG_fail_ptr("ofxTimeline_flagTrackModified",2,SWIGTYPE_p_ofxTLTrack); }  (arg1)->flagTrackModified(arg2);
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setInPointAtPercent(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    float arg2 ; SWIG_check_num_args("ofxTimeline::setInPointAtPercent",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setInPointAtPercent",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setInPointAtPercent",2,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setInPointAtPercent",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
+    (arg1)->setInPointAtPercent(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setInPointAtFrame(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    int arg2 ; SWIG_check_num_args("ofxTimeline::setInPointAtFrame",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setInPointAtFrame",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setInPointAtFrame",2,"int");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setInPointAtFrame",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (int)lua_tonumber(L, 2);
+    (arg1)->setInPointAtFrame(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setInPointAtSeconds(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    float arg2 ; SWIG_check_num_args("ofxTimeline::setInPointAtSeconds",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setInPointAtSeconds",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setInPointAtSeconds",2,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setInPointAtSeconds",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
+    (arg1)->setInPointAtSeconds(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setInPointAtMillis(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    unsigned long long arg2 ; SWIG_check_num_args("ofxTimeline::setInPointAtMillis",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setInPointAtMillis",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setInPointAtMillis",2,"unsigned long long");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setInPointAtMillis",1,SWIGTYPE_p_ofxTimeline); } 
+    arg2 = (unsigned long long)lua_tonumber(L, 2); (arg1)->setInPointAtMillis(arg2); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setInPointAtTimecode(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; SWIG_check_num_args("ofxTimeline::setInPointAtTimecode",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setInPointAtTimecode",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setInPointAtTimecode",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setInPointAtTimecode",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->setInPointAtTimecode(arg2); return SWIG_arg; fail: SWIGUNUSED; }
+   lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setInPointAtPlayhead(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::setInPointAtPlayhead",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setInPointAtPlayhead",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setInPointAtPlayhead",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->setInPointAtPlayhead();
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setOutPointAtPercent(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    float arg2 ; SWIG_check_num_args("ofxTimeline::setOutPointAtPercent",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setOutPointAtPercent",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setOutPointAtPercent",2,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setOutPointAtPercent",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
+    (arg1)->setOutPointAtPercent(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setOutPointAtFrame(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    float arg2 ; SWIG_check_num_args("ofxTimeline::setOutPointAtFrame",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setOutPointAtFrame",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setOutPointAtFrame",2,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setOutPointAtFrame",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
+    (arg1)->setOutPointAtFrame(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setOutPointAtSeconds(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    float arg2 ; SWIG_check_num_args("ofxTimeline::setOutPointAtSeconds",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setOutPointAtSeconds",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setOutPointAtSeconds",2,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setOutPointAtSeconds",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
+    (arg1)->setOutPointAtSeconds(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setOutPointAtMillis(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    unsigned long long arg2 ; SWIG_check_num_args("ofxTimeline::setOutPointAtMillis",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setOutPointAtMillis",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setOutPointAtMillis",2,"unsigned long long");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setOutPointAtMillis",1,SWIGTYPE_p_ofxTimeline); } 
+    arg2 = (unsigned long long)lua_tonumber(L, 2); (arg1)->setOutPointAtMillis(arg2); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setOutPointAtTimecode(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; SWIG_check_num_args("ofxTimeline::setOutPointAtTimecode",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setOutPointAtTimecode",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setOutPointAtTimecode",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setOutPointAtTimecode",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->setOutPointAtTimecode(arg2); return SWIG_arg; fail: SWIGUNUSED; }
+   lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setOutPointAtPlayhead(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::setOutPointAtPlayhead",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setOutPointAtPlayhead",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setOutPointAtPlayhead",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->setOutPointAtPlayhead();
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setEditableHeaders(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool arg2 ; SWIG_check_num_args("ofxTimeline::setEditableHeaders",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setEditableHeaders",1,"ofxTimeline *");
+    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setEditableHeaders",2,"bool");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setEditableHeaders",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
+    (arg1)->setEditableHeaders(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_areHeadersEditable(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool result; SWIG_check_num_args("ofxTimeline::areHeadersEditable",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::areHeadersEditable",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_areHeadersEditable",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->areHeadersEditable();
+    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setMinimalHeaders(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool arg2 ; SWIG_check_num_args("ofxTimeline::setMinimalHeaders",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setMinimalHeaders",1,"ofxTimeline *");
+    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setMinimalHeaders",2,"bool");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setMinimalHeaders",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
+    (arg1)->setMinimalHeaders(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_areHeadersMinimal(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool result; SWIG_check_num_args("ofxTimeline::areHeadersMinimal",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::areHeadersMinimal",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_areHeadersMinimal",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->areHeadersMinimal();
+    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_toggleShowFooters(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool result; SWIG_check_num_args("ofxTimeline::toggleShowFooters",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::toggleShowFooters",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_toggleShowFooters",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->toggleShowFooters();
+    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setFootersHidden(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool arg2 ; SWIG_check_num_args("ofxTimeline::setFootersHidden",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setFootersHidden",1,"ofxTimeline *");
+    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setFootersHidden",2,"bool");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setFootersHidden",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
+    (arg1)->setFootersHidden(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_areFootersHidden(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool result; SWIG_check_num_args("ofxTimeline::areFootersHidden",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::areFootersHidden",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_areFootersHidden",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->areFootersHidden();
+    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setInOutRange(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofRange arg2 ; ofRange *argp2 ; SWIG_check_num_args("ofxTimeline::setInOutRange",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setInOutRange",1,"ofxTimeline *");
+    if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofxTimeline::setInOutRange",2,"ofRange");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setInOutRange",1,SWIGTYPE_p_ofxTimeline); } 
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofRange,0))){
+      SWIG_fail_ptr("ofxTimeline_setInOutRange",2,SWIGTYPE_p_ofRange); }  arg2 = *argp2; (arg1)->setInOutRange(arg2);
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setInOutRangeMillis(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    unsigned long long arg2 ; unsigned long long arg3 ; SWIG_check_num_args("ofxTimeline::setInOutRangeMillis",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setInOutRangeMillis",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setInOutRangeMillis",2,"unsigned long long");
+    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::setInOutRangeMillis",3,"unsigned long long");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setInOutRangeMillis",1,SWIGTYPE_p_ofxTimeline); } 
+    arg2 = (unsigned long long)lua_tonumber(L, 2); arg3 = (unsigned long long)lua_tonumber(L, 3);
+    (arg1)->setInOutRangeMillis(arg2,arg3); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_clearInOut(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::clearInOut",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::clearInOut",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_clearInOut",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->clearInOut(); return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getInOutRange(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofRange result; SWIG_check_num_args("ofxTimeline::getInOutRange",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getInOutRange",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getInOutRange",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getInOutRange(); {
+      ofRange * resultptr = new ofRange(result); SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofRange,1); SWIG_arg++; } 
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getInOutRangeMillis(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofLongRange result; SWIG_check_num_args("ofxTimeline::getInOutRangeMillis",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getInOutRangeMillis",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getInOutRangeMillis",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getInOutRangeMillis(); {
+      ofLongRange * resultptr = new ofLongRange(result);
+      SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofLongRange,1); SWIG_arg++; }  return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getInFrame(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; int result;
+    SWIG_check_num_args("ofxTimeline::getInFrame",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getInFrame",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getInFrame",1,SWIGTYPE_p_ofxTimeline); }  result = (int)(arg1)->getInFrame();
+    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getInTimeInSeconds(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    float result; SWIG_check_num_args("ofxTimeline::getInTimeInSeconds",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getInTimeInSeconds",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getInTimeInSeconds",1,SWIGTYPE_p_ofxTimeline); }  result = (float)(arg1)->getInTimeInSeconds();
+    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getInTimeInMillis(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    long result; SWIG_check_num_args("ofxTimeline::getInTimeInMillis",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getInTimeInMillis",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getInTimeInMillis",1,SWIGTYPE_p_ofxTimeline); }  result = (long)(arg1)->getInTimeInMillis();
+    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getInPointTimecode(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string result; SWIG_check_num_args("ofxTimeline::getInPointTimecode",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getInPointTimecode",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getInPointTimecode",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getInPointTimecode();
+    lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_getOutFrame(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; int result;
+    SWIG_check_num_args("ofxTimeline::getOutFrame",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getOutFrame",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getOutFrame",1,SWIGTYPE_p_ofxTimeline); }  result = (int)(arg1)->getOutFrame();
+    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getOutTimeInSeconds(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    float result; SWIG_check_num_args("ofxTimeline::getOutTimeInSeconds",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getOutTimeInSeconds",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getOutTimeInSeconds",1,SWIGTYPE_p_ofxTimeline); } 
+    result = (float)(arg1)->getOutTimeInSeconds(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getOutTimeInMillis(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    long result; SWIG_check_num_args("ofxTimeline::getOutTimeInMillis",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getOutTimeInMillis",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getOutTimeInMillis",1,SWIGTYPE_p_ofxTimeline); }  result = (long)(arg1)->getOutTimeInMillis();
+    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getOutPointTimecode(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string result; SWIG_check_num_args("ofxTimeline::getOutPointTimecode",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getOutPointTimecode",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getOutPointTimecode",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getOutPointTimecode();
+    lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_setOffset(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofVec2f arg2 ; ofVec2f *argp2 ; SWIG_check_num_args("ofxTimeline::setOffset",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setOffset",1,"ofxTimeline *");
+    if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofxTimeline::setOffset",2,"ofVec2f");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setOffset",1,SWIGTYPE_p_ofxTimeline); } 
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofVec2f,0))){
+      SWIG_fail_ptr("ofxTimeline_setOffset",2,SWIGTYPE_p_ofVec2f); }  arg2 = *argp2; (arg1)->setOffset(arg2); return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setLockWidthToWindow(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool arg2 ; SWIG_check_num_args("ofxTimeline::setLockWidthToWindow",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setLockWidthToWindow",1,"ofxTimeline *");
+    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setLockWidthToWindow",2,"bool");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setLockWidthToWindow",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
+    (arg1)->setLockWidthToWindow(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getLockWidthToWindow(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool result; SWIG_check_num_args("ofxTimeline::getLockWidthToWindow",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getLockWidthToWindow",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getLockWidthToWindow",1,SWIGTYPE_p_ofxTimeline); } 
+    result = (bool)(arg1)->getLockWidthToWindow(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setWidth(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; float arg2 ;
+    SWIG_check_num_args("ofxTimeline::setWidth",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setWidth",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setWidth",2,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setWidth",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
+    (arg1)->setWidth(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setHeight(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; float arg2 ;
+    SWIG_check_num_args("ofxTimeline::setHeight",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setHeight",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setHeight",2,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setHeight",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
+    (arg1)->setHeight(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_collapseAllTracks(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::collapseAllTracks",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::collapseAllTracks",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_collapseAllTracks",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->collapseAllTracks(); return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getDrawRect(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofRectangle result; SWIG_check_num_args("ofxTimeline::getDrawRect",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getDrawRect",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getDrawRect",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getDrawRect(); {
+      ofRectangle * resultptr = new ofRectangle(result);
+      SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofRectangle,1); SWIG_arg++; }  return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getWidth(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; float result;
+    SWIG_check_num_args("ofxTimeline::getWidth",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getWidth",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getWidth",1,SWIGTYPE_p_ofxTimeline); }  result = (float)(arg1)->getWidth();
+    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getHeight(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; float result;
+    SWIG_check_num_args("ofxTimeline::getHeight",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getHeight",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getHeight",1,SWIGTYPE_p_ofxTimeline); }  result = (float)(arg1)->getHeight();
+    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getTopRight(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofVec2f result; SWIG_check_num_args("ofxTimeline::getTopRight",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getTopRight",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getTopRight",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getTopRight(); {
+      ofVec2f * resultptr = new ofVec2f(result); SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVec2f,1); SWIG_arg++; } 
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getTopLeft(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofVec2f result; SWIG_check_num_args("ofxTimeline::getTopLeft",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getTopLeft",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getTopLeft",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getTopLeft(); {
+      ofVec2f * resultptr = new ofVec2f(result); SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVec2f,1); SWIG_arg++; } 
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getBottomLeft(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofVec2f result; SWIG_check_num_args("ofxTimeline::getBottomLeft",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getBottomLeft",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getBottomLeft",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getBottomLeft(); {
+      ofVec2f * resultptr = new ofVec2f(result); SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVec2f,1); SWIG_arg++; } 
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getBottomRight(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofVec2f result; SWIG_check_num_args("ofxTimeline::getBottomRight",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getBottomRight",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getBottomRight",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getBottomRight(); {
+      ofVec2f * resultptr = new ofVec2f(result); SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVec2f,1); SWIG_arg++; } 
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setBPM(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; float arg2 ;
+    SWIG_check_num_args("ofxTimeline::setBPM",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setBPM",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setBPM",2,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setBPM",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2); (arg1)->setBPM(arg2);
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getBPM(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; float result;
+    SWIG_check_num_args("ofxTimeline::getBPM",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getBPM",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getBPM",1,SWIGTYPE_p_ofxTimeline); }  result = (float)(arg1)->getBPM();
+    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_toggleSnapToBPM(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool result; SWIG_check_num_args("ofxTimeline::toggleSnapToBPM",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::toggleSnapToBPM",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_toggleSnapToBPM",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->toggleSnapToBPM();
+    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_enableSnapToBPM(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool arg2 ; SWIG_check_num_args("ofxTimeline::enableSnapToBPM",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::enableSnapToBPM",1,"ofxTimeline *");
+    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::enableSnapToBPM",2,"bool");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_enableSnapToBPM",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
+    (arg1)->enableSnapToBPM(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getSnapToBPM(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool result; SWIG_check_num_args("ofxTimeline::getSnapToBPM",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getSnapToBPM",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getSnapToBPM",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->getSnapToBPM();
+    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_toggleShowBPMGrid(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool result; SWIG_check_num_args("ofxTimeline::toggleShowBPMGrid",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::toggleShowBPMGrid",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_toggleShowBPMGrid",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->toggleShowBPMGrid();
+    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setShowBPMGrid(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool arg2 ; SWIG_check_num_args("ofxTimeline::setShowBPMGrid",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setShowBPMGrid",1,"ofxTimeline *");
+    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setShowBPMGrid",2,"bool");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setShowBPMGrid",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
+    (arg1)->setShowBPMGrid(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getShowBPMGrid(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool result; SWIG_check_num_args("ofxTimeline::getShowBPMGrid",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getShowBPMGrid",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getShowBPMGrid",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->getShowBPMGrid();
+    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_toggleSnapToOtherKeyframes(lua_State* L) { { int SWIG_arg = 0;
+    ofxTimeline *arg1 = (ofxTimeline *) 0 ; bool result; SWIG_check_num_args("ofxTimeline::toggleSnapToOtherKeyframes",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::toggleSnapToOtherKeyframes",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_toggleSnapToOtherKeyframes",1,SWIGTYPE_p_ofxTimeline); } 
+    result = (bool)(arg1)->toggleSnapToOtherKeyframes(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_enableSnapToOtherKeyframes(lua_State* L) { { int SWIG_arg = 0;
+    ofxTimeline *arg1 = (ofxTimeline *) 0 ; bool arg2 ; SWIG_check_num_args("ofxTimeline::enableSnapToOtherKeyframes",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::enableSnapToOtherKeyframes",1,"ofxTimeline *");
+    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::enableSnapToOtherKeyframes",2,"bool");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_enableSnapToOtherKeyframes",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
+    (arg1)->enableSnapToOtherKeyframes(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getSnapToOtherElements(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool result; SWIG_check_num_args("ofxTimeline::getSnapToOtherElements",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getSnapToOtherElements",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getSnapToOtherElements",1,SWIGTYPE_p_ofxTimeline); } 
+    result = (bool)(arg1)->getSnapToOtherElements(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setMovePlayheadOnPaste(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool arg2 ; SWIG_check_num_args("ofxTimeline::setMovePlayheadOnPaste",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setMovePlayheadOnPaste",1,"ofxTimeline *");
+    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setMovePlayheadOnPaste",2,"bool");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setMovePlayheadOnPaste",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
+    (arg1)->setMovePlayheadOnPaste(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getMovePlayheadOnPaste(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool result; SWIG_check_num_args("ofxTimeline::getMovePlayheadOnPaste",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getMovePlayheadOnPaste",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getMovePlayheadOnPaste",1,SWIGTYPE_p_ofxTimeline); } 
+    result = (bool)(arg1)->getMovePlayheadOnPaste(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getPasteboard(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    vector< string > *result = 0 ; SWIG_check_num_args("ofxTimeline::getPasteboard",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getPasteboard",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getPasteboard",1,SWIGTYPE_p_ofxTimeline); } 
+    result = (vector< string > *) &(arg1)->getPasteboard();
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_vectorT_std__string_t,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_enableUndo(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; bool arg2 ;
+    SWIG_check_num_args("ofxTimeline::enableUndo",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::enableUndo",1,"ofxTimeline *");
+    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::enableUndo",2,"bool");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_enableUndo",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
+    (arg1)->enableUndo(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_undo(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::undo",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::undo",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_undo",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->undo(); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_redo(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::redo",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::redo",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_redo",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->redo(); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setMovePlayheadOnDrag(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool arg2 ; SWIG_check_num_args("ofxTimeline::setMovePlayheadOnDrag",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setMovePlayheadOnDrag",1,"ofxTimeline *");
+    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::setMovePlayheadOnDrag",2,"bool");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setMovePlayheadOnDrag",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
+    (arg1)->setMovePlayheadOnDrag(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getMovePlayheadOnDrag(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool result; SWIG_check_num_args("ofxTimeline::getMovePlayheadOnDrag",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getMovePlayheadOnDrag",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getMovePlayheadOnDrag",1,SWIGTYPE_p_ofxTimeline); } 
+    result = (bool)(arg1)->getMovePlayheadOnDrag(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_unselectAll(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::unselectAll",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::unselectAll",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_unselectAll",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->unselectAll(); return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_addPage__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; bool arg3 ; SWIG_check_num_args("ofxTimeline::addPage",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addPage",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addPage",2,"string");
+    if(!lua_isboolean(L,3)) SWIG_fail_arg("ofxTimeline::addPage",3,"bool");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addPage",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    arg3 = (lua_toboolean(L, 3)!=0); (arg1)->addPage(arg2,arg3); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_addPage__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; SWIG_check_num_args("ofxTimeline::addPage",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addPage",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addPage",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addPage",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    (arg1)->addPage(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_addPage(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) {
+    return _wrap_ofxTimeline_addPage__SWIG_1(L);}  if (argc == 3) { return _wrap_ofxTimeline_addPage__SWIG_0(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_addPage'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::addPage(string,bool)\n" "    ofxTimeline::addPage(string)\n");
+  lua_error(L);return 0; }
+static int _wrap_ofxTimeline_setPageName__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; SWIG_check_num_args("ofxTimeline::setPageName",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setPageName",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setPageName",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setPageName",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    (arg1)->setPageName(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setPageName__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; int arg3 ; SWIG_check_num_args("ofxTimeline::setPageName",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setPageName",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setPageName",2,"string");
+    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::setPageName",3,"int");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setPageName",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    arg3 = (int)lua_tonumber(L, 3); (arg1)->setPageName(arg2,arg3); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_setPageName(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L);
+  if (argc == 2) { return _wrap_ofxTimeline_setPageName__SWIG_0(L);}  if (argc == 3) {
+    return _wrap_ofxTimeline_setPageName__SWIG_1(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_setPageName'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::setPageName(string)\n" "    ofxTimeline::setPageName(string,int)\n");
+  lua_error(L);return 0; }
+static int _wrap_ofxTimeline_setCurrentPage__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; SWIG_check_num_args("ofxTimeline::setCurrentPage",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setCurrentPage",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setCurrentPage",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setCurrentPage",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->setCurrentPage(arg2); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setCurrentPage__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    int arg2 ; SWIG_check_num_args("ofxTimeline::setCurrentPage",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setCurrentPage",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setCurrentPage",2,"int");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setCurrentPage",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (int)lua_tonumber(L, 2);
+    (arg1)->setCurrentPage(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setCurrentPage(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L);
+  if (argc == 2) { int _v = 0; { { _v = lua_isnumber(L,argv[1]); } }  if (!_v) goto check_1;
+    return _wrap_ofxTimeline_setCurrentPage__SWIG_1(L);}  check_1: if (argc == 2) {
+    return _wrap_ofxTimeline_setCurrentPage__SWIG_0(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_setCurrentPage'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::setCurrentPage(string)\n" "    ofxTimeline::setCurrentPage(int)\n");
+  lua_error(L);return 0; }
+static int _wrap_ofxTimeline_removePage__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; SWIG_check_num_args("ofxTimeline::removePage",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::removePage",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::removePage",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_removePage",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    (arg1)->removePage(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_removePage__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofxTLPage *arg2 = (ofxTLPage *) 0 ; SWIG_check_num_args("ofxTimeline::removePage",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::removePage",1,"ofxTimeline *");
+    if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofxTimeline::removePage",2,"ofxTLPage *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_removePage",1,SWIGTYPE_p_ofxTimeline); } 
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofxTLPage,0))){
+      SWIG_fail_ptr("ofxTimeline_removePage",2,SWIGTYPE_p_ofxTLPage); }  (arg1)->removePage(arg2); return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_removePage(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 2) {
+    int _v = 0; { { void *ptr;
+        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofxTLPage, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_ofxTimeline_removePage__SWIG_1(L);}  check_1:
+  if (argc == 2) { return _wrap_ofxTimeline_removePage__SWIG_0(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_removePage'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::removePage(string)\n" "    ofxTimeline::removePage(ofxTLPage *)\n");
+  lua_error(L);return 0; }
+static int _wrap_ofxTimeline_isModal(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; bool result;
+    SWIG_check_num_args("ofxTimeline::isModal",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::isModal",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_isModal",1,SWIGTYPE_p_ofxTimeline); }  result = (bool)(arg1)->isModal();
+    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getModalTrack(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofxTLTrack *result = 0 ; SWIG_check_num_args("ofxTimeline::getModalTrack",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getModalTrack",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getModalTrack",1,SWIGTYPE_p_ofxTimeline); }  result = (ofxTLTrack *)(arg1)->getModalTrack();
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLTrack,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_getFocusedTrack(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofxTLTrack *result = 0 ; SWIG_check_num_args("ofxTimeline::getFocusedTrack",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getFocusedTrack",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getFocusedTrack",1,SWIGTYPE_p_ofxTimeline); } 
+    result = (ofxTLTrack *)(arg1)->getFocusedTrack(); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLTrack,0); SWIG_arg++; 
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setFocusedTrack(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofxTLTrack *arg2 = (ofxTLTrack *) 0 ; SWIG_check_num_args("ofxTimeline::setFocusedTrack",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setFocusedTrack",1,"ofxTimeline *");
+    if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofxTimeline::setFocusedTrack",2,"ofxTLTrack *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setFocusedTrack",1,SWIGTYPE_p_ofxTimeline); } 
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofxTLTrack,0))){
+      SWIG_fail_ptr("ofxTimeline_setFocusedTrack",2,SWIGTYPE_p_ofxTLTrack); }  (arg1)->setFocusedTrack(arg2); return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getTotalSelectedItems(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    int result; SWIG_check_num_args("ofxTimeline::getTotalSelectedItems",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getTotalSelectedItems",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getTotalSelectedItems",1,SWIGTYPE_p_ofxTimeline); } 
+    result = (int)(arg1)->getTotalSelectedItems(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getEarliestTime(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    unsigned long long result; SWIG_check_num_args("ofxTimeline::getEarliestTime",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getEarliestTime",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getEarliestTime",1,SWIGTYPE_p_ofxTimeline); } 
+    result = (unsigned long long)(arg1)->getEarliestTime(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getLatestTime(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    unsigned long long result; SWIG_check_num_args("ofxTimeline::getLatestTime",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getLatestTime",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getLatestTime",1,SWIGTYPE_p_ofxTimeline); } 
+    result = (unsigned long long)(arg1)->getLatestTime(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getEarliestSelectedTime(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    unsigned long long result; SWIG_check_num_args("ofxTimeline::getEarliestSelectedTime",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getEarliestSelectedTime",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getEarliestSelectedTime",1,SWIGTYPE_p_ofxTimeline); } 
+    result = (unsigned long long)(arg1)->getEarliestSelectedTime(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getLatestSelectedTime(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    unsigned long long result; SWIG_check_num_args("ofxTimeline::getLatestSelectedTime",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getLatestSelectedTime",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getLatestSelectedTime",1,SWIGTYPE_p_ofxTimeline); } 
+    result = (unsigned long long)(arg1)->getLatestSelectedTime(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_hasTrack(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ;
+    bool result; SWIG_check_num_args("ofxTimeline::hasTrack",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::hasTrack",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::hasTrack",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_hasTrack",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    result = (bool)(arg1)->hasTrack(arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }
+   lua_error(L); return 0; }
+static int _wrap_ofxTimeline_hasPage(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ;
+    bool result; SWIG_check_num_args("ofxTimeline::hasPage",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::hasPage",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::hasPage",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_hasPage",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    result = (bool)(arg1)->hasPage(arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getTrack(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ;
+    ofxTLTrack *result = 0 ; SWIG_check_num_args("ofxTimeline::getTrack",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getTrack",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getTrack",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getTrack",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    result = (ofxTLTrack *)(arg1)->getTrack(arg2); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLTrack,0); SWIG_arg++; 
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getPage(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ;
+    ofxTLPage *result = 0 ; SWIG_check_num_args("ofxTimeline::getPage",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getPage",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getPage",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getPage",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    result = (ofxTLPage *)(arg1)->getPage(arg2); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLPage,0); SWIG_arg++; 
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_addCurves__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; ofRange arg3 ; float arg4 ; ofRange *argp3 ; ofxTLCurves *result = 0 ;
+    SWIG_check_num_args("ofxTimeline::addCurves",4,4)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addCurves",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addCurves",2,"string");
+    if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofxTimeline::addCurves",3,"ofRange");
+    if(!lua_isnumber(L,4)) SWIG_fail_arg("ofxTimeline::addCurves",4,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addCurves",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_ofRange,0))){
+      SWIG_fail_ptr("ofxTimeline_addCurves",3,SWIGTYPE_p_ofRange); }  arg3 = *argp3; arg4 = (float)lua_tonumber(L, 4);
+    result = (ofxTLCurves *)(arg1)->addCurves(arg2,arg3,arg4);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLCurves,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_addCurves__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; ofRange arg3 ; ofRange *argp3 ; ofxTLCurves *result = 0 ; SWIG_check_num_args("ofxTimeline::addCurves",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addCurves",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addCurves",2,"string");
+    if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofxTimeline::addCurves",3,"ofRange");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addCurves",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_ofRange,0))){
+      SWIG_fail_ptr("ofxTimeline_addCurves",3,SWIGTYPE_p_ofRange); }  arg3 = *argp3;
+    result = (ofxTLCurves *)(arg1)->addCurves(arg2,arg3); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLCurves,0); SWIG_arg++; 
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_addCurves__SWIG_2(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; ofxTLCurves *result = 0 ; SWIG_check_num_args("ofxTimeline::addCurves",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addCurves",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addCurves",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addCurves",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    result = (ofxTLCurves *)(arg1)->addCurves(arg2); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLCurves,0); SWIG_arg++; 
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_addCurves__SWIG_3(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; string arg3 ; ofRange arg4 ; float arg5 ; ofRange *argp4 ; ofxTLCurves *result = 0 ;
+    SWIG_check_num_args("ofxTimeline::addCurves",5,5)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addCurves",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addCurves",2,"string");
+    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addCurves",3,"string");
+    if(!lua_isuserdata(L,4)) SWIG_fail_arg("ofxTimeline::addCurves",4,"ofRange");
+    if(!lua_isnumber(L,5)) SWIG_fail_arg("ofxTimeline::addCurves",5,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addCurves",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3));
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&argp4,SWIGTYPE_p_ofRange,0))){
+      SWIG_fail_ptr("ofxTimeline_addCurves",4,SWIGTYPE_p_ofRange); }  arg4 = *argp4; arg5 = (float)lua_tonumber(L, 5);
+    result = (ofxTLCurves *)(arg1)->addCurves(arg2,arg3,arg4,arg5);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLCurves,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_addCurves__SWIG_4(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; string arg3 ; ofRange arg4 ; ofRange *argp4 ; ofxTLCurves *result = 0 ;
+    SWIG_check_num_args("ofxTimeline::addCurves",4,4)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addCurves",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addCurves",2,"string");
+    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addCurves",3,"string");
+    if(!lua_isuserdata(L,4)) SWIG_fail_arg("ofxTimeline::addCurves",4,"ofRange");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addCurves",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3));
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&argp4,SWIGTYPE_p_ofRange,0))){
+      SWIG_fail_ptr("ofxTimeline_addCurves",4,SWIGTYPE_p_ofRange); }  arg4 = *argp4;
+    result = (ofxTLCurves *)(arg1)->addCurves(arg2,arg3,arg4);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLCurves,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_addCurves__SWIG_5(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; string arg3 ; ofxTLCurves *result = 0 ; SWIG_check_num_args("ofxTimeline::addCurves",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addCurves",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addCurves",2,"string");
+    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addCurves",3,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addCurves",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3)); result = (ofxTLCurves *)(arg1)->addCurves(arg2,arg3);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLCurves,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_getValue__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; float result; SWIG_check_num_args("ofxTimeline::getValue",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getValue",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getValue",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getValue",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    result = (float)(arg1)->getValue(arg2); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getValueAtPercent(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; float arg3 ; float result; SWIG_check_num_args("ofxTimeline::getValueAtPercent",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getValueAtPercent",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getValueAtPercent",2,"string");
+    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::getValueAtPercent",3,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getValueAtPercent",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); arg3 = (float)lua_tonumber(L, 3);
+    result = (float)(arg1)->getValueAtPercent(arg2,arg3); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getValue__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; float arg3 ; float result; SWIG_check_num_args("ofxTimeline::getValue",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getValue",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getValue",2,"string");
+    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::getValue",3,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getValue",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    arg3 = (float)lua_tonumber(L, 3); result = (float)(arg1)->getValue(arg2,arg3);
+    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getValue__SWIG_2(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; int arg3 ; float result; SWIG_check_num_args("ofxTimeline::getValue",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getValue",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getValue",2,"string");
+    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::getValue",3,"int");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getValue",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    arg3 = (int)lua_tonumber(L, 3); result = (float)(arg1)->getValue(arg2,arg3);
+    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getValue(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) {
+    return _wrap_ofxTimeline_getValue__SWIG_0(L);}  if (argc == 3) { return _wrap_ofxTimeline_getValue__SWIG_1(L);} 
+  if (argc == 3) { return _wrap_ofxTimeline_getValue__SWIG_2(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_getValue'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::getValue(string)\n" "    ofxTimeline::getValue(string,float)\n"
+  "    ofxTimeline::getValue(string,int)\n"); lua_error(L);return 0; }
+static int _wrap_ofxTimeline_addLFO__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; ofRange arg3 ; float arg4 ; ofRange *argp3 ; ofxTLLFO *result = 0 ;
+    SWIG_check_num_args("ofxTimeline::addLFO",4,4)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addLFO",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addLFO",2,"string");
+    if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofxTimeline::addLFO",3,"ofRange");
+    if(!lua_isnumber(L,4)) SWIG_fail_arg("ofxTimeline::addLFO",4,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addLFO",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_ofRange,0))){
+      SWIG_fail_ptr("ofxTimeline_addLFO",3,SWIGTYPE_p_ofRange); }  arg3 = *argp3; arg4 = (float)lua_tonumber(L, 4);
+    result = (ofxTLLFO *)(arg1)->addLFO(arg2,arg3,arg4); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLLFO,0); SWIG_arg++; 
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_addLFO__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; ofRange arg3 ; ofRange *argp3 ; ofxTLLFO *result = 0 ; SWIG_check_num_args("ofxTimeline::addLFO",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addLFO",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addLFO",2,"string");
+    if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofxTimeline::addLFO",3,"ofRange");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addLFO",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_ofRange,0))){
+      SWIG_fail_ptr("ofxTimeline_addLFO",3,SWIGTYPE_p_ofRange); }  arg3 = *argp3;
+    result = (ofxTLLFO *)(arg1)->addLFO(arg2,arg3); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLLFO,0); SWIG_arg++; 
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_addLFO__SWIG_2(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; ofxTLLFO *result = 0 ; SWIG_check_num_args("ofxTimeline::addLFO",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addLFO",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addLFO",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addLFO",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    result = (ofxTLLFO *)(arg1)->addLFO(arg2); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLLFO,0); SWIG_arg++;  return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_addLFO__SWIG_3(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; string arg3 ; ofRange arg4 ; float arg5 ; ofRange *argp4 ; ofxTLLFO *result = 0 ;
+    SWIG_check_num_args("ofxTimeline::addLFO",5,5)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addLFO",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addLFO",2,"string");
+    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addLFO",3,"string");
+    if(!lua_isuserdata(L,4)) SWIG_fail_arg("ofxTimeline::addLFO",4,"ofRange");
+    if(!lua_isnumber(L,5)) SWIG_fail_arg("ofxTimeline::addLFO",5,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addLFO",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3));
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&argp4,SWIGTYPE_p_ofRange,0))){
+      SWIG_fail_ptr("ofxTimeline_addLFO",4,SWIGTYPE_p_ofRange); }  arg4 = *argp4; arg5 = (float)lua_tonumber(L, 5);
+    result = (ofxTLLFO *)(arg1)->addLFO(arg2,arg3,arg4,arg5); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLLFO,0); SWIG_arg++; 
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_addLFO__SWIG_4(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; string arg3 ; ofRange arg4 ; ofRange *argp4 ; ofxTLLFO *result = 0 ;
+    SWIG_check_num_args("ofxTimeline::addLFO",4,4)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addLFO",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addLFO",2,"string");
+    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addLFO",3,"string");
+    if(!lua_isuserdata(L,4)) SWIG_fail_arg("ofxTimeline::addLFO",4,"ofRange");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addLFO",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3));
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&argp4,SWIGTYPE_p_ofRange,0))){
+      SWIG_fail_ptr("ofxTimeline_addLFO",4,SWIGTYPE_p_ofRange); }  arg4 = *argp4;
+    result = (ofxTLLFO *)(arg1)->addLFO(arg2,arg3,arg4); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLLFO,0); SWIG_arg++; 
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_addLFO__SWIG_5(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; string arg3 ; ofxTLLFO *result = 0 ; SWIG_check_num_args("ofxTimeline::addLFO",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addLFO",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addLFO",2,"string");
+    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addLFO",3,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addLFO",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3)); result = (ofxTLLFO *)(arg1)->addLFO(arg2,arg3);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLLFO,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_addLFO(lua_State* L) { int argc; int argv[6]={ 1,2,3,4,5,6} ; argc = lua_gettop(L);
+  if (argc == 2) { return _wrap_ofxTimeline_addLFO__SWIG_2(L);}  if (argc == 3) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_ofRange, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_ofxTimeline_addLFO__SWIG_1(L);}  check_2:
+  if (argc == 3) { return _wrap_ofxTimeline_addLFO__SWIG_5(L);}  if (argc == 4) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_ofRange, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_4; { { _v = lua_isnumber(L,argv[3]); } }  if (!_v) goto check_4;
+    return _wrap_ofxTimeline_addLFO__SWIG_0(L);}  check_4: if (argc == 4) { return _wrap_ofxTimeline_addLFO__SWIG_4(L);} 
+  if (argc == 5) { return _wrap_ofxTimeline_addLFO__SWIG_3(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_addLFO'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofxTimeline::addLFO(string,ofRange,float)\n" "    ofxTimeline::addLFO(string,ofRange)\n"
+  "    ofxTimeline::addLFO(string)\n" "    ofxTimeline::addLFO(string,string,ofRange,float)\n"
+  "    ofxTimeline::addLFO(string,string,ofRange)\n" "    ofxTimeline::addLFO(string,string)\n"); lua_error(L);return 0; }
+static int _wrap_ofxTimeline_addSwitches__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; ofxTLSwitches *result = 0 ; SWIG_check_num_args("ofxTimeline::addSwitches",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addSwitches",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addSwitches",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addSwitches",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    result = (ofxTLSwitches *)(arg1)->addSwitches(arg2); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLSwitches,0); SWIG_arg++; 
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_addSwitches__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; string arg3 ; ofxTLSwitches *result = 0 ; SWIG_check_num_args("ofxTimeline::addSwitches",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addSwitches",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addSwitches",2,"string");
+    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addSwitches",3,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addSwitches",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3)); result = (ofxTLSwitches *)(arg1)->addSwitches(arg2,arg3);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLSwitches,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_addSwitches(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L);
+  if (argc == 2) { return _wrap_ofxTimeline_addSwitches__SWIG_0(L);}  if (argc == 3) {
+    return _wrap_ofxTimeline_addSwitches__SWIG_1(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_addSwitches'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::addSwitches(string)\n"
+  "    ofxTimeline::addSwitches(string,string)\n"); lua_error(L);return 0; }
+static int _wrap_ofxTimeline_isSwitchOn__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; bool result; SWIG_check_num_args("ofxTimeline::isSwitchOn",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::isSwitchOn",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::isSwitchOn",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_isSwitchOn",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    result = (bool)(arg1)->isSwitchOn(arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_isSwitchOn__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; float arg3 ; bool result; SWIG_check_num_args("ofxTimeline::isSwitchOn",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::isSwitchOn",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::isSwitchOn",2,"string");
+    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::isSwitchOn",3,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_isSwitchOn",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    arg3 = (float)lua_tonumber(L, 3); result = (bool)(arg1)->isSwitchOn(arg2,arg3);
+    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_isSwitchOn__SWIG_2(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; int arg3 ; bool result; SWIG_check_num_args("ofxTimeline::isSwitchOn",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::isSwitchOn",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::isSwitchOn",2,"string");
+    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::isSwitchOn",3,"int");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_isSwitchOn",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    arg3 = (int)lua_tonumber(L, 3); result = (bool)(arg1)->isSwitchOn(arg2,arg3);
+    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_isSwitchOn(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L);
+  if (argc == 2) { return _wrap_ofxTimeline_isSwitchOn__SWIG_0(L);}  if (argc == 3) {
+    return _wrap_ofxTimeline_isSwitchOn__SWIG_1(L);}  if (argc == 3) { return _wrap_ofxTimeline_isSwitchOn__SWIG_2(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_isSwitchOn'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::isSwitchOn(string)\n" "    ofxTimeline::isSwitchOn(string,float)\n"
+  "    ofxTimeline::isSwitchOn(string,int)\n"); lua_error(L);return 0; }
+static int _wrap_ofxTimeline_addBangs__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; ofxTLBangs *result = 0 ; SWIG_check_num_args("ofxTimeline::addBangs",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addBangs",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addBangs",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addBangs",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    result = (ofxTLBangs *)(arg1)->addBangs(arg2); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLBangs,0); SWIG_arg++; 
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_addBangs__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; string arg3 ; ofxTLBangs *result = 0 ; SWIG_check_num_args("ofxTimeline::addBangs",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addBangs",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addBangs",2,"string");
+    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addBangs",3,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addBangs",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3)); result = (ofxTLBangs *)(arg1)->addBangs(arg2,arg3);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLBangs,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_addBangs(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) {
+    return _wrap_ofxTimeline_addBangs__SWIG_0(L);}  if (argc == 3) { return _wrap_ofxTimeline_addBangs__SWIG_1(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_addBangs'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::addBangs(string)\n" "    ofxTimeline::addBangs(string,string)\n");
+  lua_error(L);return 0; }
+static int _wrap_ofxTimeline_addFlags__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; ofxTLFlags *result = 0 ; SWIG_check_num_args("ofxTimeline::addFlags",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addFlags",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addFlags",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addFlags",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    result = (ofxTLFlags *)(arg1)->addFlags(arg2); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLFlags,0); SWIG_arg++; 
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_addFlags__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; string arg3 ; ofxTLFlags *result = 0 ; SWIG_check_num_args("ofxTimeline::addFlags",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addFlags",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addFlags",2,"string");
+    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addFlags",3,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addFlags",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3)); result = (ofxTLFlags *)(arg1)->addFlags(arg2,arg3);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLFlags,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_addFlags(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) {
+    return _wrap_ofxTimeline_addFlags__SWIG_0(L);}  if (argc == 3) { return _wrap_ofxTimeline_addFlags__SWIG_1(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_addFlags'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::addFlags(string)\n" "    ofxTimeline::addFlags(string,string)\n");
+  lua_error(L);return 0; }
+static int _wrap_ofxTimeline_addColors__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; ofxTLColorTrack *result = 0 ; SWIG_check_num_args("ofxTimeline::addColors",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addColors",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addColors",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addColors",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    result = (ofxTLColorTrack *)(arg1)->addColors(arg2); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLColorTrack,0); SWIG_arg++; 
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_addColors__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; string arg3 ; ofxTLColorTrack *result = 0 ; SWIG_check_num_args("ofxTimeline::addColors",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addColors",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addColors",2,"string");
+    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addColors",3,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addColors",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3)); result = (ofxTLColorTrack *)(arg1)->addColors(arg2,arg3);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLColorTrack,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_addColors(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) {
+    return _wrap_ofxTimeline_addColors__SWIG_0(L);}  if (argc == 3) { return _wrap_ofxTimeline_addColors__SWIG_1(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_addColors'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::addColors(string)\n" "    ofxTimeline::addColors(string,string)\n");
+  lua_error(L);return 0; }
+static int _wrap_ofxTimeline_addColorsWithPalette__SWIG_0(lua_State* L) { { int SWIG_arg = 0;
+    ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ; ofImage *arg3 = 0 ; ofxTLColorTrack *result = 0 ;
+    SWIG_check_num_args("ofxTimeline::addColorsWithPalette",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",2,"string");
+    if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",3,"ofImage &");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addColorsWithPalette",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_ofImage,0))){
+      SWIG_fail_ptr("ofxTimeline_addColorsWithPalette",3,SWIGTYPE_p_ofImage); } 
+    result = (ofxTLColorTrack *)(arg1)->addColorsWithPalette(arg2,*arg3);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLColorTrack,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_addColorsWithPalette__SWIG_1(lua_State* L) { { int SWIG_arg = 0;
+    ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ; string arg3 ; ofxTLColorTrack *result = 0 ;
+    SWIG_check_num_args("ofxTimeline::addColorsWithPalette",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",2,"string");
+    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",3,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addColorsWithPalette",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3));
+    result = (ofxTLColorTrack *)(arg1)->addColorsWithPalette(arg2,arg3);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLColorTrack,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_addColorsWithPalette__SWIG_2(lua_State* L) { { int SWIG_arg = 0;
+    ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ; string arg3 ; ofImage *arg4 = 0 ; ofxTLColorTrack *result = 0 ;
+    SWIG_check_num_args("ofxTimeline::addColorsWithPalette",4,4)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",2,"string");
+    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",3,"string");
+    if(!lua_isuserdata(L,4)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",4,"ofImage &");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addColorsWithPalette",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3));
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&arg4,SWIGTYPE_p_ofImage,0))){
+      SWIG_fail_ptr("ofxTimeline_addColorsWithPalette",4,SWIGTYPE_p_ofImage); } 
+    result = (ofxTLColorTrack *)(arg1)->addColorsWithPalette(arg2,arg3,*arg4);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLColorTrack,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_addColorsWithPalette__SWIG_3(lua_State* L) { { int SWIG_arg = 0;
+    ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ; string arg3 ; string arg4 ; ofxTLColorTrack *result = 0 ;
+    SWIG_check_num_args("ofxTimeline::addColorsWithPalette",4,4)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",2,"string");
+    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",3,"string");
+    if(!lua_isstring(L,4)) SWIG_fail_arg("ofxTimeline::addColorsWithPalette",4,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addColorsWithPalette",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3));
+    (&arg4)->assign(lua_tostring(L,4),lua_rawlen(L,4));
+    result = (ofxTLColorTrack *)(arg1)->addColorsWithPalette(arg2,arg3,arg4);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLColorTrack,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_addColorsWithPalette(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L);
+  if (argc == 3) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_ofImage, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_ofxTimeline_addColorsWithPalette__SWIG_0(L);} 
+  check_1: if (argc == 3) { return _wrap_ofxTimeline_addColorsWithPalette__SWIG_1(L);}  if (argc == 4) { int _v = 0; { {
+        void *ptr;
+        if (lua_isuserdata(L,argv[3])==0 || SWIG_ConvertPtr(L,argv[3], (void **) &ptr, SWIGTYPE_p_ofImage, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_3; return _wrap_ofxTimeline_addColorsWithPalette__SWIG_2(L);} 
+  check_3: if (argc == 4) { return _wrap_ofxTimeline_addColorsWithPalette__SWIG_3(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_addColorsWithPalette'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::addColorsWithPalette(string,ofImage &)\n"
+  "    ofxTimeline::addColorsWithPalette(string,string)\n" "    ofxTimeline::addColorsWithPalette(string,string,ofImage &)\n"
+  "    ofxTimeline::addColorsWithPalette(string,string,string)\n"); lua_error(L);return 0; }
+static int _wrap_ofxTimeline_getColor(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ;
+    ofColor result; SWIG_check_num_args("ofxTimeline::getColor",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getColor",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getColor",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getColor",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    result = (arg1)->getColor(arg2); { ofColor * resultptr = new ofColor(result);
+      SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofColor,1); SWIG_arg++; }  return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getColorAtPercent(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; float arg3 ; ofColor result; SWIG_check_num_args("ofxTimeline::getColorAtPercent",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getColorAtPercent",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getColorAtPercent",2,"string");
+    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::getColorAtPercent",3,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getColorAtPercent",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); arg3 = (float)lua_tonumber(L, 3);
+    result = (arg1)->getColorAtPercent(arg2,arg3); { ofColor * resultptr = new ofColor(result);
+      SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofColor,1); SWIG_arg++; }  return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getColorAtSecond(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; float arg3 ; ofColor result; SWIG_check_num_args("ofxTimeline::getColorAtSecond",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getColorAtSecond",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getColorAtSecond",2,"string");
+    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::getColorAtSecond",3,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getColorAtSecond",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); arg3 = (float)lua_tonumber(L, 3);
+    result = (arg1)->getColorAtSecond(arg2,arg3); { ofColor * resultptr = new ofColor(result);
+      SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofColor,1); SWIG_arg++; }  return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getColorAtMillis(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; unsigned long long arg3 ; ofColor result; SWIG_check_num_args("ofxTimeline::getColorAtMillis",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getColorAtMillis",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getColorAtMillis",2,"string");
+    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::getColorAtMillis",3,"unsigned long long");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getColorAtMillis",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); arg3 = (unsigned long long)lua_tonumber(L, 3);
+    result = (arg1)->getColorAtMillis(arg2,arg3); { ofColor * resultptr = new ofColor(result);
+      SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofColor,1); SWIG_arg++; }  return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setDefaultColorPalettePath(lua_State* L) { { int SWIG_arg = 0;
+    ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ; SWIG_check_num_args("ofxTimeline::setDefaultColorPalettePath",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setDefaultColorPalettePath",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setDefaultColorPalettePath",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setDefaultColorPalettePath",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->setDefaultColorPalettePath(arg2); return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getDefaultColorPalettePath(lua_State* L) { { int SWIG_arg = 0;
+    ofxTimeline *arg1 = (ofxTimeline *) 0 ; string result; SWIG_check_num_args("ofxTimeline::getDefaultColorPalettePath",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getDefaultColorPalettePath",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getDefaultColorPalettePath",1,SWIGTYPE_p_ofxTimeline); } 
+    result = (arg1)->getDefaultColorPalettePath(); lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_addImageSequence__SWIG_0(lua_State* L) { { int SWIG_arg = 0;
+    ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ; ofxTLImageSequence *result = 0 ;
+    SWIG_check_num_args("ofxTimeline::addImageSequence",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addImageSequence",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addImageSequence",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addImageSequence",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); result = (ofxTLImageSequence *)(arg1)->addImageSequence(arg2);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLImageSequence,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_addImageSequence__SWIG_1(lua_State* L) { { int SWIG_arg = 0;
+    ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ; string arg3 ; ofxTLImageSequence *result = 0 ;
+    SWIG_check_num_args("ofxTimeline::addImageSequence",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addImageSequence",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addImageSequence",2,"string");
+    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addImageSequence",3,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addImageSequence",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3));
+    result = (ofxTLImageSequence *)(arg1)->addImageSequence(arg2,arg3);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLImageSequence,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_addImageSequence(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L);
+  if (argc == 2) { return _wrap_ofxTimeline_addImageSequence__SWIG_0(L);}  if (argc == 3) {
+    return _wrap_ofxTimeline_addImageSequence__SWIG_1(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_addImageSequence'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::addImageSequence(string)\n"
+  "    ofxTimeline::addImageSequence(string,string)\n"); lua_error(L);return 0; }
+static int _wrap_ofxTimeline_getImage__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; ofImage *result = 0 ; SWIG_check_num_args("ofxTimeline::getImage",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getImage",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getImage",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getImage",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    result = (ofImage *)(arg1)->getImage(arg2); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofImage,0); SWIG_arg++;  return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getImage__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; float arg3 ; ofImage *result = 0 ; SWIG_check_num_args("ofxTimeline::getImage",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getImage",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getImage",2,"string");
+    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::getImage",3,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getImage",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    arg3 = (float)lua_tonumber(L, 3); result = (ofImage *)(arg1)->getImage(arg2,arg3);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofImage,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_getImage__SWIG_2(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; int arg3 ; ofImage *result = 0 ; SWIG_check_num_args("ofxTimeline::getImage",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getImage",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getImage",2,"string");
+    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::getImage",3,"int");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getImage",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    arg3 = (int)lua_tonumber(L, 3); result = (ofImage *)(arg1)->getImage(arg2,arg3);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofImage,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_getImage(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) {
+    return _wrap_ofxTimeline_getImage__SWIG_0(L);}  if (argc == 3) { return _wrap_ofxTimeline_getImage__SWIG_1(L);} 
+  if (argc == 3) { return _wrap_ofxTimeline_getImage__SWIG_2(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_getImage'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::getImage(string)\n" "    ofxTimeline::getImage(string,float)\n"
+  "    ofxTimeline::getImage(string,int)\n"); lua_error(L);return 0; }
+static int _wrap_ofxTimeline_addVideoTrack__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; ofxTLVideoTrack *result = 0 ; SWIG_check_num_args("ofxTimeline::addVideoTrack",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addVideoTrack",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addVideoTrack",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addVideoTrack",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); result = (ofxTLVideoTrack *)(arg1)->addVideoTrack(arg2);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLVideoTrack,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_addVideoTrackWithPath(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; ofxTLVideoTrack *result = 0 ; SWIG_check_num_args("ofxTimeline::addVideoTrackWithPath",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addVideoTrackWithPath",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addVideoTrackWithPath",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addVideoTrackWithPath",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); result = (ofxTLVideoTrack *)(arg1)->addVideoTrackWithPath(arg2);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLVideoTrack,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_addVideoTrack__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; string arg3 ; ofxTLVideoTrack *result = 0 ; SWIG_check_num_args("ofxTimeline::addVideoTrack",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addVideoTrack",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addVideoTrack",2,"string");
+    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addVideoTrack",3,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addVideoTrack",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3));
+    result = (ofxTLVideoTrack *)(arg1)->addVideoTrack(arg2,arg3);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLVideoTrack,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_addVideoTrack(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L);
+  if (argc == 2) { return _wrap_ofxTimeline_addVideoTrack__SWIG_0(L);}  if (argc == 3) {
+    return _wrap_ofxTimeline_addVideoTrack__SWIG_1(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_addVideoTrack'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::addVideoTrack(string)\n"
+  "    ofxTimeline::addVideoTrack(string,string)\n"); lua_error(L);return 0; }
+static int _wrap_ofxTimeline_getVideoTrack(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; ofxTLVideoTrack *result = 0 ; SWIG_check_num_args("ofxTimeline::getVideoTrack",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getVideoTrack",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getVideoTrack",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getVideoTrack",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); result = (ofxTLVideoTrack *)(arg1)->getVideoTrack(arg2);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLVideoTrack,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_getVideoPlayer(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; ofPtr< ofVideoPlayer > result; SWIG_check_num_args("ofxTimeline::getVideoPlayer",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getVideoPlayer",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getVideoPlayer",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getVideoPlayer",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); result = (arg1)->getVideoPlayer(arg2); {
+      ofPtr< ofVideoPlayer > * resultptr = new ofPtr< ofVideoPlayer >(result);
+      SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofPtrT_ofVideoPlayer_t,1); SWIG_arg++; }  return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_addAudioTrack__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; ofxTLAudioTrack *result = 0 ; SWIG_check_num_args("ofxTimeline::addAudioTrack",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addAudioTrack",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addAudioTrack",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addAudioTrack",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); result = (ofxTLAudioTrack *)(arg1)->addAudioTrack(arg2);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLAudioTrack,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_addAudioTrackWithPath(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; ofxTLAudioTrack *result = 0 ; SWIG_check_num_args("ofxTimeline::addAudioTrackWithPath",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addAudioTrackWithPath",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addAudioTrackWithPath",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addAudioTrackWithPath",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); result = (ofxTLAudioTrack *)(arg1)->addAudioTrackWithPath(arg2);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLAudioTrack,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_addAudioTrack__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; string arg3 ; ofxTLAudioTrack *result = 0 ; SWIG_check_num_args("ofxTimeline::addAudioTrack",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addAudioTrack",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addAudioTrack",2,"string");
+    if(!lua_isstring(L,3)) SWIG_fail_arg("ofxTimeline::addAudioTrack",3,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addAudioTrack",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (&arg3)->assign(lua_tostring(L,3),lua_rawlen(L,3));
+    result = (ofxTLAudioTrack *)(arg1)->addAudioTrack(arg2,arg3);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLAudioTrack,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_addAudioTrack(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L);
+  if (argc == 2) { return _wrap_ofxTimeline_addAudioTrack__SWIG_0(L);}  if (argc == 3) {
+    return _wrap_ofxTimeline_addAudioTrack__SWIG_1(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_addAudioTrack'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::addAudioTrack(string)\n"
+  "    ofxTimeline::addAudioTrack(string,string)\n"); lua_error(L);return 0; }
+static int _wrap_ofxTimeline_getAudioTrack(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; ofxTLAudioTrack *result = 0 ; SWIG_check_num_args("ofxTimeline::getAudioTrack",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getAudioTrack",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getAudioTrack",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getAudioTrack",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); result = (ofxTLAudioTrack *)(arg1)->getAudioTrack(arg2);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLAudioTrack,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_setTimecontrolTrack__SWIG_0(lua_State* L) { { int SWIG_arg = 0;
+    ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ; SWIG_check_num_args("ofxTimeline::setTimecontrolTrack",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setTimecontrolTrack",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setTimecontrolTrack",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setTimecontrolTrack",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->setTimecontrolTrack(arg2); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setTimecontrolTrack__SWIG_1(lua_State* L) { { int SWIG_arg = 0;
+    ofxTimeline *arg1 = (ofxTimeline *) 0 ; ofxTLTrack *arg2 = (ofxTLTrack *) 0 ;
+    SWIG_check_num_args("ofxTimeline::setTimecontrolTrack",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setTimecontrolTrack",1,"ofxTimeline *");
+    if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofxTimeline::setTimecontrolTrack",2,"ofxTLTrack *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setTimecontrolTrack",1,SWIGTYPE_p_ofxTimeline); } 
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofxTLTrack,0))){
+      SWIG_fail_ptr("ofxTimeline_setTimecontrolTrack",2,SWIGTYPE_p_ofxTLTrack); }  (arg1)->setTimecontrolTrack(arg2);
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setTimecontrolTrack(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L);
+  if (argc == 2) { int _v = 0; { { void *ptr;
+        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofxTLTrack, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_ofxTimeline_setTimecontrolTrack__SWIG_1(L);}  check_1:
+  if (argc == 2) { return _wrap_ofxTimeline_setTimecontrolTrack__SWIG_0(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_setTimecontrolTrack'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::setTimecontrolTrack(string)\n"
+  "    ofxTimeline::setTimecontrolTrack(ofxTLTrack *)\n"); lua_error(L);return 0; }
+static int _wrap_ofxTimeline_getTimecontrolTrack(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofxTLTrack *result = 0 ; SWIG_check_num_args("ofxTimeline::getTimecontrolTrack",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getTimecontrolTrack",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getTimecontrolTrack",1,SWIGTYPE_p_ofxTimeline); } 
+    result = (ofxTLTrack *)(arg1)->getTimecontrolTrack(); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLTrack,0); SWIG_arg++; 
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_addTrack(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ;
+    ofxTLTrack *arg3 = (ofxTLTrack *) 0 ; SWIG_check_num_args("ofxTimeline::addTrack",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addTrack",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addTrack",2,"string");
+    if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofxTimeline::addTrack",3,"ofxTLTrack *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addTrack",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_ofxTLTrack,0))){
+      SWIG_fail_ptr("ofxTimeline_addTrack",3,SWIGTYPE_p_ofxTLTrack); }  (arg1)->addTrack(arg2,arg3); return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getTrackHeader__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; ofxTLTrackHeader *result = 0 ; SWIG_check_num_args("ofxTimeline::getTrackHeader",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getTrackHeader",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getTrackHeader",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getTrackHeader",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); result = (ofxTLTrackHeader *)(arg1)->getTrackHeader(arg2);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLTrackHeader,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_getTrackHeader__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofxTLTrack *arg2 = (ofxTLTrack *) 0 ; ofxTLTrackHeader *result = 0 ; SWIG_check_num_args("ofxTimeline::getTrackHeader",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getTrackHeader",1,"ofxTimeline *");
+    if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofxTimeline::getTrackHeader",2,"ofxTLTrack *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getTrackHeader",1,SWIGTYPE_p_ofxTimeline); } 
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofxTLTrack,0))){
+      SWIG_fail_ptr("ofxTimeline_getTrackHeader",2,SWIGTYPE_p_ofxTLTrack); } 
+    result = (ofxTLTrackHeader *)(arg1)->getTrackHeader(arg2);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLTrackHeader,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_getTrackHeader(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L);
+  if (argc == 2) { int _v = 0; { { void *ptr;
+        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofxTLTrack, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_ofxTimeline_getTrackHeader__SWIG_1(L);}  check_1:
+  if (argc == 2) { return _wrap_ofxTimeline_getTrackHeader__SWIG_0(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_getTrackHeader'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::getTrackHeader(string)\n"
+  "    ofxTimeline::getTrackHeader(ofxTLTrack *)\n"); lua_error(L);return 0; }
+static int _wrap_ofxTimeline_removeTrack__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; SWIG_check_num_args("ofxTimeline::removeTrack",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::removeTrack",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::removeTrack",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_removeTrack",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    (arg1)->removeTrack(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_removeTrack__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofxTLTrack *arg2 = (ofxTLTrack *) 0 ; SWIG_check_num_args("ofxTimeline::removeTrack",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::removeTrack",1,"ofxTimeline *");
+    if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofxTimeline::removeTrack",2,"ofxTLTrack *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_removeTrack",1,SWIGTYPE_p_ofxTimeline); } 
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofxTLTrack,0))){
+      SWIG_fail_ptr("ofxTimeline_removeTrack",2,SWIGTYPE_p_ofxTLTrack); }  (arg1)->removeTrack(arg2); return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_removeTrack(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 2) {
+    int _v = 0; { { void *ptr;
+        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofxTLTrack, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_ofxTimeline_removeTrack__SWIG_1(L);}  check_1:
+  if (argc == 2) { return _wrap_ofxTimeline_removeTrack__SWIG_0(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_removeTrack'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::removeTrack(string)\n" "    ofxTimeline::removeTrack(ofxTLTrack *)\n");
+  lua_error(L);return 0; }
+static int _wrap_ofxTimeline_bringTrackToTop__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; SWIG_check_num_args("ofxTimeline::bringTrackToTop",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::bringTrackToTop",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::bringTrackToTop",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_bringTrackToTop",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->bringTrackToTop(arg2); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_bringTrackToTop__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofxTLTrack *arg2 = (ofxTLTrack *) 0 ; SWIG_check_num_args("ofxTimeline::bringTrackToTop",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::bringTrackToTop",1,"ofxTimeline *");
+    if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofxTimeline::bringTrackToTop",2,"ofxTLTrack *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_bringTrackToTop",1,SWIGTYPE_p_ofxTimeline); } 
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofxTLTrack,0))){
+      SWIG_fail_ptr("ofxTimeline_bringTrackToTop",2,SWIGTYPE_p_ofxTLTrack); }  (arg1)->bringTrackToTop(arg2); return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_bringTrackToTop(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L);
+  if (argc == 2) { int _v = 0; { { void *ptr;
+        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofxTLTrack, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_ofxTimeline_bringTrackToTop__SWIG_1(L);}  check_1:
+  if (argc == 2) { return _wrap_ofxTimeline_bringTrackToTop__SWIG_0(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_bringTrackToTop'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::bringTrackToTop(string)\n"
+  "    ofxTimeline::bringTrackToTop(ofxTLTrack *)\n"); lua_error(L);return 0; }
+static int _wrap_ofxTimeline_bringTrackToBottom__SWIG_0(lua_State* L) { { int SWIG_arg = 0;
+    ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ; SWIG_check_num_args("ofxTimeline::bringTrackToBottom",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::bringTrackToBottom",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::bringTrackToBottom",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_bringTrackToBottom",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); (arg1)->bringTrackToBottom(arg2); return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_bringTrackToBottom__SWIG_1(lua_State* L) { { int SWIG_arg = 0;
+    ofxTimeline *arg1 = (ofxTimeline *) 0 ; ofxTLTrack *arg2 = (ofxTLTrack *) 0 ;
+    SWIG_check_num_args("ofxTimeline::bringTrackToBottom",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::bringTrackToBottom",1,"ofxTimeline *");
+    if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofxTimeline::bringTrackToBottom",2,"ofxTLTrack *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_bringTrackToBottom",1,SWIGTYPE_p_ofxTimeline); } 
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofxTLTrack,0))){
+      SWIG_fail_ptr("ofxTimeline_bringTrackToBottom",2,SWIGTYPE_p_ofxTLTrack); }  (arg1)->bringTrackToBottom(arg2);
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_bringTrackToBottom(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L);
+  if (argc == 2) { int _v = 0; { { void *ptr;
+        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofxTLTrack, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_ofxTimeline_bringTrackToBottom__SWIG_1(L);}  check_1:
+  if (argc == 2) { return _wrap_ofxTimeline_bringTrackToBottom__SWIG_0(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_bringTrackToBottom'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::bringTrackToBottom(string)\n"
+  "    ofxTimeline::bringTrackToBottom(ofxTLTrack *)\n"); lua_error(L);return 0; }
+static int _wrap_ofxTimeline_setupFont__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::setupFont",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setupFont",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setupFont",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->setupFont(); return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setupFont__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; int arg3 ; SWIG_check_num_args("ofxTimeline::setupFont",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setupFont",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::setupFont",2,"string");
+    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::setupFont",3,"int");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setupFont",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    arg3 = (int)lua_tonumber(L, 3); (arg1)->setupFont(arg2,arg3); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setupFont(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 1) {
+    return _wrap_ofxTimeline_setupFont__SWIG_0(L);}  if (argc == 3) { return _wrap_ofxTimeline_setupFont__SWIG_1(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_setupFont'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::setupFont()\n" "    ofxTimeline::setupFont(string,int)\n");
+  lua_error(L);return 0; }
+static int _wrap_ofxTimeline_getFont(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofTrueTypeFont *result = 0 ; SWIG_check_num_args("ofxTimeline::getFont",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getFont",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getFont",1,SWIGTYPE_p_ofxTimeline); }  result = (ofTrueTypeFont *) &(arg1)->getFont();
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofTrueTypeFont,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_getColors(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofxTLColors *result = 0 ; SWIG_check_num_args("ofxTimeline::getColors",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getColors",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getColors",1,SWIGTYPE_p_ofxTimeline); }  result = (ofxTLColors *) &(arg1)->getColors();
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLColors,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_getTimecode(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofxTimecode *result = 0 ; SWIG_check_num_args("ofxTimeline::getTimecode",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getTimecode",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getTimecode",1,SWIGTYPE_p_ofxTimeline); }  result = (ofxTimecode *) &(arg1)->getTimecode();
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTimecode,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_getTimer(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofxMSATimer *result = 0 ; SWIG_check_num_args("ofxTimeline::getTimer",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getTimer",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getTimer",1,SWIGTYPE_p_ofxTimeline); }  result = (ofxMSATimer *) &(arg1)->getTimer();
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxMSATimer,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_getZoomer(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofxTLZoomer *result = 0 ; SWIG_check_num_args("ofxTimeline::getZoomer",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getZoomer",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getZoomer",1,SWIGTYPE_p_ofxTimeline); }  result = (ofxTLZoomer *)(arg1)->getZoomer();
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLZoomer,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_getPages(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    vector< ofxTLPage * > *result = 0 ; SWIG_check_num_args("ofxTimeline::getPages",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getPages",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getPages",1,SWIGTYPE_p_ofxTimeline); }  result = (vector< ofxTLPage * > *) &(arg1)->getPages();
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_vectorT_ofxTLPage_p_t,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; } 
+  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getNudgePercent(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofVec2f result; SWIG_check_num_args("ofxTimeline::getNudgePercent",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getNudgePercent",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getNudgePercent",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getNudgePercent(); {
+      ofVec2f * resultptr = new ofVec2f(result); SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVec2f,1); SWIG_arg++; } 
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getBigNudgePercent(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofVec2f result; SWIG_check_num_args("ofxTimeline::getBigNudgePercent",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getBigNudgePercent",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getBigNudgePercent",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->getBigNudgePercent(); {
+      ofVec2f * resultptr = new ofVec2f(result); SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVec2f,1); SWIG_arg++; } 
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setDragTimeOffset(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    unsigned long long arg2 ; SWIG_check_num_args("ofxTimeline::setDragTimeOffset",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setDragTimeOffset",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setDragTimeOffset",2,"unsigned long long");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setDragTimeOffset",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (unsigned long long)lua_tonumber(L, 2);
+    (arg1)->setDragTimeOffset(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_cancelSnapping(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::cancelSnapping",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::cancelSnapping",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_cancelSnapping",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->cancelSnapping(); return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getDragTimeOffset(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    long result; SWIG_check_num_args("ofxTimeline::getDragTimeOffset",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getDragTimeOffset",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getDragTimeOffset",1,SWIGTYPE_p_ofxTimeline); }  result = (long)(arg1)->getDragTimeOffset();
+    lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setHoverTime(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    unsigned long long arg2 ; SWIG_check_num_args("ofxTimeline::setHoverTime",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setHoverTime",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setHoverTime",2,"unsigned long long");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setHoverTime",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (unsigned long long)lua_tonumber(L, 2);
+    (arg1)->setHoverTime(arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_formatTime__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    float arg2 ; string result; SWIG_check_num_args("ofxTimeline::formatTime",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::formatTime",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::formatTime",2,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_formatTime",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
+    result = (arg1)->formatTime(arg2); lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_formatTime__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    unsigned long long arg2 ; string result; SWIG_check_num_args("ofxTimeline::formatTime",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::formatTime",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::formatTime",2,"unsigned long long");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_formatTime",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (unsigned long long)lua_tonumber(L, 2);
+    result = (arg1)->formatTime(arg2); lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_formatTime(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 2) {
+    return _wrap_ofxTimeline_formatTime__SWIG_0(L);}  if (argc == 2) { return _wrap_ofxTimeline_formatTime__SWIG_1(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_formatTime'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::formatTime(float)\n"
+  "    ofxTimeline::formatTime(unsigned long long)\n"); lua_error(L);return 0; }
+static int _wrap_ofxTimeline_nameToXMLName(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; string result; SWIG_check_num_args("ofxTimeline::nameToXMLName",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::nameToXMLName",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::nameToXMLName",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_nameToXMLName",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); result = (arg1)->nameToXMLName(arg2);
+    lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_confirmedUniqueName(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; string result; SWIG_check_num_args("ofxTimeline::confirmedUniqueName",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::confirmedUniqueName",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::confirmedUniqueName",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_confirmedUniqueName",1,SWIGTYPE_p_ofxTimeline); } 
+    (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2)); result = (arg1)->confirmedUniqueName(arg2);
+    lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_createPlaybackEvent(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofxTLPlaybackEventArgs result; SWIG_check_num_args("ofxTimeline::createPlaybackEvent",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::createPlaybackEvent",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_createPlaybackEvent",1,SWIGTYPE_p_ofxTimeline); }  result = (arg1)->createPlaybackEvent(); {
+      ofxTLPlaybackEventArgs * resultptr = new ofxTLPlaybackEventArgs(result);
+      SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofxTLPlaybackEventArgs,1); SWIG_arg++; }  return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_presentedModalContent(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofxTLTrack *arg2 = (ofxTLTrack *) 0 ; SWIG_check_num_args("ofxTimeline::presentedModalContent",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::presentedModalContent",1,"ofxTimeline *");
+    if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofxTimeline::presentedModalContent",2,"ofxTLTrack *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_presentedModalContent",1,SWIGTYPE_p_ofxTimeline); } 
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofxTLTrack,0))){
+      SWIG_fail_ptr("ofxTimeline_presentedModalContent",2,SWIGTYPE_p_ofxTLTrack); }  (arg1)->presentedModalContent(arg2);
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_dismissedModalContent(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    SWIG_check_num_args("ofxTimeline::dismissedModalContent",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::dismissedModalContent",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_dismissedModalContent",1,SWIGTYPE_p_ofxTimeline); }  (arg1)->dismissedModalContent();
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_screenXToMillis(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    float arg2 ; long result; SWIG_check_num_args("ofxTimeline::screenXToMillis",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::screenXToMillis",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::screenXToMillis",2,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_screenXToMillis",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
+    result = (long)(arg1)->screenXToMillis(arg2); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_millisToScreenX(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    long arg2 ; float result; SWIG_check_num_args("ofxTimeline::millisToScreenX",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::millisToScreenX",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::millisToScreenX",2,"long");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_millisToScreenX",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (long)lua_tonumber(L, 2);
+    result = (float)(arg1)->millisToScreenX(arg2); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_screenXtoNormalizedX__SWIG_0(lua_State* L) { { int SWIG_arg = 0;
+    ofxTimeline *arg1 = (ofxTimeline *) 0 ; float arg2 ; float result;
+    SWIG_check_num_args("ofxTimeline::screenXtoNormalizedX",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::screenXtoNormalizedX",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::screenXtoNormalizedX",2,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_screenXtoNormalizedX",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
+    result = (float)(arg1)->screenXtoNormalizedX(arg2); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_normalizedXtoScreenX__SWIG_0(lua_State* L) { { int SWIG_arg = 0;
+    ofxTimeline *arg1 = (ofxTimeline *) 0 ; float arg2 ; float result;
+    SWIG_check_num_args("ofxTimeline::normalizedXtoScreenX",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::normalizedXtoScreenX",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::normalizedXtoScreenX",2,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_normalizedXtoScreenX",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
+    result = (float)(arg1)->normalizedXtoScreenX(arg2); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+    fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_screenXtoNormalizedX__SWIG_1(lua_State* L) { { int SWIG_arg = 0;
+    ofxTimeline *arg1 = (ofxTimeline *) 0 ; float arg2 ; ofRange arg3 ; ofRange *argp3 ; float result;
+    SWIG_check_num_args("ofxTimeline::screenXtoNormalizedX",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::screenXtoNormalizedX",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::screenXtoNormalizedX",2,"float");
+    if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofxTimeline::screenXtoNormalizedX",3,"ofRange");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_screenXtoNormalizedX",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_ofRange,0))){
+      SWIG_fail_ptr("ofxTimeline_screenXtoNormalizedX",3,SWIGTYPE_p_ofRange); }  arg3 = *argp3;
+    result = (float)(arg1)->screenXtoNormalizedX(arg2,arg3); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_screenXtoNormalizedX(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L);
+  if (argc == 2) { return _wrap_ofxTimeline_screenXtoNormalizedX__SWIG_0(L);}  if (argc == 3) {
+    return _wrap_ofxTimeline_screenXtoNormalizedX__SWIG_1(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_screenXtoNormalizedX'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::screenXtoNormalizedX(float)\n"
+  "    ofxTimeline::screenXtoNormalizedX(float,ofRange)\n"); lua_error(L);return 0; }
+static int _wrap_ofxTimeline_normalizedXtoScreenX__SWIG_1(lua_State* L) { { int SWIG_arg = 0;
+    ofxTimeline *arg1 = (ofxTimeline *) 0 ; float arg2 ; ofRange arg3 ; ofRange *argp3 ; float result;
+    SWIG_check_num_args("ofxTimeline::normalizedXtoScreenX",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::normalizedXtoScreenX",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::normalizedXtoScreenX",2,"float");
+    if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofxTimeline::normalizedXtoScreenX",3,"ofRange");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_normalizedXtoScreenX",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (float)lua_tonumber(L, 2);
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_ofRange,0))){
+      SWIG_fail_ptr("ofxTimeline_normalizedXtoScreenX",3,SWIGTYPE_p_ofRange); }  arg3 = *argp3;
+    result = (float)(arg1)->normalizedXtoScreenX(arg2,arg3); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_normalizedXtoScreenX(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L);
+  if (argc == 2) { return _wrap_ofxTimeline_normalizedXtoScreenX__SWIG_0(L);}  if (argc == 3) {
+    return _wrap_ofxTimeline_normalizedXtoScreenX__SWIG_1(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_normalizedXtoScreenX'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::normalizedXtoScreenX(float)\n"
+  "    ofxTimeline::normalizedXtoScreenX(float,ofRange)\n"); lua_error(L);return 0; }
+static int _wrap_ofxTimeline_events(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    ofxTLEvents *result = 0 ; SWIG_check_num_args("ofxTimeline::events",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::events",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_events",1,SWIGTYPE_p_ofxTimeline); }  result = (ofxTLEvents *) &(arg1)->events();
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofxTLEvents,0); SWIG_arg++;  return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_curvesUseBinary_set(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool arg2 ; SWIG_check_num_args("ofxTimeline::curvesUseBinary",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::curvesUseBinary",1,"ofxTimeline *");
+    if(!lua_isboolean(L,2)) SWIG_fail_arg("ofxTimeline::curvesUseBinary",2,"bool");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_curvesUseBinary_set",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (lua_toboolean(L, 2)!=0);
+    if (arg1) (arg1)->curvesUseBinary = arg2; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_curvesUseBinary_get(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    bool result; SWIG_check_num_args("ofxTimeline::curvesUseBinary",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::curvesUseBinary",1,"ofxTimeline *");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_curvesUseBinary_get",1,SWIGTYPE_p_ofxTimeline); }  result = (bool) ((arg1)->curvesUseBinary);
+    lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setLoopType__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    short arg2 ; SWIG_check_num_args("ofxTimeline::setLoopType",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::setLoopType",1,"ofxTimeline *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("ofxTimeline::setLoopType",2,"short");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_setLoopType",1,SWIGTYPE_p_ofxTimeline); }  arg2 = (short)lua_tonumber(L, 2);
+    ofxTimeline_setLoopType__SWIG_1(arg1,arg2); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_setLoopType(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 2) {
+    int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofLoopType, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_ofxTimeline_setLoopType__SWIG_0(L);}  check_1:
+  if (argc == 2) { return _wrap_ofxTimeline_setLoopType__SWIG_1(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_setLoopType'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::setLoopType(ofLoopType)\n" "    ofxTimeline::setLoopType(short)\n");
+  lua_error(L);return 0; }
+static int _wrap_ofxTimeline_getR(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ;
+    float result; SWIG_check_num_args("ofxTimeline::getR",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getR",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getR",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getR",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    result = (float)ofxTimeline_getR(arg1,SWIG_STD_MOVE(arg2)); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getG(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ;
+    float result; SWIG_check_num_args("ofxTimeline::getG",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getG",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getG",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getG",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    result = (float)ofxTimeline_getG(arg1,SWIG_STD_MOVE(arg2)); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getB(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ;
+    float result; SWIG_check_num_args("ofxTimeline::getB",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getB",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getB",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getB",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    result = (float)ofxTimeline_getB(arg1,SWIG_STD_MOVE(arg2)); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getA(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ;
+    float result; SWIG_check_num_args("ofxTimeline::getA",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getA",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getA",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getA",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    result = (float)ofxTimeline_getA(arg1,SWIG_STD_MOVE(arg2)); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_addCurves__SWIG_6(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
+    string arg2 ; float arg3 ; float arg4 ; SWIG_check_num_args("ofxTimeline::addCurves",4,4)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addCurves",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::addCurves",2,"string");
+    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxTimeline::addCurves",3,"float");
+    if(!lua_isnumber(L,4)) SWIG_fail_arg("ofxTimeline::addCurves",4,"float");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_addCurves",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    arg3 = (float)lua_tonumber(L, 3); arg4 = (float)lua_tonumber(L, 4);
+    ofxTimeline_addCurves__SWIG_6(arg1,SWIG_STD_MOVE(arg2),arg3,arg4); return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L);
+  return 0; }
+static int _wrap_ofxTimeline_addCurves(lua_State* L) { int argc; int argv[6]={ 1,2,3,4,5,6} ; argc = lua_gettop(L);
+  if (argc == 2) { return _wrap_ofxTimeline_addCurves__SWIG_2(L);}  if (argc == 3) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_ofRange, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_ofxTimeline_addCurves__SWIG_1(L);}  check_2:
+  if (argc == 3) { return _wrap_ofxTimeline_addCurves__SWIG_5(L);}  if (argc == 4) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_ofRange, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_4; { { _v = lua_isnumber(L,argv[3]); } }  if (!_v) goto check_4;
+    return _wrap_ofxTimeline_addCurves__SWIG_0(L);}  check_4: if (argc == 4) { int _v = 0; { { _v = lua_isnumber(L,argv[2]); } }
+     if (!_v) goto check_5; { { _v = lua_isnumber(L,argv[3]); } }  if (!_v) goto check_5;
+    return _wrap_ofxTimeline_addCurves__SWIG_6(L);}  check_5: if (argc == 4) { return _wrap_ofxTimeline_addCurves__SWIG_4(L);} 
+  if (argc == 5) { return _wrap_ofxTimeline_addCurves__SWIG_3(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ofxTimeline_addCurves'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofxTimeline::addCurves(string,ofRange,float)\n"
+  "    ofxTimeline::addCurves(string,ofRange)\n" "    ofxTimeline::addCurves(string)\n"
+  "    ofxTimeline::addCurves(string,string,ofRange,float)\n" "    ofxTimeline::addCurves(string,string,ofRange)\n"
+  "    ofxTimeline::addCurves(string,string)\n" "    ofxTimeline::addCurves(string,float,float)\n"); lua_error(L);return 0; }
+static void swig_delete_ofxTimeline(void *obj) {
+ofxTimeline *arg1 = (ofxTimeline *) obj;
+delete arg1;
+}
+static int _proxy__wrap_new_ofxTimeline(lua_State *L) {
+    assert(lua_istable(L,1));
+    lua_pushcfunction(L,_wrap_new_ofxTimeline);
+    assert(!lua_isnil(L,-1));
+    lua_replace(L,1); /* replace our table with real constructor */
+    lua_call(L,lua_gettop(L)-1,1);
+    return 1;
+}
+static swig_lua_attribute swig_ofxTimeline_attributes[] = {
+    { "curvesUseBinary", _wrap_ofxTimeline_curvesUseBinary_get, _wrap_ofxTimeline_curvesUseBinary_set },
+    {0,0,0}
+};
+static swig_lua_method swig_ofxTimeline_methods[]= {
+    { "setup", _wrap_ofxTimeline_setup},
+    { "moveToThread", _wrap_ofxTimeline_moveToThread},
+    { "removeFromThread", _wrap_ofxTimeline_removeFromThread},
+    { "toggleEnabled", _wrap_ofxTimeline_toggleEnabled},
+    { "enable", _wrap_ofxTimeline_enable},
+    { "disable", _wrap_ofxTimeline_disable},
+    { "getIsEnabled", _wrap_ofxTimeline_getIsEnabled},
+    { "enableEvents", _wrap_ofxTimeline_enableEvents},
+    { "disableEvents", _wrap_ofxTimeline_disableEvents},
+    { "clear", _wrap_ofxTimeline_clear},
+    { "reset", _wrap_ofxTimeline_reset},
+    { "setName", _wrap_ofxTimeline_setName},
+    { "getName", _wrap_ofxTimeline_getName},
+    { "play", _wrap_ofxTimeline_play},
+    { "stop", _wrap_ofxTimeline_stop},
+    { "togglePlay", _wrap_ofxTimeline_togglePlay},
+    { "getIsPlaying", _wrap_ofxTimeline_getIsPlaying},
+    { "getSpacebarTogglesPlay", _wrap_ofxTimeline_getSpacebarTogglesPlay},
+    { "setSpacebarTogglePlay", _wrap_ofxTimeline_setSpacebarTogglePlay},
+    { "playSelectedTrack", _wrap_ofxTimeline_playSelectedTrack},
+    { "stopSelectedTrack", _wrap_ofxTimeline_stopSelectedTrack},
+    { "togglePlaySelectedTrack", _wrap_ofxTimeline_togglePlaySelectedTrack},
+    { "getLoopType", _wrap_ofxTimeline_getLoopType},
+    { "isDone", _wrap_ofxTimeline_isDone},
+    { "toggleShow", _wrap_ofxTimeline_toggleShow},
+    { "show", _wrap_ofxTimeline_show},
+    { "hide", _wrap_ofxTimeline_hide},
+    { "getIsShowing", _wrap_ofxTimeline_getIsShowing},
+    { "draw", _wrap_ofxTimeline_draw},
+    { "mousePressed", _wrap_ofxTimeline_mousePressed},
+    { "mouseMoved", _wrap_ofxTimeline_mouseMoved},
+    { "mouseDragged", _wrap_ofxTimeline_mouseDragged},
+    { "mouseReleased", _wrap_ofxTimeline_mouseReleased},
+    { "keyPressed", _wrap_ofxTimeline_keyPressed},
+    { "keyReleased", _wrap_ofxTimeline_keyReleased},
+    { "windowResized", _wrap_ofxTimeline_windowResized},
+    { "exit", _wrap_ofxTimeline_exit},
+    { "setShowTimeControls", _wrap_ofxTimeline_setShowTimeControls},
+    { "setShowTicker", _wrap_ofxTimeline_setShowTicker},
+    { "setShowInoutControl", _wrap_ofxTimeline_setShowInoutControl},
+    { "setShowZoomer", _wrap_ofxTimeline_setShowZoomer},
+    { "setWorkingFolder", _wrap_ofxTimeline_setWorkingFolder},
+    { "getWorkingFolder", _wrap_ofxTimeline_getWorkingFolder},
+    { "loadTracksFromFolder", _wrap_ofxTimeline_loadTracksFromFolder},
+    { "saveTracksToFolder", _wrap_ofxTimeline_saveTracksToFolder},
+    { "setDefaultFontPath", _wrap_ofxTimeline_setDefaultFontPath},
+    { "setFrameRate", _wrap_ofxTimeline_setFrameRate},
+    { "setDurationInFrames", _wrap_ofxTimeline_setDurationInFrames},
+    { "setDurationInSeconds", _wrap_ofxTimeline_setDurationInSeconds},
+    { "setDurationInMillis", _wrap_ofxTimeline_setDurationInMillis},
+    { "setDurationInTimecode", _wrap_ofxTimeline_setDurationInTimecode},
+    { "getDurationInFrames", _wrap_ofxTimeline_getDurationInFrames},
+    { "getDurationInSeconds", _wrap_ofxTimeline_getDurationInSeconds},
+    { "getDurationInMilliseconds", _wrap_ofxTimeline_getDurationInMilliseconds},
+    { "getDurationInTimecode", _wrap_ofxTimeline_getDurationInTimecode},
+    { "setFrameBased", _wrap_ofxTimeline_setFrameBased},
+    { "getIsFrameBased", _wrap_ofxTimeline_getIsFrameBased},
+    { "setAutosave", _wrap_ofxTimeline_setAutosave},
+    { "save", _wrap_ofxTimeline_save},
+    { "hasUnsavedChanges", _wrap_ofxTimeline_hasUnsavedChanges},
+    { "setCurrentFrame", _wrap_ofxTimeline_setCurrentFrame},
+    { "setCurrentTimeSeconds", _wrap_ofxTimeline_setCurrentTimeSeconds},
+    { "setCurrentTimeMillis", _wrap_ofxTimeline_setCurrentTimeMillis},
+    { "setPercentComplete", _wrap_ofxTimeline_setPercentComplete},
+    { "setCurrentTimecode", _wrap_ofxTimeline_setCurrentTimecode},
+    { "setCurrentTimeToInPoint", _wrap_ofxTimeline_setCurrentTimeToInPoint},
+    { "setCurrentTimeToOutPoint", _wrap_ofxTimeline_setCurrentTimeToOutPoint},
+    { "getCurrentFrame", _wrap_ofxTimeline_getCurrentFrame},
+    { "getCurrentPageIndex", _wrap_ofxTimeline_getCurrentPageIndex},
+    { "getCurrentPageName", _wrap_ofxTimeline_getCurrentPageName},
+    { "getCurrentTime", _wrap_ofxTimeline_getCurrentTime},
+    { "getCurrentTimeMillis", _wrap_ofxTimeline_getCurrentTimeMillis},
+    { "getPercentComplete", _wrap_ofxTimeline_getPercentComplete},
+    { "getCurrentTimecode", _wrap_ofxTimeline_getCurrentTimecode},
+    { "getQuantizedTime", _wrap_ofxTimeline_getQuantizedTime},
+    { "flagUserChangedValue", _wrap_ofxTimeline_flagUserChangedValue},
+    { "getUserChangedValue", _wrap_ofxTimeline_getUserChangedValue},
+    { "flagTrackModified", _wrap_ofxTimeline_flagTrackModified},
+    { "setInPointAtPercent", _wrap_ofxTimeline_setInPointAtPercent},
+    { "setInPointAtFrame", _wrap_ofxTimeline_setInPointAtFrame},
+    { "setInPointAtSeconds", _wrap_ofxTimeline_setInPointAtSeconds},
+    { "setInPointAtMillis", _wrap_ofxTimeline_setInPointAtMillis},
+    { "setInPointAtTimecode", _wrap_ofxTimeline_setInPointAtTimecode},
+    { "setInPointAtPlayhead", _wrap_ofxTimeline_setInPointAtPlayhead},
+    { "setOutPointAtPercent", _wrap_ofxTimeline_setOutPointAtPercent},
+    { "setOutPointAtFrame", _wrap_ofxTimeline_setOutPointAtFrame},
+    { "setOutPointAtSeconds", _wrap_ofxTimeline_setOutPointAtSeconds},
+    { "setOutPointAtMillis", _wrap_ofxTimeline_setOutPointAtMillis},
+    { "setOutPointAtTimecode", _wrap_ofxTimeline_setOutPointAtTimecode},
+    { "setOutPointAtPlayhead", _wrap_ofxTimeline_setOutPointAtPlayhead},
+    { "setEditableHeaders", _wrap_ofxTimeline_setEditableHeaders},
+    { "areHeadersEditable", _wrap_ofxTimeline_areHeadersEditable},
+    { "setMinimalHeaders", _wrap_ofxTimeline_setMinimalHeaders},
+    { "areHeadersMinimal", _wrap_ofxTimeline_areHeadersMinimal},
+    { "toggleShowFooters", _wrap_ofxTimeline_toggleShowFooters},
+    { "setFootersHidden", _wrap_ofxTimeline_setFootersHidden},
+    { "areFootersHidden", _wrap_ofxTimeline_areFootersHidden},
+    { "setInOutRange", _wrap_ofxTimeline_setInOutRange},
+    { "setInOutRangeMillis", _wrap_ofxTimeline_setInOutRangeMillis},
+    { "clearInOut", _wrap_ofxTimeline_clearInOut},
+    { "getInOutRange", _wrap_ofxTimeline_getInOutRange},
+    { "getInOutRangeMillis", _wrap_ofxTimeline_getInOutRangeMillis},
+    { "getInFrame", _wrap_ofxTimeline_getInFrame},
+    { "getInTimeInSeconds", _wrap_ofxTimeline_getInTimeInSeconds},
+    { "getInTimeInMillis", _wrap_ofxTimeline_getInTimeInMillis},
+    { "getInPointTimecode", _wrap_ofxTimeline_getInPointTimecode},
+    { "getOutFrame", _wrap_ofxTimeline_getOutFrame},
+    { "getOutTimeInSeconds", _wrap_ofxTimeline_getOutTimeInSeconds},
+    { "getOutTimeInMillis", _wrap_ofxTimeline_getOutTimeInMillis},
+    { "getOutPointTimecode", _wrap_ofxTimeline_getOutPointTimecode},
+    { "setOffset", _wrap_ofxTimeline_setOffset},
+    { "setLockWidthToWindow", _wrap_ofxTimeline_setLockWidthToWindow},
+    { "getLockWidthToWindow", _wrap_ofxTimeline_getLockWidthToWindow},
+    { "setWidth", _wrap_ofxTimeline_setWidth},
+    { "setHeight", _wrap_ofxTimeline_setHeight},
+    { "collapseAllTracks", _wrap_ofxTimeline_collapseAllTracks},
+    { "getDrawRect", _wrap_ofxTimeline_getDrawRect},
+    { "getWidth", _wrap_ofxTimeline_getWidth},
+    { "getHeight", _wrap_ofxTimeline_getHeight},
+    { "getTopRight", _wrap_ofxTimeline_getTopRight},
+    { "getTopLeft", _wrap_ofxTimeline_getTopLeft},
+    { "getBottomLeft", _wrap_ofxTimeline_getBottomLeft},
+    { "getBottomRight", _wrap_ofxTimeline_getBottomRight},
+    { "setBPM", _wrap_ofxTimeline_setBPM},
+    { "getBPM", _wrap_ofxTimeline_getBPM},
+    { "toggleSnapToBPM", _wrap_ofxTimeline_toggleSnapToBPM},
+    { "enableSnapToBPM", _wrap_ofxTimeline_enableSnapToBPM},
+    { "getSnapToBPM", _wrap_ofxTimeline_getSnapToBPM},
+    { "toggleShowBPMGrid", _wrap_ofxTimeline_toggleShowBPMGrid},
+    { "setShowBPMGrid", _wrap_ofxTimeline_setShowBPMGrid},
+    { "getShowBPMGrid", _wrap_ofxTimeline_getShowBPMGrid},
+    { "toggleSnapToOtherKeyframes", _wrap_ofxTimeline_toggleSnapToOtherKeyframes},
+    { "enableSnapToOtherKeyframes", _wrap_ofxTimeline_enableSnapToOtherKeyframes},
+    { "getSnapToOtherElements", _wrap_ofxTimeline_getSnapToOtherElements},
+    { "setMovePlayheadOnPaste", _wrap_ofxTimeline_setMovePlayheadOnPaste},
+    { "getMovePlayheadOnPaste", _wrap_ofxTimeline_getMovePlayheadOnPaste},
+    { "getPasteboard", _wrap_ofxTimeline_getPasteboard},
+    { "enableUndo", _wrap_ofxTimeline_enableUndo},
+    { "undo", _wrap_ofxTimeline_undo},
+    { "redo", _wrap_ofxTimeline_redo},
+    { "setMovePlayheadOnDrag", _wrap_ofxTimeline_setMovePlayheadOnDrag},
+    { "getMovePlayheadOnDrag", _wrap_ofxTimeline_getMovePlayheadOnDrag},
+    { "unselectAll", _wrap_ofxTimeline_unselectAll},
+    { "addPage", _wrap_ofxTimeline_addPage},
+    { "setPageName", _wrap_ofxTimeline_setPageName},
+    { "setCurrentPage", _wrap_ofxTimeline_setCurrentPage},
+    { "removePage", _wrap_ofxTimeline_removePage},
+    { "isModal", _wrap_ofxTimeline_isModal},
+    { "getModalTrack", _wrap_ofxTimeline_getModalTrack},
+    { "getFocusedTrack", _wrap_ofxTimeline_getFocusedTrack},
+    { "setFocusedTrack", _wrap_ofxTimeline_setFocusedTrack},
+    { "getTotalSelectedItems", _wrap_ofxTimeline_getTotalSelectedItems},
+    { "getEarliestTime", _wrap_ofxTimeline_getEarliestTime},
+    { "getLatestTime", _wrap_ofxTimeline_getLatestTime},
+    { "getEarliestSelectedTime", _wrap_ofxTimeline_getEarliestSelectedTime},
+    { "getLatestSelectedTime", _wrap_ofxTimeline_getLatestSelectedTime},
+    { "hasTrack", _wrap_ofxTimeline_hasTrack},
+    { "hasPage", _wrap_ofxTimeline_hasPage},
+    { "getTrack", _wrap_ofxTimeline_getTrack},
+    { "getPage", _wrap_ofxTimeline_getPage},
+    { "getValueAtPercent", _wrap_ofxTimeline_getValueAtPercent},
+    { "getValue", _wrap_ofxTimeline_getValue},
+    { "addLFO", _wrap_ofxTimeline_addLFO},
+    { "addSwitches", _wrap_ofxTimeline_addSwitches},
+    { "isSwitchOn", _wrap_ofxTimeline_isSwitchOn},
+    { "addBangs", _wrap_ofxTimeline_addBangs},
+    { "addFlags", _wrap_ofxTimeline_addFlags},
+    { "addColors", _wrap_ofxTimeline_addColors},
+    { "addColorsWithPalette", _wrap_ofxTimeline_addColorsWithPalette},
+    { "getColor", _wrap_ofxTimeline_getColor},
+    { "getColorAtPercent", _wrap_ofxTimeline_getColorAtPercent},
+    { "getColorAtSecond", _wrap_ofxTimeline_getColorAtSecond},
+    { "getColorAtMillis", _wrap_ofxTimeline_getColorAtMillis},
+    { "setDefaultColorPalettePath", _wrap_ofxTimeline_setDefaultColorPalettePath},
+    { "getDefaultColorPalettePath", _wrap_ofxTimeline_getDefaultColorPalettePath},
+    { "addImageSequence", _wrap_ofxTimeline_addImageSequence},
+    { "getImage", _wrap_ofxTimeline_getImage},
+    { "addVideoTrackWithPath", _wrap_ofxTimeline_addVideoTrackWithPath},
+    { "addVideoTrack", _wrap_ofxTimeline_addVideoTrack},
+    { "getVideoTrack", _wrap_ofxTimeline_getVideoTrack},
+    { "getVideoPlayer", _wrap_ofxTimeline_getVideoPlayer},
+    { "addAudioTrackWithPath", _wrap_ofxTimeline_addAudioTrackWithPath},
+    { "addAudioTrack", _wrap_ofxTimeline_addAudioTrack},
+    { "getAudioTrack", _wrap_ofxTimeline_getAudioTrack},
+    { "setTimecontrolTrack", _wrap_ofxTimeline_setTimecontrolTrack},
+    { "getTimecontrolTrack", _wrap_ofxTimeline_getTimecontrolTrack},
+    { "addTrack", _wrap_ofxTimeline_addTrack},
+    { "getTrackHeader", _wrap_ofxTimeline_getTrackHeader},
+    { "removeTrack", _wrap_ofxTimeline_removeTrack},
+    { "bringTrackToTop", _wrap_ofxTimeline_bringTrackToTop},
+    { "bringTrackToBottom", _wrap_ofxTimeline_bringTrackToBottom},
+    { "setupFont", _wrap_ofxTimeline_setupFont},
+    { "getFont", _wrap_ofxTimeline_getFont},
+    { "getColors", _wrap_ofxTimeline_getColors},
+    { "getTimecode", _wrap_ofxTimeline_getTimecode},
+    { "getTimer", _wrap_ofxTimeline_getTimer},
+    { "getZoomer", _wrap_ofxTimeline_getZoomer},
+    { "getPages", _wrap_ofxTimeline_getPages},
+    { "getNudgePercent", _wrap_ofxTimeline_getNudgePercent},
+    { "getBigNudgePercent", _wrap_ofxTimeline_getBigNudgePercent},
+    { "setDragTimeOffset", _wrap_ofxTimeline_setDragTimeOffset},
+    { "cancelSnapping", _wrap_ofxTimeline_cancelSnapping},
+    { "getDragTimeOffset", _wrap_ofxTimeline_getDragTimeOffset},
+    { "setHoverTime", _wrap_ofxTimeline_setHoverTime},
+    { "formatTime", _wrap_ofxTimeline_formatTime},
+    { "nameToXMLName", _wrap_ofxTimeline_nameToXMLName},
+    { "confirmedUniqueName", _wrap_ofxTimeline_confirmedUniqueName},
+    { "createPlaybackEvent", _wrap_ofxTimeline_createPlaybackEvent},
+    { "presentedModalContent", _wrap_ofxTimeline_presentedModalContent},
+    { "dismissedModalContent", _wrap_ofxTimeline_dismissedModalContent},
+    { "screenXToMillis", _wrap_ofxTimeline_screenXToMillis},
+    { "millisToScreenX", _wrap_ofxTimeline_millisToScreenX},
+    { "screenXtoNormalizedX", _wrap_ofxTimeline_screenXtoNormalizedX},
+    { "normalizedXtoScreenX", _wrap_ofxTimeline_normalizedXtoScreenX},
+    { "events", _wrap_ofxTimeline_events},
+    { "setLoopType", _wrap_ofxTimeline_setLoopType},
+    { "getR", _wrap_ofxTimeline_getR},
+    { "getG", _wrap_ofxTimeline_getG},
+    { "getB", _wrap_ofxTimeline_getB},
+    { "getA", _wrap_ofxTimeline_getA},
+    { "addCurves", _wrap_ofxTimeline_addCurves},
+    {0,0}
+};
+static swig_lua_method swig_ofxTimeline_meta[] = {
+    {0,0}
+};
+
+static swig_lua_attribute swig_ofxTimeline_Sf_SwigStatic_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_const_info swig_ofxTimeline_Sf_SwigStatic_constants[]= {
+    {0,0,0,0,0,0}
+};
+static swig_lua_method swig_ofxTimeline_Sf_SwigStatic_methods[]= {
+    {0,0}
+};
+static swig_lua_class* swig_ofxTimeline_Sf_SwigStatic_classes[]= {
+    0
+};
+
+static swig_lua_namespace swig_ofxTimeline_Sf_SwigStatic = {
+    "ofxTimeline",
+    swig_ofxTimeline_Sf_SwigStatic_methods,
+    swig_ofxTimeline_Sf_SwigStatic_attributes,
+    swig_ofxTimeline_Sf_SwigStatic_constants,
+    swig_ofxTimeline_Sf_SwigStatic_classes,
+    0
+};
+static swig_lua_class *swig_ofxTimeline_bases[] = {0};
+static const char *swig_ofxTimeline_base_names[] = {0};
+static swig_lua_class _wrap_class_ofxTimeline = { "ofxTimeline", "ofxTimeline", &SWIGTYPE_p_ofxTimeline,_proxy__wrap_new_ofxTimeline, swig_delete_ofxTimeline, swig_ofxTimeline_methods, swig_ofxTimeline_attributes, &swig_ofxTimeline_Sf_SwigStatic, swig_ofxTimeline_meta, swig_ofxTimeline_bases, swig_ofxTimeline_base_names };
+
 static swig_lua_attribute swig_SwigModule_attributes[] = {
     {0,0,0}
 };
@@ -8669,8 +8774,6 @@ static swig_lua_method swig_SwigModule_methods[]= {
 };
 static swig_lua_class* swig_SwigModule_classes[]= {
 &_wrap_class_string,
-&_wrap_class_UndoItem,
-&_wrap_class_ofxTimeline,
 &_wrap_class_ofxTLTrack,
 &_wrap_class_ofxTLKeyframe,
 &_wrap_class_ofxTLKeyframes,
@@ -8689,6 +8792,8 @@ static swig_lua_class* swig_SwigModule_classes[]= {
 &_wrap_class_ofxTLCameraFrame,
 &_wrap_class_ofxTLCameraTrack,
 &_wrap_class_ofxTLAudioTrack,
+&_wrap_class_UndoItem,
+&_wrap_class_ofxTimeline,
     0
 };
 static swig_lua_namespace* swig_SwigModule_namespaces[] = {

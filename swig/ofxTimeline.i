@@ -1,6 +1,5 @@
 %module ofxTimeline
 %{
-#include "ofxTimeline.h"
 #include "ofxTLTrack.h"
 #include "ofxTLColorTrack.h"
 #include "ofxTLEmptyTrack.h"
@@ -11,6 +10,7 @@
 #include "ofxTLBangs.h"
 #include "ofxTLCameraTrack.h"
 #include "ofxTLAudioTrack.h"
+#include "ofxTimeline.h"
 %}
 
 // STL types
@@ -19,7 +19,6 @@
 typedef std::string string;
 
 // includes
-%include "ofxTimeline/src/ofxTimeline.h"
 %include "ofxTimeline/src/ofxTLTrack.h"
 %include "ofxTimeline/src/ofxTLKeyframes.h"
 %include "ofxTimeline/src/ofxTLColorTrack.h"
@@ -31,6 +30,7 @@ typedef std::string string;
 %include "ofxTimeline/src/ofxTLBangs.h"
 %include "ofxTimeline/src/ofxTLCameraTrack.h"
 %include "ofxTimeline/src/ofxTLAudioTrack.h"
+%include "ofxTimeline/src/ofxTimeline.h"
 
 %extend ofxTimeline {
     void setLoopType(short value) {

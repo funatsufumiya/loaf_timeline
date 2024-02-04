@@ -10,18 +10,18 @@ function setup()
     of.setWindowTitle("camera track")
     of.setWindowShape(1024, 768)
 
-    of.setFrameRate(30);
-	of.setVerticalSync(true);
+    of.setFrameRate(30)
+	of.setVerticalSync(true)
 
-	of.enableSmoothing();
-	of.enableAlphaBlending();
+	of.enableSmoothing()
+	of.enableAlphaBlending()
 	
-	timeline:setup();
-	timeline:setLoopType(of.LOOP_NORMAL);
-	timeline:setDurationInSeconds(30);
+	timeline:setup()
+	timeline:setLoopType(of.LOOP_NORMAL)
+	timeline:setDurationInSeconds(30)
 
 	cameraTrack:setCamera(cam)
-	timeline:addTrack("Camera", cameraTrack:getTrack());
+	timeline:addTrack("Camera", cameraTrack:getTrack())
 	
 	cameraTrack:setLockCameraToTrack(true);
 	timeline:play();
