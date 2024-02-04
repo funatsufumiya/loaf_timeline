@@ -2812,6 +2812,9 @@ SWIGINTERN float ofxTimeline_getGreen(ofxTimeline *self,string trackName){
 SWIGINTERN float ofxTimeline_getBlue(ofxTimeline *self,string trackName){
         return self->getColor(trackName).b;
     }
+SWIGINTERN float ofxTimeline_getAlpha(ofxTimeline *self,string trackName){
+        return self->getColor(trackName).a;
+    }
 SWIGINTERN void ofxTimeline_addCurves__SWIG_6(ofxTimeline *self,string trackName,float min,float max){
         self->addCurves(trackName, ofRange(min, max));
     }
@@ -5142,6 +5145,14 @@ static int _wrap_ofxTimeline_getBlue(lua_State* L) { { int SWIG_arg = 0; ofxTime
       SWIG_fail_ptr("ofxTimeline_getBlue",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
     result = (float)ofxTimeline_getBlue(arg1,SWIG_STD_MOVE(arg2)); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
     return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
+static int _wrap_ofxTimeline_getAlpha(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ; string arg2 ;
+    float result; SWIG_check_num_args("ofxTimeline::getAlpha",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::getAlpha",1,"ofxTimeline *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxTimeline::getAlpha",2,"string");
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxTimeline,0))){
+      SWIG_fail_ptr("ofxTimeline_getAlpha",1,SWIGTYPE_p_ofxTimeline); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
+    result = (float)ofxTimeline_getAlpha(arg1,SWIG_STD_MOVE(arg2)); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
 static int _wrap_ofxTimeline_addCurves__SWIG_6(lua_State* L) { { int SWIG_arg = 0; ofxTimeline *arg1 = (ofxTimeline *) 0 ;
     string arg2 ; float arg3 ; float arg4 ; SWIG_check_num_args("ofxTimeline::addCurves",4,4)
     if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxTimeline::addCurves",1,"ofxTimeline *");
@@ -5398,6 +5409,7 @@ static swig_lua_method swig_ofxTimeline_methods[]= {
     { "getRed", _wrap_ofxTimeline_getRed},
     { "getGreen", _wrap_ofxTimeline_getGreen},
     { "getBlue", _wrap_ofxTimeline_getBlue},
+    { "getAlpha", _wrap_ofxTimeline_getAlpha},
     { "addCurves", _wrap_ofxTimeline_addCurves},
     {0,0}
 };

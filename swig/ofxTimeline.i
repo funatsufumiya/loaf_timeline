@@ -28,6 +28,10 @@ typedef std::string string;
         return $self->getColor(trackName).b;
     }
 
+    float getAlpha(string trackName) {
+        return $self->getColor(trackName).a;
+    }
+
     void addCurves(string trackName, float min, float max) {
         $self->addCurves(trackName, ofRange(min, max));
     }
