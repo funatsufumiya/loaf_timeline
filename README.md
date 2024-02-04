@@ -6,7 +6,7 @@ This is a fork of [loaf](https://github.com/danomatika/loaf), make use of [ofxTi
 
 ## Usage
 
-- use prebuilt binary from [release](https://github.com/funatsufumiya/ofxTimeline/releases)
+- use prebuilt binary from [release](https://github.com/funatsufumiya/loaf_timeline/releases)
 - or build from source
   - be sure to apply `projectGenerator` before build
 
