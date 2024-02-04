@@ -77,6 +77,7 @@ loaf-prepare:
 
 loaf: loaf-prepare bindings
 
+
 # syphon bindings
 syphon-prepare:
 	$(eval TARGET := syphon)
@@ -86,3 +87,19 @@ syphon-prepare:
 	mkdir -p $(DEST_DIR)/macos
 
 syphon: syphon-prepare bindings
+
+# ofxTimeline bindings
+ofxTimeline-prepare:
+	$(eval TARGET := ofxTimeline)
+	$(eval INTERFACE := ofxTimeline.i)
+	$(eval NAME := ofxTimelineBindings)
+
+ofxTimeline: ofxTimeline-prepare bindings
+
+# ofRange bindings
+ofRange-prepare:
+	$(eval TARGET := ofRange)
+	$(eval INTERFACE := ofRange.i)
+	$(eval NAME := ofRangeBindings)
+
+ofRange: ofRange-prepare bindings

@@ -3693,23 +3693,6 @@ static int _wrap_ReceiverSettings_port_get(lua_State* L) { { int SWIG_arg = 0;
     if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxOscReceiverSettings,0))){
       SWIG_fail_ptr("ReceiverSettings_port_get",1,SWIGTYPE_p_ofxOscReceiverSettings); }  result = (int) ((arg1)->port);
     lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ReceiverSettings_host_set(lua_State* L) { { int SWIG_arg = 0;
-    ofxOscReceiverSettings *arg1 = (ofxOscReceiverSettings *) 0 ; std::string *arg2 = 0 ; std::string temp2 ;
-    SWIG_check_num_args("ofxOscReceiverSettings::host",2,2)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxOscReceiverSettings::host",1,"ofxOscReceiverSettings *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxOscReceiverSettings::host",2,"std::string const &");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxOscReceiverSettings,0))){
-      SWIG_fail_ptr("ReceiverSettings_host_set",1,SWIGTYPE_p_ofxOscReceiverSettings); } 
-    temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2; if (arg1) (arg1)->host = *arg2; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_ReceiverSettings_host_get(lua_State* L) { { int SWIG_arg = 0;
-    ofxOscReceiverSettings *arg1 = (ofxOscReceiverSettings *) 0 ; std::string *result = 0 ;
-    SWIG_check_num_args("ofxOscReceiverSettings::host",1,1)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxOscReceiverSettings::host",1,"ofxOscReceiverSettings *");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxOscReceiverSettings,0))){
-      SWIG_fail_ptr("ReceiverSettings_host_get",1,SWIGTYPE_p_ofxOscReceiverSettings); } 
-    result = (std::string *) & ((arg1)->host); lua_pushlstring(L,result->data(),result->size()); SWIG_arg++; return SWIG_arg;
-    fail: SWIGUNUSED; }  lua_error(L); return 0; }
 static int _wrap_ReceiverSettings_reuse_set(lua_State* L) { { int SWIG_arg = 0;
     ofxOscReceiverSettings *arg1 = (ofxOscReceiverSettings *) 0 ; bool arg2 ;
     SWIG_check_num_args("ofxOscReceiverSettings::reuse",2,2)
@@ -3759,7 +3742,6 @@ static int _proxy__wrap_new_ReceiverSettings(lua_State *L) {
 }
 static swig_lua_attribute swig_ReceiverSettings_attributes[] = {
     { "port", _wrap_ReceiverSettings_port_get, _wrap_ReceiverSettings_port_set },
-    { "host", _wrap_ReceiverSettings_host_get, _wrap_ReceiverSettings_host_set },
     { "reuse", _wrap_ReceiverSettings_reuse_get, _wrap_ReceiverSettings_reuse_set },
     { "start", _wrap_ReceiverSettings_start_get, _wrap_ReceiverSettings_start_set },
     {0,0,0}
@@ -3833,15 +3815,6 @@ static int _wrap_Receiver_setup__SWIG_0(lua_State* L) { { int SWIG_arg = 0; ofxO
     result = (bool)(arg1)->setup(arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; fail: SWIGUNUSED; } 
   lua_error(L); return 0; }
 static int _wrap_Receiver_setup__SWIG_1(lua_State* L) { { int SWIG_arg = 0; ofxOscReceiver *arg1 = (ofxOscReceiver *) 0 ;
-    std::string arg2 ; int arg3 ; bool result; SWIG_check_num_args("ofxOscReceiver::setup",3,3)
-    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxOscReceiver::setup",1,"ofxOscReceiver *");
-    if(!lua_isstring(L,2)) SWIG_fail_arg("ofxOscReceiver::setup",2,"std::string");
-    if(!lua_isnumber(L,3)) SWIG_fail_arg("ofxOscReceiver::setup",3,"int");
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofxOscReceiver,0))){
-      SWIG_fail_ptr("Receiver_setup",1,SWIGTYPE_p_ofxOscReceiver); }  (&arg2)->assign(lua_tostring(L,2),lua_rawlen(L,2));
-    arg3 = (int)lua_tonumber(L, 3); result = (bool)(arg1)->setup(arg2,arg3); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
-    return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_Receiver_setup__SWIG_2(lua_State* L) { { int SWIG_arg = 0; ofxOscReceiver *arg1 = (ofxOscReceiver *) 0 ;
     ofxOscReceiverSettings *arg2 = 0 ; bool result; SWIG_check_num_args("ofxOscReceiver::setup",2,2)
     if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxOscReceiver::setup",1,"ofxOscReceiver *");
     if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofxOscReceiver::setup",2,"ofxOscReceiverSettings const &");
@@ -3851,14 +3824,13 @@ static int _wrap_Receiver_setup__SWIG_2(lua_State* L) { { int SWIG_arg = 0; ofxO
       SWIG_fail_ptr("Receiver_setup",2,SWIGTYPE_p_ofxOscReceiverSettings); } 
     result = (bool)(arg1)->setup((ofxOscReceiverSettings const &)*arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
     return SWIG_arg; fail: SWIGUNUSED; }  lua_error(L); return 0; }
-static int _wrap_Receiver_setup(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) {
+static int _wrap_Receiver_setup(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 2) {
     int _v = 0; { { void *ptr;
         if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofxOscReceiverSettings, SWIG_POINTER_NO_NULL)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_Receiver_setup__SWIG_2(L);}  check_1:
-  if (argc == 2) { return _wrap_Receiver_setup__SWIG_0(L);}  if (argc == 3) { return _wrap_Receiver_setup__SWIG_1(L);} 
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_Receiver_setup__SWIG_1(L);}  check_1:
+  if (argc == 2) { return _wrap_Receiver_setup__SWIG_0(L);} 
   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Receiver_setup'\n" "  Possible C/C++ prototypes are:\n"
-  "    ofxOscReceiver::setup(int)\n" "    ofxOscReceiver::setup(std::string,int)\n"
-  "    ofxOscReceiver::setup(ofxOscReceiverSettings const &)\n"); lua_error(L);return 0; }
+  "    ofxOscReceiver::setup(int)\n" "    ofxOscReceiver::setup(ofxOscReceiverSettings const &)\n"); lua_error(L);return 0; }
 static int _wrap_Receiver_start(lua_State* L) { { int SWIG_arg = 0; ofxOscReceiver *arg1 = (ofxOscReceiver *) 0 ; bool result;
     SWIG_check_num_args("ofxOscReceiver::start",1,1)
     if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofxOscReceiver::start",1,"ofxOscReceiver *");

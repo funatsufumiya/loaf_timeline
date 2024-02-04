@@ -93,10 +93,6 @@ of.CylinderPrimitive
 of.DEG_TO_RAD
 of.DIGITAL_MESSAGE
 of.Directory
-of.Directory_SORT_BY_DATE
-of.Directory_SORT_FAST
-of.Directory_SORT_NATURAL
-of.DoubleColor
 of.DragInfo
 of.ENCODER_ATTACH
 of.ENCODER_CHANNEL_MASK
@@ -162,7 +158,6 @@ of.GRADIENT_BAR
 of.GRADIENT_CIRCULAR
 of.GRADIENT_LINEAR
 of.HALF_PI
-of.HAS_CPP17
 of.HAS_TLS
 of.HW_SERIAL0
 of.HW_SERIAL1
@@ -287,22 +282,6 @@ of.LOOP_NONE
 of.LOOP_NORMAL
 of.LOOP_PALINDROME
 of.Light
-of.MATERIAL_TEXTURE_AMBIENT
-of.MATERIAL_TEXTURE_AO_ROUGHNESS_METALLIC
-of.MATERIAL_TEXTURE_CLEARCOAT
-of.MATERIAL_TEXTURE_CLEARCOAT_INTENSITY_ROUGHNESS
-of.MATERIAL_TEXTURE_CLEARCOAT_NORMAL
-of.MATERIAL_TEXTURE_CLEARCOAT_ROUGHNESS
-of.MATERIAL_TEXTURE_DIFFUSE
-of.MATERIAL_TEXTURE_DISPLACEMENT
-of.MATERIAL_TEXTURE_EMISSIVE
-of.MATERIAL_TEXTURE_METALLIC
-of.MATERIAL_TEXTURE_NONE
-of.MATERIAL_TEXTURE_NORMAL
-of.MATERIAL_TEXTURE_OCCLUSION
-of.MATERIAL_TEXTURE_ROUGHNESS
-of.MATERIAL_TEXTURE_ROUGHNESS_METALLIC
-of.MATERIAL_TEXTURE_SPECULAR
 of.MATRIX_MODELVIEW
 of.MATRIX_PROJECTION
 of.MATRIX_TEXTURE
@@ -463,6 +442,7 @@ of.SYSTEM_RESET
 of.Serial
 of.SerialDeviceInfo
 of.Shader
+of.ShortColor
 of.ShortImage
 of.ShortPixels
 of.SoundDevice
@@ -487,7 +467,6 @@ of.TARGET_EMSCRIPTEN
 of.TARGET_IOS
 of.TARGET_LINUX
 of.TARGET_LINUX64
-of.TARGET_LINUXAARCH64
 of.TARGET_LINUXARMV6L
 of.TARGET_LINUXARMV7L
 of.TARGET_MINGW
@@ -546,6 +525,8 @@ of.angleDifferenceRadians
 of.background
 of.backgroundGradient
 of.backgroundHex
+of.beginSaveScreenAsPDF
+of.beginSaveScreenAsSVG
 of.beginShape
 of.bezierVertex
 of.binaryToChar
@@ -613,12 +594,13 @@ of.enableSeparateSpecularLight
 of.enableSetupScreen
 of.enableSmoothing
 of.enableTextureEdgeHack
+of.endSaveScreenAsPDF
+of.endSaveScreenAsSVG
 of.endShape
 of.events
 of.exit
 of.fill
 of.gLCheckExtension
-of.gLSLGetDefaultHeader
 of.gLSLVersionFromGL
 of.gLSupportedExtensions
 of.gLSupportsNPOTTextures
@@ -665,7 +647,6 @@ of.getLightingEnabled
 of.getLogLevel
 of.getLogLevelName
 of.getLoggerChannel
-of.getMainThreadId
 of.getMinutes
 of.getMonth
 of.getMousePressed
@@ -691,7 +672,6 @@ of.getTargetFrameRate
 of.getTargetPlatform
 of.getTimestampString
 of.getUnixTime
-of.getUnixTimeMillis
 of.getUsingArbTex
 of.getUsingNormalizedTexCoords
 of.getVersionInfo
@@ -718,7 +698,6 @@ of.hexToString
 of.hideCursor
 of.imageFormatExtension
 of.inRange
-of.isCurrentThreadTheMainThread
 of.isGLProgrammableRenderer
 of.isStringInString
 of.isTextureEdgeHackEnabled
@@ -778,6 +757,7 @@ of.saveURLAsync
 of.saveURLTo
 of.saveViewport
 of.scale
+of.seedRandom
 of.sendMessage
 of.serialize
 of.setBackgroundAuto
@@ -807,7 +787,6 @@ of.setOrientation
 of.setPixelStoreiAlignment
 of.setPlaneResolution
 of.setPolyMode
-of.setRandomSeed
 of.setRectMode
 of.setSmoothLighting
 of.setSphereResolution
@@ -872,9 +851,6 @@ of.wrap
 of.wrapDegrees
 of.wrapRadians
 
-of.Directory.SORT_BY_DATE
-of.Directory.SORT_FAST
-of.Directory.SORT_NATURAL
 of.Directory.createDirectory
 of.Directory.doesDirectoryExist
 of.Directory.isDirectoryEmpty
@@ -1020,9 +996,6 @@ of.Arduino
   setUseDelay
   update
 
-of.Material.getUniformName
-of.Material.isPBRSupported
-
 of.BaseSoundPlayer
   getPan
   getPosition
@@ -1149,15 +1122,10 @@ of.Mesh
   load
   mergeDuplicateVertices
   removeColor
-  removeColors
   removeIndex
-  removeIndices
   removeNormal
-  removeNormals
   removeTexCoord
-  removeTexCoords
   removeVertex
-  removeVertices
   save
   setColor
   setColorForIndices
@@ -1331,7 +1299,6 @@ of.TrueTypeFontSettings
   dpi
   fontName
   fontSize
-  index
   ranges
   simplifyAmt
 
@@ -1344,8 +1311,6 @@ of.Directory
   copyTo
   create
   exists
-  extensions
-  files
   getAbsolutePath
   getFile
   getFiles
@@ -1358,10 +1323,8 @@ of.Directory
   isHidden
   listDir
   moveTo
-  myDir
   open
   openFromCWD
-  originalDirectory
   path
   remove
   renameTo
@@ -1370,7 +1333,6 @@ of.Directory
   setReadable
   setShowHidden
   setWriteable
-  showHidden
   size
   sort
   sortByDate
@@ -1484,43 +1446,6 @@ of.Matrix4x4.newScaleMatrix
 of.Matrix4x4.newTranslationMatrix
 of.Matrix4x4.transform3x3
 
-of.DoubleColor
-  DoubleColor
-  a
-  b
-  clamp
-  g
-  getA
-  getB
-  getBrightness
-  getClamped
-  getG
-  getHex
-  getHsb
-  getHue
-  getHueAngle
-  getInverted
-  getLerped
-  getLightness
-  getNormalized
-  getR
-  getSaturation
-  invert
-  lerp
-  normalize
-  r
-  set
-  setA
-  setB
-  setBrightness
-  setG
-  setHex
-  setHsb
-  setHue
-  setHueAngle
-  setR
-  setSaturation
-
 of.ConePrimitive
   getCapIndices
   getCapMesh
@@ -1574,8 +1499,6 @@ of.Shader
   setGeometryInputType
   setGeometryOutputCount
   setGeometryOutputType
-  setPbrEnvironmentMapUniforms
-  setShadowUniforms
   setUniform1f
   setUniform1i
   setUniform2f
@@ -1686,8 +1609,6 @@ of.TrueTypeFont
   drawString
   drawStringAsShapes
   getAscenderHeight
-  getCharAdvance
-  getCharWidth
   getCharacterAsPoints
   getDescenderHeight
   getFirstGlyphPosForTexture
@@ -1714,183 +1635,15 @@ of.TrueTypeFont
   stringHeight
   stringWidth
 
-of.DoubleColor.aliceBlue
-of.DoubleColor.antiqueWhite
-of.DoubleColor.aqua
-of.DoubleColor.aquamarine
-of.DoubleColor.azure
-of.DoubleColor.beige
-of.DoubleColor.bisque
-of.DoubleColor.black
-of.DoubleColor.blanchedAlmond
-of.DoubleColor.blue
-of.DoubleColor.blueSteel
-of.DoubleColor.blueViolet
-of.DoubleColor.brown
-of.DoubleColor.burlyWood
-of.DoubleColor.cadetBlue
-of.DoubleColor.chartreuse
-of.DoubleColor.chocolate
-of.DoubleColor.coral
-of.DoubleColor.cornflowerBlue
-of.DoubleColor.cornsilk
-of.DoubleColor.crimson
-of.DoubleColor.cyan
-of.DoubleColor.darkBlue
-of.DoubleColor.darkCyan
-of.DoubleColor.darkGoldenRod
-of.DoubleColor.darkGray
-of.DoubleColor.darkGreen
-of.DoubleColor.darkGrey
-of.DoubleColor.darkKhaki
-of.DoubleColor.darkMagenta
-of.DoubleColor.darkOliveGreen
-of.DoubleColor.darkOrange
-of.DoubleColor.darkOrchid
-of.DoubleColor.darkRed
-of.DoubleColor.darkSalmon
-of.DoubleColor.darkSeaGreen
-of.DoubleColor.darkSlateBlue
-of.DoubleColor.darkSlateGray
-of.DoubleColor.darkSlateGrey
-of.DoubleColor.darkTurquoise
-of.DoubleColor.darkViolet
-of.DoubleColor.deepPink
-of.DoubleColor.deepSkyBlue
-of.DoubleColor.dimGray
-of.DoubleColor.dimGrey
-of.DoubleColor.dodgerBlue
-of.DoubleColor.fireBrick
-of.DoubleColor.floralWhite
-of.DoubleColor.forestGreen
-of.DoubleColor.fromHex
-of.DoubleColor.fromHsb
-of.DoubleColor.fuchsia
-of.DoubleColor.gainsboro
-of.DoubleColor.ghostWhite
-of.DoubleColor.gold
-of.DoubleColor.goldenRod
-of.DoubleColor.gray
-of.DoubleColor.green
-of.DoubleColor.greenYellow
-of.DoubleColor.grey
-of.DoubleColor.honeyDew
-of.DoubleColor.hotPink
-of.DoubleColor.indianRed
-of.DoubleColor.indigo
-of.DoubleColor.ivory
-of.DoubleColor.khaki
-of.DoubleColor.lavender
-of.DoubleColor.lavenderBlush
-of.DoubleColor.lawnGreen
-of.DoubleColor.lemonChiffon
-of.DoubleColor.lightBlue
-of.DoubleColor.lightCoral
-of.DoubleColor.lightCyan
-of.DoubleColor.lightGoldenRodYellow
-of.DoubleColor.lightGray
-of.DoubleColor.lightGreen
-of.DoubleColor.lightGrey
-of.DoubleColor.lightPink
-of.DoubleColor.lightSalmon
-of.DoubleColor.lightSeaGreen
-of.DoubleColor.lightSkyBlue
-of.DoubleColor.lightSlateGray
-of.DoubleColor.lightSlateGrey
-of.DoubleColor.lightSteelBlue
-of.DoubleColor.lightYellow
-of.DoubleColor.lime
-of.DoubleColor.limeGreen
-of.DoubleColor.limit
-of.DoubleColor.linen
-of.DoubleColor.magenta
-of.DoubleColor.maroon
-of.DoubleColor.mediumAquaMarine
-of.DoubleColor.mediumBlue
-of.DoubleColor.mediumOrchid
-of.DoubleColor.mediumPurple
-of.DoubleColor.mediumSeaGreen
-of.DoubleColor.mediumSlateBlue
-of.DoubleColor.mediumSpringGreen
-of.DoubleColor.mediumTurquoise
-of.DoubleColor.mediumVioletRed
-of.DoubleColor.midnightBlue
-of.DoubleColor.mintCream
-of.DoubleColor.mistyRose
-of.DoubleColor.moccasin
-of.DoubleColor.navajoWhite
-of.DoubleColor.navy
-of.DoubleColor.oldLace
-of.DoubleColor.olive
-of.DoubleColor.oliveDrab
-of.DoubleColor.orange
-of.DoubleColor.orangeRed
-of.DoubleColor.orchid
-of.DoubleColor.paleGoldenRod
-of.DoubleColor.paleGreen
-of.DoubleColor.paleTurquoise
-of.DoubleColor.paleVioletRed
-of.DoubleColor.papayaWhip
-of.DoubleColor.peachPuff
-of.DoubleColor.peru
-of.DoubleColor.pink
-of.DoubleColor.plum
-of.DoubleColor.powderBlue
-of.DoubleColor.purple
-of.DoubleColor.red
-of.DoubleColor.rosyBrown
-of.DoubleColor.royalBlue
-of.DoubleColor.saddleBrown
-of.DoubleColor.salmon
-of.DoubleColor.sandyBrown
-of.DoubleColor.seaGreen
-of.DoubleColor.seaShell
-of.DoubleColor.sienna
-of.DoubleColor.silver
-of.DoubleColor.skyBlue
-of.DoubleColor.slateBlue
-of.DoubleColor.slateGray
-of.DoubleColor.slateGrey
-of.DoubleColor.snow
-of.DoubleColor.springGreen
-of.DoubleColor.steelBlue
-of.DoubleColor.tan
-of.DoubleColor.teal
-of.DoubleColor.thistle
-of.DoubleColor.tomato
-of.DoubleColor.turquoise
-of.DoubleColor.violet
-of.DoubleColor.wheat
-of.DoubleColor.white
-of.DoubleColor.whiteSmoke
-of.DoubleColor.yellow
-of.DoubleColor.yellowGreen
-
 of.MaterialSettings
   MaterialSettings
   ambient
-  clearCoatEnabled
-  clearCoatRoughness
-  clearCoatStrength
   customUniforms
   diffuse
-  displacementNormalsStrength
-  displacementStrength
   emissive
-  isPbr
-  mainFragment
-  mainFragmentKey
-  mainVertex
-  mainVertexKey
-  metallic
-  normalGeomToNormalMapMix
   postFragment
-  reflectance
-  roughness
   shininess
   specular
-  texCoordScale
-  uniqueIdString
 
 of.Polyline
   Polyline
@@ -1956,10 +1709,8 @@ of.Fbo.maxDrawBuffers
 of.Fbo.maxSamples
 
 of.Light
-  beginShadowDepthPass
   disable
   enable
-  endShadowDepthPass
   getAmbientColor
   getAttenuationConstant
   getAttenuationLinear
@@ -1971,8 +1722,6 @@ of.Light
   getIsPointLight
   getIsSpotlight
   getLightID
-  getNumShadowDepthPasses
-  getShadow
   getSpecularColor
   getSpotConcentration
   getSpotlightCutOff
@@ -1988,7 +1737,6 @@ of.Light
   setSpotlight
   setSpotlightCutOff
   setup
-  shouldRenderShadowDepthPass
 
 of.CylinderPrimitive
   getBottomCapIndices
@@ -2291,6 +2039,43 @@ of.SerialDeviceInfo
   getDeviceName
   getDevicePath
 
+of.ShortColor
+  ShortColor
+  a
+  b
+  clamp
+  g
+  getA
+  getB
+  getBrightness
+  getClamped
+  getG
+  getHex
+  getHsb
+  getHue
+  getHueAngle
+  getInverted
+  getLerped
+  getLightness
+  getNormalized
+  getR
+  getSaturation
+  invert
+  lerp
+  normalize
+  r
+  set
+  setA
+  setB
+  setBrightness
+  setG
+  setHex
+  setHsb
+  setHue
+  setHueAngle
+  setR
+  setSaturation
+
 of.Unicode
   Unicode
 
@@ -2496,7 +2281,6 @@ of.Color.darkGrey
 of.Color.darkKhaki
 of.Color.darkMagenta
 of.Color.darkOliveGreen
-of.Color.darkOrange
 of.Color.darkOrchid
 of.Color.darkRed
 of.Color.darkSalmon
@@ -2506,6 +2290,7 @@ of.Color.darkSlateGray
 of.Color.darkSlateGrey
 of.Color.darkTurquoise
 of.Color.darkViolet
+of.Color.darkorange
 of.Color.deepPink
 of.Color.deepSkyBlue
 of.Color.dimGray
@@ -2962,7 +2747,6 @@ of.ImageLoadSettings
   ImageLoadSettings
   accurate
   exifRotate
-  freeImageFlags
   grayscale
   separateCMYK
 
@@ -2982,41 +2766,16 @@ of.Vec4f.one
 of.Vec4f.zero
 
 of.Material
-  addShaderDefine
   beginMaterial
   endMaterial
   getAmbientColor
-  getClearCoatRoughness
-  getClearCoatStrength
-  getDefinesString
   getDiffuseColor
-  getDisplacementNormalsStrength
-  getDisplacementStrength
   getEmissiveColor
-  getHighestUniformTextureLocation
-  getMetallic
-  getNormalGeomToNormalMapMix
-  getReflectance
-  getRoughness
   getSettings
   getShininess
   getSpecularColor
-  hasTexture
-  isClearCoatEnabled
-  isPBR
-  isPBRTexture
-  loadTexture
-  removeCustomUniformTexture
-  removeShaderDefine
   setAmbientColor
-  setAmbientTexture
-  setAoRoughnessMetallicTexture
-  setClearCoatEnabled
-  setClearCoatRoughness
-  setClearCoatStrength
-  setClearCoatTexture
   setColors
-  setCustomShader
   setCustomUniform1f
   setCustomUniform1i
   setCustomUniform2f
@@ -3029,30 +2788,10 @@ of.Material
   setCustomUniformMatrix4f
   setCustomUniformTexture
   setDiffuseColor
-  setDiffuseTexture
-  setDisplacementNormalsStrength
-  setDisplacementStrength
-  setDisplacementTexture
   setEmissiveColor
-  setEmissiveTexture
-  setMetallic
-  setMetallicTexture
-  setNormalGeomToNormalMapMix
-  setNormalTexture
-  setOcclusionTexture
-  setPBR
-  setReflectance
-  setRoughness
-  setRoughnessMetallicTexture
-  setRoughnessTexture
-  setShaderMain
   setShininess
   setSpecularColor
-  setSpecularTexture
-  setTexCoordScale
-  setTexture
   setup
-  uploadMatrices
 
 of.VideoDevice
   bAvailable
@@ -3093,7 +2832,6 @@ of.FloatColor.darkGrey
 of.FloatColor.darkKhaki
 of.FloatColor.darkMagenta
 of.FloatColor.darkOliveGreen
-of.FloatColor.darkOrange
 of.FloatColor.darkOrchid
 of.FloatColor.darkRed
 of.FloatColor.darkSalmon
@@ -3103,6 +2841,7 @@ of.FloatColor.darkSlateGray
 of.FloatColor.darkSlateGrey
 of.FloatColor.darkTurquoise
 of.FloatColor.darkViolet
+of.FloatColor.darkorange
 of.FloatColor.deepPink
 of.FloatColor.deepSkyBlue
 of.FloatColor.dimGray
@@ -3219,6 +2958,158 @@ of.DragInfo
   files
   position
 
+of.ShortColor.aliceBlue
+of.ShortColor.antiqueWhite
+of.ShortColor.aqua
+of.ShortColor.aquamarine
+of.ShortColor.azure
+of.ShortColor.beige
+of.ShortColor.bisque
+of.ShortColor.black
+of.ShortColor.blanchedAlmond
+of.ShortColor.blue
+of.ShortColor.blueSteel
+of.ShortColor.blueViolet
+of.ShortColor.brown
+of.ShortColor.burlyWood
+of.ShortColor.cadetBlue
+of.ShortColor.chartreuse
+of.ShortColor.chocolate
+of.ShortColor.coral
+of.ShortColor.cornflowerBlue
+of.ShortColor.cornsilk
+of.ShortColor.crimson
+of.ShortColor.cyan
+of.ShortColor.darkBlue
+of.ShortColor.darkCyan
+of.ShortColor.darkGoldenRod
+of.ShortColor.darkGray
+of.ShortColor.darkGreen
+of.ShortColor.darkGrey
+of.ShortColor.darkKhaki
+of.ShortColor.darkMagenta
+of.ShortColor.darkOliveGreen
+of.ShortColor.darkOrchid
+of.ShortColor.darkRed
+of.ShortColor.darkSalmon
+of.ShortColor.darkSeaGreen
+of.ShortColor.darkSlateBlue
+of.ShortColor.darkSlateGray
+of.ShortColor.darkSlateGrey
+of.ShortColor.darkTurquoise
+of.ShortColor.darkViolet
+of.ShortColor.darkorange
+of.ShortColor.deepPink
+of.ShortColor.deepSkyBlue
+of.ShortColor.dimGray
+of.ShortColor.dimGrey
+of.ShortColor.dodgerBlue
+of.ShortColor.fireBrick
+of.ShortColor.floralWhite
+of.ShortColor.forestGreen
+of.ShortColor.fromHex
+of.ShortColor.fromHsb
+of.ShortColor.fuchsia
+of.ShortColor.gainsboro
+of.ShortColor.ghostWhite
+of.ShortColor.gold
+of.ShortColor.goldenRod
+of.ShortColor.gray
+of.ShortColor.green
+of.ShortColor.greenYellow
+of.ShortColor.grey
+of.ShortColor.honeyDew
+of.ShortColor.hotPink
+of.ShortColor.indianRed
+of.ShortColor.indigo
+of.ShortColor.ivory
+of.ShortColor.khaki
+of.ShortColor.lavender
+of.ShortColor.lavenderBlush
+of.ShortColor.lawnGreen
+of.ShortColor.lemonChiffon
+of.ShortColor.lightBlue
+of.ShortColor.lightCoral
+of.ShortColor.lightCyan
+of.ShortColor.lightGoldenRodYellow
+of.ShortColor.lightGray
+of.ShortColor.lightGreen
+of.ShortColor.lightGrey
+of.ShortColor.lightPink
+of.ShortColor.lightSalmon
+of.ShortColor.lightSeaGreen
+of.ShortColor.lightSkyBlue
+of.ShortColor.lightSlateGray
+of.ShortColor.lightSlateGrey
+of.ShortColor.lightSteelBlue
+of.ShortColor.lightYellow
+of.ShortColor.lime
+of.ShortColor.limeGreen
+of.ShortColor.limit
+of.ShortColor.linen
+of.ShortColor.magenta
+of.ShortColor.maroon
+of.ShortColor.mediumAquaMarine
+of.ShortColor.mediumBlue
+of.ShortColor.mediumOrchid
+of.ShortColor.mediumPurple
+of.ShortColor.mediumSeaGreen
+of.ShortColor.mediumSlateBlue
+of.ShortColor.mediumSpringGreen
+of.ShortColor.mediumTurquoise
+of.ShortColor.mediumVioletRed
+of.ShortColor.midnightBlue
+of.ShortColor.mintCream
+of.ShortColor.mistyRose
+of.ShortColor.moccasin
+of.ShortColor.navajoWhite
+of.ShortColor.navy
+of.ShortColor.oldLace
+of.ShortColor.olive
+of.ShortColor.oliveDrab
+of.ShortColor.orange
+of.ShortColor.orangeRed
+of.ShortColor.orchid
+of.ShortColor.paleGoldenRod
+of.ShortColor.paleGreen
+of.ShortColor.paleTurquoise
+of.ShortColor.paleVioletRed
+of.ShortColor.papayaWhip
+of.ShortColor.peachPuff
+of.ShortColor.peru
+of.ShortColor.pink
+of.ShortColor.plum
+of.ShortColor.powderBlue
+of.ShortColor.purple
+of.ShortColor.red
+of.ShortColor.rosyBrown
+of.ShortColor.royalBlue
+of.ShortColor.saddleBrown
+of.ShortColor.salmon
+of.ShortColor.sandyBrown
+of.ShortColor.seaGreen
+of.ShortColor.seaShell
+of.ShortColor.sienna
+of.ShortColor.silver
+of.ShortColor.skyBlue
+of.ShortColor.slateBlue
+of.ShortColor.slateGray
+of.ShortColor.slateGrey
+of.ShortColor.snow
+of.ShortColor.springGreen
+of.ShortColor.steelBlue
+of.ShortColor.tan
+of.ShortColor.teal
+of.ShortColor.thistle
+of.ShortColor.tomato
+of.ShortColor.turquoise
+of.ShortColor.violet
+of.ShortColor.wheat
+of.ShortColor.white
+of.ShortColor.whiteSmoke
+of.ShortColor.yellow
+of.ShortColor.yellowGreen
+
 of.MeshFace
   MeshFace
   getColor
@@ -3300,9 +3191,7 @@ of.Unicode.ArabicSupplement
 of.Unicode.Arrows
 of.Unicode.BlockElement
 of.Unicode.BoxDrawing
-of.Unicode.Braces
 of.Unicode.CJKLettersAndMonths
-of.Unicode.CJKSymbolAndPunctuation
 of.Unicode.CJKUnified
 of.Unicode.CurrencySymbols
 of.Unicode.Cyrillic
@@ -3312,7 +3201,6 @@ of.Unicode.Dingbats
 of.Unicode.Emoticons
 of.Unicode.EnclosedCharacters
 of.Unicode.GeneralPunctuation
-of.Unicode.GenericSymbols
 of.Unicode.GeometricShapes
 of.Unicode.Greek
 of.Unicode.GreekExtended
@@ -3332,21 +3220,17 @@ of.Unicode.Latin1Supplement
 of.Unicode.LatinA
 of.Unicode.LatinExtendedAdditional
 of.Unicode.LetterLikeSymbols
-of.Unicode.LowercaseLatin
 of.Unicode.MathOperators
 of.Unicode.MiscSymbols
 of.Unicode.MiscSymbolsAndPictographs
 of.Unicode.MiscTechnical
 of.Unicode.NumberForms
-of.Unicode.Numbers
 of.Unicode.OtherAdditionalSymbols
 of.Unicode.RumiNumericalSymbols
 of.Unicode.Space
 of.Unicode.SuperAndSubScripts
-of.Unicode.Symbols
 of.Unicode.TransportAndMap
 of.Unicode.Uncategorized
-of.Unicode.UppercaseLatin
 of.Unicode.VedicExtensions
 
 of.URLFileLoader
@@ -3420,8 +3304,6 @@ of.SoundDevice.OSX_CORE
 of.SoundDevice.PULSE
 of.SoundDevice.UNSPECIFIED
 
-of.TrueTypeFont.dbl_to_int26p6
-of.TrueTypeFont.int26p6_to_dbl
 of.TrueTypeFont.setGlobalDpi
 
 of.Time.FixedRate

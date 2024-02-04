@@ -25,7 +25,6 @@ osc.TYPE_TRUE
 
 osc.ReceiverSettings
   ReceiverSettings
-  host
   port
   reuse
   start

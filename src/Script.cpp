@@ -35,6 +35,8 @@
 extern "C" {
 	int luaopen_osc(lua_State *L);
 	int luaopen_loaf(lua_State *L);
+	int luaopen_ofxTimeline(lua_State *L);
+	int luaopen_ofRange(lua_State *L);
 }
 
 //--------------------------------------------------------------
@@ -256,6 +258,8 @@ bool Script::initState() {
 	luaopen_osc(lua);     // osc bindings
 	luaopen_loaf(lua);    // loaf bindings
 	Syphon::luaopen(lua); // syphon bindings
+	luaopen_ofxTimeline(lua);    // ofxTimeline bindings
+	luaopen_ofRange(lua);    // ofRange bindings
 
 	// script arguments
 	lua.newTable("arg");

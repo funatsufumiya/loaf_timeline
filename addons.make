@@ -1,3 +1,11 @@
 ofxLua
+ofxMSATimer
 ofxOsc
+ofxPoco
+ofxRange
 ofxSyphon
+ofxTextInputField
+ofxTimecode
+ofxXmlSettings
+ofxTween
+ofxTimeline

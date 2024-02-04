@@ -20,12 +20,16 @@ cd ../swig
 make symbols TARGET=osc INTERFACE=osc.i
 make symbols TARGET=loaf INTERFACE=loaf.i
 make symbols TARGET=syphon INTERFACE=syphon.i
+make symbols TARGET=ofxTimeline INTERFACE=ofxTimeline.i
+make symbols TARGET=ofRange INTERFACE=ofRange.i
 
 $LUA_SYNTAX of of_lua_symbols.txt
 $LUA_SYNTAX glm glm_lua_symbols.txt
 $LUA_SYNTAX osc osc_symbols.txt
 $LUA_SYNTAX loaf loaf_symbols.txt
 $LUA_SYNTAX syphon syphon_symbols.txt
+$LUA_SYNTAX ofxTimeline ofxTimeline_symbols.txt
+$LUA_SYNTAX ofRange ofRange_symbols.txt
 
 # added by loaf.i
 echo "loaf.send" >> loaf_syntax.txt

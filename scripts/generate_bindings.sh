@@ -16,3 +16,6 @@ make loaf
 if [ -d "$OF_DIR/addons/ofxSyphon" ] ; then
 	make syphon
 fi
+
+make ofxTimeline
+make ofRange

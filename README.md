@@ -1,3 +1,20 @@
+## loaf_timeline
+
+This is a fork of [loaf](https://github.com/danomatika/loaf), make use of [ofxTimeline](https://github.com/funatsufumiya/ofxTimeline)
+
+## Usage
+
+- use prebuilt binary from [release](https://github.com/funatsufumiya/ofxTimeline/releases) (**NOT READY YET**)
+- or build from source
+  - be sure to apply `projectGenerator` before build
+
+## Example
+
+see [examples/timeline](examples/timeline)
+
+--
+Original README
+
 loaf: lua, osc, and openFrameworks
 ==================================
 

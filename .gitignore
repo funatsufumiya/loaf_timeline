@@ -1,3 +1,8 @@
+examples/timeline/**/GUI
+*.xcodeproj
+Project.xcconfig
+openFrameworks-Info.plist
+
 # Makefile-mac-dist.mk
 build
 *.dmg
