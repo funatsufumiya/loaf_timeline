@@ -1,5 +1,22 @@
 ofxTimeline
+ofxTimeline.ClickPoint
+ofxTimeline.OFXTL_CAMERA_EASE_CUT
+ofxTimeline.OFXTL_CAMERA_EASE_LINEAR
+ofxTimeline.OFXTL_CAMERA_EASE_SMOOTH
+ofxTimeline.PreviewTexture
 ofxTimeline.UndoItem
+ofxTimeline.glTypeForImageType
+
+ofxTimeline.ClickPoint
+  ClickPoint
+  time
+  value
+
+ofxTimeline.PreviewTexture
+  PreviewTexture
+  bounds
+  frameIndex
+  texture
 
 ofxTimeline.UndoItem
   UndoItem

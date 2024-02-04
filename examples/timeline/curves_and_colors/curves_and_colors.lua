@@ -44,9 +44,9 @@ function draw()
     
     of.pushStyle();
     -- set the color to whatever the last color we encountered was
-    local r = timeline:getRed("Colors")
-    local g = timeline:getGreen("Colors")
-    local b = timeline:getBlue("Colors")
+    local r = timeline:getR("Colors")
+    local g = timeline:getG("Colors")
+    local b = timeline:getB("Colors")
     of.setColor(r, g, b);
     
     -- translate to the center of the screen
