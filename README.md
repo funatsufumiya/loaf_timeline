@@ -14,6 +14,7 @@ and run:
 
 ```bash
 $ loaf_timeline examples/timeline/camera_track/camera_track.lua
+
 # NOTE: if mac, loaf_timeline is located on .app/Contents/MacOS
 ```
 
