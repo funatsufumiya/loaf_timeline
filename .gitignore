@@ -2,6 +2,9 @@ examples/timeline/**/GUI
 *.xcodeproj
 Project.xcconfig
 openFrameworks-Info.plist
+bin/data/NewMedia\ Fett.ttf
+bin/data/defaultColorPalette.png
+bin/data/defaultColors.xml
 
 # Makefile-mac-dist.mk
 build
