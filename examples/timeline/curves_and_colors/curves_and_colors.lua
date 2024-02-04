@@ -1,3 +1,6 @@
+-- this example is ported from original C++ code (please check license):
+-- https://github.com/funatsufumiya/ofxTimeline/blob/master/example-curvesAndColors/
+
 light = of.Light()
 timeline = ofxTimeline.ofxTimeline()
 
