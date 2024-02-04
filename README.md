@@ -1,6 +1,6 @@
 ## loaf_timeline
 
-This is a fork of [loaf](https://github.com/danomatika/loaf), make use of [ofxTimeline](https://github.com/funatsufumiya/ofxTimeline)
+This is a fork of [loaf](https://github.com/danomatika/loaf), make use of [ofxTimeline](https://github.com/funatsufumiya/ofxTimeline) with handy lua scripting environment.
 
 ## Usage
 
