@@ -21,6 +21,7 @@ typedef std::string string;
 // includes
 %include "ofxTimeline/src/ofxTimeline.h"
 %include "ofxTimeline/src/ofxTLTrack.h"
+%include "ofxTimeline/src/ofxTLKeyframes.h"
 %include "ofxTimeline/src/ofxTLColorTrack.h"
 %include "ofxTimeline/src/ofxTLEmptyTrack.h"
 %include "ofxTimeline/src/ofxTLEmptyKeyframes.h"
@@ -73,6 +74,14 @@ typedef std::string string;
     ofxTLTrack *getTrack() {
         return (ofxTLTrack *)$self;
     }
+
+    void setLockCameraToTrack(bool value) {
+        $self->lockCameraToTrack = value;
+    }
+
+    bool getLockCameraToTrack() {
+        return $self->lockCameraToTrack;
+    }
 }
 
 %extend ofxTLVideoTrack {
@@ -96,5 +105,23 @@ typedef std::string string;
 %extend ofxTLEmptyTrack {
     ofxTLTrack *getTrack() {
         return (ofxTLTrack *)$self;
+    }
+}
+
+%extend ofxTLSwitches {
+    ofxTLTrack *getTrack() {
+        return (ofxTLTrack *)$self;
+    }
+}
+
+%extend ofxTLBangs {
+    ofxTLTrack *getTrack() {
+        return (ofxTLTrack *)$self;
+    }
+}
+
+%extend ofxTLTrack {
+    ofxTLKeyframes *getKeyframes() {
+        return (ofxTLKeyframes *)$self;
     }
 }

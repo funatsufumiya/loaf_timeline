@@ -6,6 +6,8 @@ bin/data/NewMedia\ Fett.ttf
 bin/data/defaultColorPalette.png
 bin/data/defaultColors.xml
 
+examples/timeline/empty_track_template/*.xml
+
 # Makefile-mac-dist.mk
 build
 *.dmg
