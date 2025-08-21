@@ -2,6 +2,8 @@
 
 This is a fork of [loaf](https://github.com/danomatika/loaf), make easy use of [ofxTimeline](https://github.com/funatsufumiya/ofxTimeline) with handy lua scripting environment.
 
+This environment would be useful for general timeline editor. Saved track data (XML) can be loaded to your application using [ofxTimelineLoader](https://github.com/funatsufumiya/ofxTimelineLoader) or [timeline_rs](https://github.com/funatsufumiya/timeline_rs);
+
 ![screenshot-loaf-timeline](images/screenshot-loaf-timeline.png)
 
 ## Usage
