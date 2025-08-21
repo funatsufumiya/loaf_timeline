@@ -16,3 +16,6 @@
 [submodule "addons/ofxTween"]
 	path = addons/ofxTween
 	url = https://github.com/funatsufumiya/ofxTween
+[submodule "addons/ofxLua"]
+	path = addons/ofxLua
+	url = https://github.com/funatsufumiya/ofxLua

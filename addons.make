@@ -1,7 +1,7 @@
-ofxLua
 ofxOsc
 ofxPoco
 ofxXmlSettings
+addons/ofxLua
 addons/ofxMSATimer
 addons/ofxRange
 addons/ofxTextInputField
