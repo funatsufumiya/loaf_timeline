@@ -19,6 +19,8 @@ $ loaf_timeline examples/timeline/camera_track/camera_track.lua
 # NOTE: if mac, loaf_timeline is located on .app/Contents/MacOS
 ```
 
+( Please copy [`copy_to_data_GUI`](https://github.com/funatsufumiya/ofxTimeline/tree/master/copy_to_data_GUI) content into `GUI` folder created next to the lua script if running examples. )
+
 ## Build
 
 - if you change bindings, edit `swig` files and run `./scripts/generate_syntax.sh && ./scripts/generate_bindings.sh && make ReleaseLoaf` to compile.
@@ -28,7 +30,7 @@ $ loaf_timeline examples/timeline/camera_track/camera_track.lua
 
 see [examples/timeline](examples/timeline)
 
-- Please make sure copy [`copy_to_data_GUI`](https://github.com/funatsufumiya/ofxTimeline/tree/master/copy_to_data_GUI) content into `GUI` folder created next to the lua script. 
+- Please make sure to copy [`copy_to_data_GUI`](https://github.com/funatsufumiya/ofxTimeline/tree/master/copy_to_data_GUI) content into `GUI` folder created next to the lua script. 
 
 ## License
 
