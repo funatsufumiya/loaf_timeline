@@ -1,11 +1,10 @@
 ofxLua
-ofxMSATimer
 ofxOsc
 ofxPoco
-ofxRange
-ofxSyphon
-ofxTextInputField
-ofxTimecode
 ofxXmlSettings
-ofxTween
-ofxTimeline
+addons/ofxMSATimer
+addons/ofxRange
+addons/ofxTextInputField
+addons/ofxTimecode
+addons/ofxTween
+addons/ofxTimeline

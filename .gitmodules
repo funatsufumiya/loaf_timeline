@@ -1,0 +1,18 @@
+[submodule "addons/ofxTextInputField"]
+	path = addons/ofxTextInputField
+	url = https://github.com/roymacdonald/ofxTextInputField
+[submodule "addons/ofxTimecode"]
+	path = addons/ofxTimecode
+	url = https://github.com/YCAMInterlab/ofxTimecode
+[submodule "addons/ofxRange"]
+	path = addons/ofxRange
+	url = https://github.com/Flightphase/ofxRange
+[submodule "addons/ofxTimeline"]
+	path = addons/ofxTimeline
+	url = https://github.com/funatsufumiya/ofxTimeline
+[submodule "addons/ofxMSATimer"]
+	path = addons/ofxMSATimer
+	url = https://github.com/obviousjim/ofxMSATimer
+[submodule "addons/ofxTween"]
+	path = addons/ofxTween
+	url = https://github.com/funatsufumiya/ofxTween
