@@ -7,8 +7,9 @@ This is a fork of [loaf](https://github.com/danomatika/loaf), make easy use of [
 ## Usage
 
 - use prebuilt binary from [release](https://github.com/funatsufumiya/loaf_timeline/releases)
-- or build from source
-  - be sure to apply `projectGenerator` before build
+- or build from source (now working on oF v0.12.0)
+  - please download submodules: `git submodule update --init --recursive` or `git clone --recursive`
+  - apply `projectGenerator` before build
  
 and run:
 
